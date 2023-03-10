@@ -76,7 +76,7 @@ Fields are a standard way to lay out a form control, its label, and help text or
 ```html render
 <div class="field">
   <label class="field__label">Email</label>
-  <div>
+  <div class="grow stack gap-xs">
     <input type="email" class="input">
     <div class="field__description">Enter your email address.</div>
   </div>
@@ -99,20 +99,20 @@ Multiple fields can be spaced using the `.stack` layout utility – commonly wit
 
 ```html render
 <div class="stack dividers">
-  <div class="field">
-    <label class="field__label" for="name">Name</label>
-    <div>
-      <input type="text" class="input" id="name">
-      <div class="field__description">Enter your full name.</div>
-    </div>
-  </div>
+  <x-waterhole::field
+    name="name"
+    label="Name"
+    description="Enter your full name."
+  >
+    <input type="text" name="name" class="input">
+  </x-waterhole::field>
 
-  <div class="field">
-    <label class="field__label" for="email">Email</label>
-    <div>
-      <input type="email" class="input" id="email">
-      <div class="field__description">Enter your email.</div>
-    </div>
-  </div>
+  <x-waterhole::field
+    name="email"
+    label="Email"
+    description="Enter your email address."
+  >
+    <input type="email" name="email" class="input">
+  </x-waterhole::field>
 </div>
 ```
