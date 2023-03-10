@@ -20,7 +20,7 @@ Use the `.input` class to style any element (`<input>`, `<textarea>`, and `<sele
 ### Input Container
 Wrap an input in an `.input-container` to decorate it with icons or buttons:
 
-```html render
+```blade render
 <div class="input-container">
   <x-waterhole::icon icon="tabler-search" class="no-pointer"/>
   <input type="text" class="input">
@@ -54,7 +54,7 @@ Apply the `.choice` class to a surrounding `<label>` for proper alignment of a c
 ## Text Editor
 The text editor component decorates a `<textarea>` with a markdown toolbar, auto-suggests users for `@` mentions, and supports the ability to preview the formatted content:
 
-```html render
+```blade render
 <x-waterhole::text-editor 
   name="body"
   value="Hello, world!"
@@ -66,7 +66,7 @@ The text editor component decorates a `<textarea>` with a markdown toolbar, auto
 ## Color Picker
 Waterhole provides a color picker input component which allows the user to visually pick a hex (or hex alpha) color:
 
-```html render
+```blade render
 <x-waterhole::admin.color-picker name="color" value="abcdef"/>
 ```
 
@@ -85,7 +85,7 @@ Fields are a standard way to lay out a form control, its label, and help text or
 
 The `<x-waterhole::field>` Blade component can be used to efficiently construct this markup. It will also automatically show validation errors for the field:
 
-```html render
+```blade render
 <x-waterhole::field
   name="email"
   label="Email" 
@@ -97,7 +97,7 @@ The `<x-waterhole::field>` Blade component can be used to efficiently construct 
 
 Multiple fields can be spaced using the `.stack` layout utility – commonly with `.dividers`:
 
-```html render
+```blade render
 <div class="stack dividers">
   <x-waterhole::field
     name="name"

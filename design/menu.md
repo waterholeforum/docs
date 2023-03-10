@@ -7,7 +7,7 @@ Menus should be styled with the `.menu` class. To prevent [FOUC](https://en.wiki
 
 Use the `.menu-item` class for menu items, which can be buttons, links, or labels. Menu items support icons.
 
-```html render
+```blade render
 <ui-popup placement="bottom-start">
   <button class="btn">
     Controls
@@ -53,7 +53,7 @@ Use the `.menu-heading` class for group headings.
 ## Title & Description
 Menu items may have a title and description, rather than just a text label. Use `.menu-item__title` and `.menu-item__description` for this:
 
-```html render
+```blade render
 <ui-menu class="menu">
   <button class="menu-item" role="menuitem">
     <x-waterhole::icon icon="tabler-star"/>
@@ -68,7 +68,7 @@ Menu items may have a title and description, rather than just a text label. Use 
 ## Selected
 Menu items will be styled as "selected" if they have the `.is-active` class, or `[aria-current="page"]` or `[aria-checked="true"]` attributes. The `.menu-item__check` class can be used to display an icon which will only become visible if the containing menu item is selected.
 
-```html render
+```blade render
 <ui-menu class="menu">
   <button class="menu-item" role="menuitemradio" aria-checked="true">
     <span>Menu Item</span>

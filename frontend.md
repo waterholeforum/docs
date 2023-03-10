@@ -6,7 +6,7 @@ Waterhole exposes many Blade Components that you can use in your own views. Thes
 
 Perhaps the most important of these to know is the [`<x-waterhole::layout>` component](https://waterhole.dev/docs/reference/Waterhole/View/Components/Layout.html). Use this to render your own views inside the Waterhole layout:
 
-```html
+```blade
 <x-waterhole::layout title="Hello World">
     <h1>Hello, world!</h1>
 </x-waterhole::layout>
@@ -83,7 +83,7 @@ PortalHeader::add(PortalTitle::class, -10);
 
 Now, in your view, you can retrive the ordered component instances using the `components` method of your extender (passing in any props), and then use the `@components` Blade directive to render them:
 
-```html
+```blade
 @components(Acme\Example\Extend\PortalHeader::components(['foo' => 'bar']))
 ```
 

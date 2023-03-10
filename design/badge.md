@@ -18,7 +18,7 @@ The `.badge` class creates the basic style. It can be combined with a `.bg` clas
 ## Icons
 Badges may have an icon as well as a label:
 
-```html render
+```blade render
 <span class="badge">
     <x-waterhole::icon icon="tabler-lock"/>
     Locked

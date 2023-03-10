@@ -6,7 +6,7 @@ Alerts may include an icon and action buttons. They can be shown inline or as a 
 ## CSS
 The `.alert` class is combined with a `.bg` color class to create the alert container. `.alert__icon`, `.alert__message`, and `.alert__actions` lay out the contents of the alert.
 
-```html render
+```blade render
 <div class="alert bg-success">
   <span class="alert__icon">
       <x-waterhole::icon icon="tabler-check"/>
@@ -21,7 +21,7 @@ The `.alert` class is combined with a `.bg` color class to create the alert cont
 ## Blade Component
 Use the [`<x-waterhole::alert>` component](https://waterhole.dev/docs/references/Waterhole/View/Components/Alert.php) to render an alert in a Blade template. Pass a `type`, which corresponds to the name of one of the `.bg` color classes. An icon will be selected automatically:
 
-```html render
+```blade render
 <div class="stack gap-sm">
     <x-waterhole::alert type="success">The action was successful.</x-waterhole::alert>
     <x-waterhole::alert type="success-soft">The action was successful.</x-waterhole::alert>
@@ -35,7 +35,7 @@ Use the [`<x-waterhole::alert>` component](https://waterhole.dev/docs/references
 ### Icon
 You can pass the name of an `icon` to use instead of the default:
 
-```html render
+```blade render
 <x-waterhole::alert type="danger" icon="tabler-circle-minus">
   Access denied.
 </x-waterhole::alert>
@@ -44,7 +44,7 @@ You can pass the name of an `icon` to use instead of the default:
 ### Actions
 Alerts can be made dismissible by adding the `dismissible` property:
 
-```html render
+```blade render
 <x-waterhole::alert type="danger" dismissible>
   Make me go away, I dare you.
 </x-waterhole::alert>
@@ -52,7 +52,7 @@ Alerts can be made dismissible by adding the `dismissible` property:
 
 You can also render a custom action in the `action` slot:
 
-```html render
+```blade render
 <x-waterhole::alert type="warning" dismissible>
   Log in is required for this section.
   <x-slot:action>

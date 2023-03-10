@@ -37,7 +37,7 @@ Extend\AdminNav::add(
 ### Rendering the Admin Layout
 Use the [`<x-waterhole::admin>`](https://waterhole.dev/docs/reference/Waterhole/View/Components/Admin.html) component to render your views inside the admin layout:
 
-```html
+```blade
 <x-waterhole::admin title="My Page">
     <!-- content -->
 </x-waterhole::admin>

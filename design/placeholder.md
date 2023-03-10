@@ -3,7 +3,7 @@ A placeholder informs the user that some content is unavailable, either because 
 
 Use the `.placeholder` class on the container, which centers and adds appropriate spacing to the children. Then add any of an icon, heading, description and call-to-action. The icon should use the `.placeholder__icon` class to give it a larger size.
 
-```html render
+```blade render
 <div class="placeholder">
     <x-waterhole::icon icon="tabler-star" class="placeholder__icon"/>
     <h4>No Stars</h4>

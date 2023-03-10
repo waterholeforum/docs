@@ -36,7 +36,7 @@ For toggle buttons, use the `[aria-pressed="true"]` attribute to indicate that t
 ## Icons
 Icons can be used in buttons to supplement text labels:
 
-```html render
+```blade render
 <button class="btn">
     <x-waterhole::icon icon="tabler-check"/>
     Accept
@@ -45,7 +45,7 @@ Icons can be used in buttons to supplement text labels:
 
 Use the `.btn--icon` class to create an icon-only button. Don't forget to add an `aria-label` attribute or a [tooltip](./tooltips.md).
 
-```html render
+```blade render
 <button class="btn btn--icon" aria-label="Accept">
     <x-waterhole::icon icon="tabler-check"/>
 </button>

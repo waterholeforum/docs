@@ -21,7 +21,7 @@ Your logo will show up in the forum header and in your forum's email template. F
 
 If you'd like to show an SVG version of your logo in the forum header, you can [override](https://laravel.com/docs/9.x/packages#overriding-package-views) the "header title" template by creating a file at `resources/views/vendor/waterhole/components/header-title.blade.php`:
 
-```html
+```blade
 <a href="{{ route('waterhole.home') }}">  
     <!-- Your logo SVG here -->
 </a>
@@ -84,8 +84,8 @@ Extend\LayoutBefore::add('waterhole.hero');
 
 Your `resources/views/waterhole/hero.blade.php` template might look something like this. The `@if` conditional will make sure it only renders on the index page:
 
-```html
-@if (request()->routeIs('waterhole.home') || request()->routeIs('waterhole.channels.show'))  
+```blade
+@if (Request::routeIs('waterhole.home', 'waterhole.channels.show'))  
     <section class="section container row justify-center text-center">  
         <p class="measure lead">  
             Welcome to my community! Please take a look around.

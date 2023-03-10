@@ -13,7 +13,7 @@ Text <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" str
 ### Thickness
 For line icons, the stroke thickness can be modulated using the `.icon--thin` and `.icon--thick` classes:
 
-```html render
+```blade render
 <x-waterhole::icon icon="tabler-star" class="icon--thin text-xl"/>
 <x-waterhole::icon icon="tabler-star" class="icon--thick text-xl"/>
 ```
@@ -21,7 +21,7 @@ For line icons, the stroke thickness can be modulated using the `.icon--thin` an
 ### Width
 While icon elements are always square, sometimes the icon glyph itself doesn't take up much room and ends up with too much whitespace around it. In this situation, use `.icon--narrow` to reduce the whitespace.
 
-```html render
+```blade render
 <p>Text <x-waterhole::icon icon="tabler-chevron-down"/> Text</p>
 <p>Text <x-waterhole::icon icon="tabler-chevron-down" class="icon--narrow"/> Text</p>
 ```
@@ -29,7 +29,7 @@ While icon elements are always square, sometimes the icon glyph itself doesn't t
 ### Text Label
 To pair an icon together with a text label, wrap them in an element with the `.with-icon` class:
 
-```html render
+```blade render
 <span class="with-icon">
     <x-waterhole::icon icon="tabler-star"/>
     Favorite
@@ -43,7 +43,7 @@ Use the `<x-waterhole::icon>` component to quickly emit icon markup. The `icon` 
 * An emoji (prefixed with `emoji:`)
 * The path to a file in the public `icons` directory (prefixed with `file:`)
 
-```html render
+```blade render
 <x-waterhole::icon icon="tabler-star"/>
 <x-waterhole::icon icon="emoji:🐡"/>
 ```
@@ -51,7 +51,7 @@ Use the `<x-waterhole::icon>` component to quickly emit icon markup. The `icon` 
 ## Icon Picker
 Use the `<x-waterhole::icon-picker>` component in a form to allow the user to choose an icon from a Blade Icon, Emoji, or an uploaded file:
 
-```html render
+```blade render
 <x-waterhole::admin.icon-picker 
   name="icon" 
   :value="old('icon')"

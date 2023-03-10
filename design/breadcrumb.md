@@ -4,7 +4,7 @@ Indicate the current page's location within a navigational hierarchy that automa
 A standalone breadcrumb can be wrapped in a `<nav>`, with `aria-current="page"` being used to mark the current page:
 
 ```html render
-<nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li><a href="#">Home</a></li>
     <li><a href="#">Section</a></li>

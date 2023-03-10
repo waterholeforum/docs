@@ -155,17 +155,29 @@ Waterhole provides UI components to render action buttons and menus.
 ### Action Button
 Render a single button that will execute the given action on the given item.
 
-```html
+```blade
 <x-waterhole::action-button
     :action="Acme\Example\Actions\MyAction::class"
     :for="$item"
 />
 ```
 
+### Action Buttons
+Render all of the actions for a given item.
+
+```blade
+<x-waterhole::action-buttons
+    :for="$item"
+    :button-attributes="['class' => 'btn btn--icon btn--transparent btn--sm']"
+    tooltips
+    :limit="3"
+/>
+```
+
 ### Action Menu
 Render a menu button containing all of the actions that apply to the given item(s).
 
-```html
+```blade
 <x-waterhole::action-menu 
     :for="$item"
     placement="bottom-start"

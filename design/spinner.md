@@ -28,6 +28,6 @@ To display the spinner as a block-level element with some padding, use `.spinner
 ## Blade Component
 Use the `<x-waterhole::spinner>` component to display a spinner, including the correct accessibility attributes:
 
-```html render
+```blade render
 <x-waterhole::spinner/>
 ```

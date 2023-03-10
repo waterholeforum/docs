@@ -28,7 +28,7 @@ By default, dialogs will size to fit their content. You can control the dialog w
 ## Blade Component
 As a shortcut for building dialog markup, you can use the `<x-waterhole::dialog>` component:
 
-```html render
+```blade render
 <x-waterhole::dialog title="My Dialog">
   Hello, world!
 </x-waterhole::dialog>
@@ -48,7 +48,7 @@ Route::get('my-dialog', function () {
 });
 ```
 
-```html
+```blade
 <x-waterhole::layout title="My Dialog Title">
     <turbo-frame id="modal">
         <x-waterhole::dialog title="My Dialog Title">
@@ -60,7 +60,7 @@ Route::get('my-dialog', function () {
 
 Then, create a link to your route, targeting the `modal` Turbo Frame with the attribute `data-turbo-frame="modal"`:
 
-```html
+```blade
 <a 
     href="{{ url('my-dialog') }}" 
     data-turbo-frame="modal"
@@ -72,7 +72,7 @@ There are a few ways to close the modal:
 - Call the  `modal#hide` Stimulus action inside the modal.  
         
         
-    ```html
+    ```blade
     <a href="{{ url()->previous() }}" data-action="modal#hide">Back</a>
     ```
 
