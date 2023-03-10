@@ -57,3 +57,7 @@ To style a provider button, target it using the `.oauth-button[data-provider]` s
   color: white;
 }
 ```
+
+### Disabling Passwords
+
+If you would like to only allow registering and logging in via an OAuth provider, you can disable passwords by setting the `password_enabled` setting to `false` in `config/waterhole/auth.php`.
