@@ -2,18 +2,7 @@
 
 Waterhole features a simple and adaptable design that's easy to customize and integrate with your brand.
 
-## Basic Settings
-
-The `config/waterhole/design.php` file contains some basic design-related settings and is a great place to start your customization.
-
-### Accent Color
-
-Start by setting `accent_color` to your brand's primary color. This is used:
-
-- As the value of the `--color-accent` CSS variable
-- In your forum's email template design
-
-### Logo
+## Logo
 
 Place your brand's logo under a `public/images` directory, and then set `logo_url`:
 
