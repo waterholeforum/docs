@@ -1,4 +1,5 @@
 # Code of Conduct
+
 This code of conduct applies to all spaces managed used by the Waterhole community for communication. This includes the Waterhole forum, GitHub, Twitter, and any other relevant forums.
 
 If you believe someone is violating the code of conduct, we ask that you report it by contacting us at [waterhole.forum/support](). Your identity will remain confidential.

@@ -1,13 +1,16 @@
 # Troubleshooting
+
 Uh oh, something's gone wrong! Here are some handy debugging tips, and some common problems and solutions.
 
 ## Debugging Tips
+
 Whether you've encountered a White Screen of Death, a generic "internal server error" message, or some other broken behavior – sometimes it can be hard to work out what's gone wrong with your Waterhole installation. Here are a few things to try:
 
 - **Check the logs.** These may contain more information about what's going wrong:
-    - Waterhole logs in `storage/logs`
-    - Web server logs (eg. `/var/log/nginx/error.log`)
-    - PHP-FPM logs (eg. `/var/log/php8.x-fpm.log`)
+
+  - Waterhole logs in `storage/logs`
+  - Web server logs (eg. `/var/log/nginx/error.log`)
+  - PHP-FPM logs (eg. `/var/log/php8.x-fpm.log`)
 
 - **Turn on debug mode.** Waterhole has a [debug mode](./configuration#debug-mode) which you can turn on to enable detailed error reporting in the browser. However, you should only use this for debugging on a development server – do NOT turn this on in production, as you risk exposing sensitive configuration values to the public.
 
@@ -33,13 +36,15 @@ TODO
 -->
 
 ## Get Help
+
 Still no luck? Assuming you've now uncovered some more information about your problem (like an error message), it's time to do a bit of searching in the following places:
 
-* [**The Waterhole community**](https://waterhole.dev/forum). Someone else might have had the same issue, posted about it, and received help in the community.
+- [**The Waterhole community**](https://waterhole.dev/forum). Someone else might have had the same issue, posted about it, and received help in the community.
 
-* [**The issue tracker**](https://github.com/waterholeforum/core/issues). You might have run into an issue that has already been reported, and maybe even fixed in an upcoming version.
+- [**The issue tracker**](https://github.com/waterholeforum/core/issues). You might have run into an issue that has already been reported, and maybe even fixed in an upcoming version.
 
 If your search is proving unfruitful, [posting in the community](https://waterhole.dev/forum/posts/create?channel=3) is often the fastest way to get help. You can also [contact us](https://waterhole.dev/support) for support directly.
 
 ## Report a Bug
+
 If you're confident that you've found an issue with Waterhole itself – not a problem on your end, or with an extension – please lodge it in our issue tracker by following the instructions on [Reporting Bugs](./contributing.md#bug-reports).

@@ -1,14 +1,15 @@
 # Buttons
+
 Buttons allow users to take actions and make choices with a single click.
 
 The `.btn` class can be applied to any element to give it the appearance of a button:
 
 ```html render
-<button class="btn">Button</button>
-<a href="#" class="btn">Link Button</a>
+<button class="btn">Button</button> <a href="#" class="btn">Link Button</a>
 ```
 
 ## Colors
+
 Use a `.bg` class to apply a color to the button:
 
 ```html render
@@ -26,6 +27,7 @@ For toggle buttons, use the `[aria-pressed="true"]` attribute to indicate that t
 ```
 
 ## Variants
+
 `.btn--outline` and `.btn--transparent` are available to create less visually prominent buttons:
 
 ```html render
@@ -34,6 +36,7 @@ For toggle buttons, use the `[aria-pressed="true"]` attribute to indicate that t
 ```
 
 ## Icons
+
 Icons can be used in buttons to supplement text labels:
 
 ```blade render
@@ -52,6 +55,7 @@ Use the `.btn--icon` class to create an icon-only button. Don't forget to add an
 ```
 
 ## Sizes
+
 `.btn--sm`, `.btn--wide` and `.btn--narrow` are available to tweak the size of a button:
 
 ```html render

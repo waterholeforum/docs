@@ -1,7 +1,9 @@
 # Colors
+
 Use variables and utilities to apply consistent and accessible color.
 
 ## Palette
+
 Waterhole's color palette consists of:
 
 - **Base colors** to help define user interface structure.
@@ -10,15 +12,16 @@ Waterhole's color palette consists of:
 All colors are selected to pass a minimum WCAG accessibility rating of [level AA](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Meeting these standards ensures that content is accessible by everyone, regardless of ability or device.
 
 ### Base Colors
-| Color                       | Usage                                                                              |
-| --------------------------- | ---------------------------------------------------------------------------------- |
-| <span class="swatch" style="background: var(--color-bg)"></span> `--color-bg`                | Page background color.                                                          |
-| <span class="swatch" style="background: var(--color-text)"></span> `--color-text`              | Default color for text and icons.                                                  |
-| <span class="swatch" style="background: var(--color-muted)"></span> `--color-muted`             | Secondary color for text and icons.                                                 |
-| <span class="swatch" style="background: var(--color-fill)"></span> `--color-fill`              | Provides subtle contrast against a background.                                     |
-| <span class="swatch" style="background: var(--color-stroke)"></span> `--color-stroke`            | Use for borders or dividers.                                      |
-| <span class="swatch" style="background: var(--color-emphasis)"></span> `--color-emphasis`          | Highest contrast against the default background, such as in tooltips. |
-| <span class="swatch" style="background: var(--color-emphasis-contrast)"></span> `--color-emphasis-contrast` | Optimal contrast against the emphasis color.                                                                                   |
+
+| Color                                                                                                       | Usage                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| <span class="swatch" style="background: var(--color-bg)"></span> `--color-bg`                               | Page background color.                                                |
+| <span class="swatch" style="background: var(--color-text)"></span> `--color-text`                           | Default color for text and icons.                                     |
+| <span class="swatch" style="background: var(--color-muted)"></span> `--color-muted`                         | Secondary color for text and icons.                                   |
+| <span class="swatch" style="background: var(--color-fill)"></span> `--color-fill`                           | Provides subtle contrast against a background.                        |
+| <span class="swatch" style="background: var(--color-stroke)"></span> `--color-stroke`                       | Use for borders or dividers.                                          |
+| <span class="swatch" style="background: var(--color-emphasis)"></span> `--color-emphasis`                   | Highest contrast against the default background, such as in tooltips. |
+| <span class="swatch" style="background: var(--color-emphasis-contrast)"></span> `--color-emphasis-contrast` | Optimal contrast against the emphasis color.                          |
 
 Both `--color-fill` and `--color-stroke` are semi-transparent colors so they can be layered:
 
@@ -29,27 +32,30 @@ Both `--color-fill` and `--color-stroke` are semi-transparent colors so they can
 ```
 
 ### Functional Colors
+
 Functional colors are used to convey interactivity and meaning. The functional colors are:
 
-| Color      | Usage                                                   |
-| ---------- | --------------------------------------------------------- |
-| <span class="swatch bg-accent"></span> `accent`   | Primary brand color used to convey interactivity and state. |
-| <span class="swatch bg-success"></span> `success`  | Emphasize a positive message.                                       |
-| <span class="swatch bg-warning"></span> `warning`  | Emphasize elements that require a user's attention.                 |
-| <span class="swatch bg-danger"></span> `danger`   | Emphasize an error message or destructive action.                              |
-| <span class="swatch bg-activity"></span> `activity` | Emphasize new activity of interest to the user.                                                          |
+| Color                                               | Usage                                                       |
+| --------------------------------------------------- | ----------------------------------------------------------- |
+| <span class="swatch bg-accent"></span> `accent`     | Primary brand color used to convey interactivity and state. |
+| <span class="swatch bg-success"></span> `success`   | Emphasize a positive message.                               |
+| <span class="swatch bg-warning"></span> `warning`   | Emphasize elements that require a user's attention.         |
+| <span class="swatch bg-danger"></span> `danger`     | Emphasize an error message or destructive action.           |
+| <span class="swatch bg-activity"></span> `activity` | Emphasize new activity of interest to the user.             |
 
 Each functional color has four associated varieties:
 
-| Variable                                                                                                | Usage                                                                 |
-|---------------------------------------------------------------------------------------------------------| --------------------------------------------------------------------- |
+| Variable                                                                                                | Usage                                                                    |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | <span class="swatch bg-accent"></span> `--color-{name}`                                                 | Background color for elements like buttons and alerts.                   |
-| <span class="swatch" style="background: var(--color-accent-contrast)"></span> `--color-{name}-contrast` | Optimal contrast against the background color.                    |
-| <span class="swatch bg-accent-soft"></span> `--color-{name}-soft`                                       | Soft background color to subtly highlight an element. |
-| <span class="swatch" style="background: var(--color-accent-text)"></span> `--color-{name}-text`         | Optimal contrast against the soft color (and the page background color).                                                                      |
+| <span class="swatch" style="background: var(--color-accent-contrast)"></span> `--color-{name}-contrast` | Optimal contrast against the background color.                           |
+| <span class="swatch bg-accent-soft"></span> `--color-{name}-soft`                                       | Soft background color to subtly highlight an element.                    |
+| <span class="swatch" style="background: var(--color-accent-text)"></span> `--color-{name}-text`         | Optimal contrast against the soft color (and the page background color). |
 
 ## Utilities
+
 ### Foreground Color
+
 Use the `.color` utilities to set text or icons to a specific color:
 
 ```html render
@@ -65,10 +71,13 @@ Use the `.color` utilities to set text or icons to a specific color:
 The `.color-inherit` utility is available to set color inheritance:
 
 ```html render
-<div class="color-success">This text is green, <a href="#" class="color-inherit">including the link</a></div>
+<div class="color-success">
+  This text is green, <a href="#" class="color-inherit">including the link</a>
+</div>
 ```
 
 ### Background Color
+
 Use the `.bg` utilities to set an element's background to a specific color. They will also set the element's foreground color to provide optimal contrast:
 
 ```html render

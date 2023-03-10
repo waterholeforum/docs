@@ -1,7 +1,9 @@
 # Frontend
+
 Waterhole's frontend is made up of Laravel Blade views and components, and uses [Hotwire](https://hotwired.dev) to coordinate partial page updates.
 
 ## Blade Components
+
 Waterhole exposes many Blade Components that you can use in your own views. These are documented in the [`Waterhole\View\Components` namespace](https://waterhole.dev/docs/reference/Waterhole/View/Components.html).
 
 Perhaps the most important of these to know is the [`<x-waterhole::layout>` component](https://waterhole.dev/docs/reference/Waterhole/View/Components/Layout.html). Use this to render your own views inside the Waterhole layout:
@@ -15,6 +17,7 @@ Perhaps the most important of these to know is the [`<x-waterhole::layout>` comp
 Blade Components are only used to encapsulate more complex HTML structures and behavior. For basic UI elements like buttons and inputs, use plain HTML elements and apply Waterhole's [CSS classes](./design/overview.md) directly.
 
 ## Component Lists
+
 Many parts of Waterhole's templates render **lists** of components. For example, the page header is made up of these components:
 
 - The forum title
@@ -23,11 +26,12 @@ Many parts of Waterhole's templates render **lists** of components. For example,
 - The notifications button
 - The user menu
 
-You can hook into these component lists and add your own components, or remove existing ones. All of these component lists are exposed as [extenders](./extending.md#extenders). 
+You can hook into these component lists and add your own components, or remove existing ones. All of these component lists are exposed as [extenders](./extending.md#extenders).
 
 Check out the [list of extenders](https://waterhole.dev/docs/reference/Waterhole/Extend.html) to learn about all the points where you can modify components. The documentation for each extender also describes what parameters will be passed into the components when they're rendered.
 
 ### Adding Components
+
 To add a component, call the `add` method on the applicable extender in the boot method of a service provider:
 
 ```php
@@ -45,6 +49,7 @@ The component can be any one of the following:
 - A callable that returns any of the above
 
 ### Component Positions
+
 Each item in a component list has a "position", and components are rendered by their position in ascending order. To specify a position, pass it as the third argument. Otherwise, a default of `0` will be used.
 
 ```php
@@ -52,6 +57,7 @@ Extend\SiteHeader::add(HelloWorld::class, position: 10);
 ```
 
 ### Component Keys
+
 When adding a component to an extender, you can specify a unique key. This will allow other extensions to replace the component by using the same key, or remove it:
 
 ```php
@@ -65,6 +71,7 @@ Extend\SiteHeader::remove('hello');
 ```
 
 ### Rendering Component Lists
+
 If you're building an extension, you can expose your own extendable component lists. First, create an extender using the `Waterhole\Extend\Concerns\OrderedList` and `OfComponents` traits and add any default components:
 
 ```php
@@ -88,25 +95,31 @@ Now, in your view, you can retrive the ordered component instances using the `co
 ```
 
 ## Hotwire
+
 Waterhole uses [Hotwire](https://hotwired.dev) to achieve the speed and responsiveness of a single-page application, while keeping template rendering on the server.
 
 The [turbo-laravel](https://github.com/tonysm/turbo-laravel) library is included and can be used to help mark-up Turbo Frames and build Turbo Stream responses.
 
 ### Stimulus & Custom Elements
+
 Waterhole's templates are all server-rendered HTML, progressively enhanced with sprinklings of JavaScript via both [Stimulus](https://stimulus.hotwired.dev) and [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
 
 ### Turbo Drive
+
 [Turbo Drive](https://turbo.hotwired.dev/handbook/drive) accelerates links and form submissions by negating the need for full page reloads. It is enabled by default in all Waterhole views. If needed, you can [opt out](https://turbo.hotwired.dev/handbook/drive#disabling-turbo-drive-on-specific-links-or-forms) on individual links and forms.
 
 ### Turbo Frames
+
 [Turbo Frames](https://turbo.hotwired.dev/handbook/frames) allow predefined parts of a page to be updated on request. They are used in various places throughout the Waterhole UI. For example, a `<turbo-frame>` wraps each comment so that when you click "Like" or "Edit", only that comment will be re-rendered.
 
 You may need to be mindful of Turbo Frames when hooking into Waterhole's views. It is possible to force a link or form to ["break out" of a frame](https://turbo.hotwired.dev/handbook/frames#targeting-navigation-into-or-out-of-a-frame) if needed.
 
 ### Turbo Streams
+
 [Turbo Streams](https://turbo.hotwired.dev/handbook/streams) are fragments of HTML wrapped in `<turbo-stream>` elements that specify where and how the HTML should be merged into the page. Waterhole uses Turbo Streams to deliver partial page updates after running [Actions](./actions.md), and to broadcast real-time updates through WebSockets.
 
 #### Streamable Components
+
 Waterhole includes a mechanism to simplify the process of rendering a Blade Component in a Turbo Stream. First, the component must include the [`Waterhole\View\Components\Concerns\Streamable` trait]()(https://waterhole.dev/docs/reference/Waterhole/View/Components/Concerns/Streamable.html):
 
 ```php

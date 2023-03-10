@@ -1,15 +1,19 @@
 # Database
+
 Waterhole uses standard Laravel database migrations and Eloquent models.
 
 ## Migrations
+
 As with any standard Laravel application, you can generate and run [database migrations](https://laravel.com/docs/9.x/migrations) as needed.
 
 If you're developing an extension, don't forget to [load your migrations](https://laravel.com/docs/9.x/packages#migrations) in your service provider.
 
 ## Models
+
 Waterhole's [Eloquent](https://laravel.com/docs/9.x/eloquent) models are found in the [`Waterhole\Models` namespace](https://waterhole.dev/docs/reference/Waterhole/Models.html).
 
 ### Defining Relationships
+
 To define new relations on Waterhole's models, use the [`resolveRelationUsing` method](https://laravel.com/docs/9.x/eloquent-relationships#dynamic-relationships), typically in the boot method of a service provider:
 
 ```php
@@ -22,6 +26,7 @@ User::resolveRelationUsing('address', function (User $user) {
 ```
 
 ### Model Events
+
 You can listen for the [standard events](https://laravel.com/docs/9.x/eloquent#events) dispatched by Eloquent models to hook into the following moments in a model's lifecycle: `retrieved`, `creating`, `created`, `updating`, `updated`, `saving`, `saved`, `deleting`, `deleted`, `restoring`, `restored`, and `replicating`.
 
 ```php

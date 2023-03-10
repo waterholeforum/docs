@@ -1,23 +1,25 @@
 # Forms & Inputs
 
 ## Input
+
 Use the `.input` class to style any element (`<input>`, `<textarea>`, and `<select>`) as a input:
 
 ```html render
 <div class="stack gap-sm">
-    <input type="text" class="input" value="Input">
-    
-    <textarea class="input">Textarea</textarea>
-    
-    <select class="input">
-      <option>Select</option>
-    </select>
-    
-    <input type="file" class="input">
+  <input type="text" class="input" value="Input" />
+
+  <textarea class="input">Textarea</textarea>
+
+  <select class="input">
+    <option>Select</option>
+  </select>
+
+  <input type="file" class="input" />
 </div>
 ```
 
 ### Input Container
+
 Wrap an input in an `.input-container` to decorate it with icons or buttons:
 
 ```blade render
@@ -33,29 +35,31 @@ Wrap an input in an `.input-container` to decorate it with icons or buttons:
 ```
 
 ## Checkbox & Radio
+
 Checkboxes and radio inputs are globally styled to match the Waterhole theme.
 
 Apply the `.choice` class to a surrounding `<label>` for proper alignment of a checkbox/radio input and its text label:
 
 ```html render
 <div class="stack gap-sm">
-    <label class="choice">
-      <input type="checkbox">
-      Checkbox
-    </label>
-    
-    <label class="choice">
-      <input type="radio">
-      Radio
-    </label>
+  <label class="choice">
+    <input type="checkbox" />
+    Checkbox
+  </label>
+
+  <label class="choice">
+    <input type="radio" />
+    Radio
+  </label>
 </div>
 ```
 
 ## Text Editor
+
 The text editor component decorates a `<textarea>` with a markdown toolbar, auto-suggests users for `@` mentions, and supports the ability to preview the formatted content:
 
 ```blade render
-<x-waterhole::text-editor 
+<x-waterhole::text-editor
   name="body"
   value="Hello, world!"
   placeholder="Enter your text"
@@ -64,6 +68,7 @@ The text editor component decorates a `<textarea>` with a markdown toolbar, auto
 ```
 
 ## Color Picker
+
 Waterhole provides a color picker input component which allows the user to visually pick a hex (or hex alpha) color:
 
 ```blade render
@@ -71,13 +76,14 @@ Waterhole provides a color picker input component which allows the user to visua
 ```
 
 ## Fields
+
 Fields are a standard way to lay out a form control, its label, and help text or status message. If there is enough room, the label and control will be displayed in a row; otherwise, they will be stacked.
 
 ```html render
 <div class="field">
   <label class="field__label">Email</label>
   <div class="grow stack gap-xs">
-    <input type="email" class="input">
+    <input type="email" class="input" />
     <div class="field__description">Enter your email address.</div>
   </div>
 </div>
@@ -88,7 +94,7 @@ The `<x-waterhole::field>` Blade component can be used to efficiently construct 
 ```blade render
 <x-waterhole::field
   name="email"
-  label="Email" 
+  label="Email"
   description="Enter your email address."
 >
   <input type="email" name="email" class="input">

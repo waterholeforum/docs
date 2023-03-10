@@ -1,7 +1,9 @@
 # Dialog
+
 A dialog encapsulates a specific task, like logging in, creating a post, or confirming an action.
 
 ## CSS
+
 The `.dialog` class creates a border around the dialog, while the `.dialog__header` and `.dialog__body` class apply appropriate padding:
 
 ```html render
@@ -10,22 +12,20 @@ The `.dialog` class creates a border around the dialog, while the `.dialog__head
     <h1 class="h3" id="dialog-title">My Dialog</h1>
   </div>
 
-  <div class="dialog__body">
-    Hello, world!
-  </div>
+  <div class="dialog__body">Hello, world!</div>
 </div>
 ```
 
 ### Sizes
+
 By default, dialogs will size to fit their content. You can control the dialog width explicitly using the `.dialog--sm`:
 
 ```html render
-<div class="dialog dialog--sm dialog__body">
-  Small Dialog
-</div>
+<div class="dialog dialog--sm dialog__body">Small Dialog</div>
 ```
 
 ## Blade Component
+
 As a shortcut for building dialog markup, you can use the `<x-waterhole::dialog>` component:
 
 ```blade render
@@ -35,6 +35,7 @@ As a shortcut for building dialog markup, you can use the `<x-waterhole::dialog>
 ```
 
 ## Modals
+
 Dialogs can be displayed modally (superimposed over the page) using the following pattern.
 
 > **Tip:**  
@@ -61,20 +62,19 @@ Route::get('my-dialog', function () {
 Then, create a link to your route, targeting the `modal` Turbo Frame with the attribute `data-turbo-frame="modal"`:
 
 ```blade
-<a 
-    href="{{ url('my-dialog') }}" 
+<a
+    href="{{ url('my-dialog') }}"
     data-turbo-frame="modal"
 >Open Modal</a>
 ```
 
 There are a few ways to close the modal:
 
-- Call the  `modal#hide` Stimulus action inside the modal.  
-        
-        
-    ```blade
-    <a href="{{ url()->previous() }}" data-action="modal#hide">Back</a>
-    ```
+- Call the `modal#hide` Stimulus action inside the modal.
+
+  ```blade
+  <a href="{{ url()->previous() }}" data-action="modal#hide">Back</a>
+  ```
 
 - Return a response without a `<turbo-frame id="modal">` element.
 - Return a [Turbo Stream](../frontend.md#turbo-streams) response.

@@ -1,4 +1,5 @@
 # Table
+
 Tables display sets of data.
 
 Use the `.table` class to apply basic table styling. Wrap in a `.table-container` (with `tabindex="0"` for keyboard accessibility) to enable horizontal scrolling at smaller screen sizes.

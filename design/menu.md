@@ -1,4 +1,5 @@
 # Menu
+
 Display a list of choices or commands in a dropdown menu.
 
 Waterhole uses the inclusive [popup](https://github.com/tobyzerner/inclusive-elements/tree/master/src/popup) and [menu](https://github.com/tobyzerner/inclusive-elements/tree/master/src/menu) elements to power menu buttons. Wrap the trigger button and menu in a `<ui-popup>` element to hook it up as an accessible popup. Use a `<ui-menu>` element for the menu itself to enable keyboard navigation.
@@ -29,18 +30,19 @@ Use the `.menu-item` class for menu items, which can be buttons, links, or label
 ```
 
 ## Divider
+
 Use `.menu-divider` to divide groups of related items.
 
 ```html render
 <ui-menu class="menu">
   <button class="menu-item" role="menuitem">Menu Item</button>
-  <hr class="menu-divider">
+  <hr class="menu-divider" />
   <button class="menu-item" role="menuitem">Menu Item</button>
 </ui-menu>
 ```
 
-
 ## Headings
+
 Use the `.menu-heading` class for group headings.
 
 ```html render
@@ -51,6 +53,7 @@ Use the `.menu-heading` class for group headings.
 ```
 
 ## Title & Description
+
 Menu items may have a title and description, rather than just a text label. Use `.menu-item__title` and `.menu-item__description` for this:
 
 ```blade render
@@ -66,6 +69,7 @@ Menu items may have a title and description, rather than just a text label. Use 
 ```
 
 ## Selected
+
 Menu items will be styled as "selected" if they have the `.is-active` class, or `[aria-current="page"]` or `[aria-checked="true"]` attributes. The `.menu-item__check` class can be used to display an icon which will only become visible if the containing menu item is selected.
 
 ```blade render

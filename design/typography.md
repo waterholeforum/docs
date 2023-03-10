@@ -1,26 +1,30 @@
 # Typography
+
 Make use of consistent typographic styles for your content.
 
 ## Fonts
+
 Waterhole defines three font families for use as CSS variables:
 
 ```css
 /* The default family used for most text */
---font-text: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+--font-text: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 /* Display family for larger headings (no different by default) */
---font-display: var(--font-text);  
+--font-display: var(--font-text);
 
 /* Monospace family used for code blocks */
 --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
 ```
 
 ## Scale
+
 Waterhole defines a typographic scale in `--text-{size}` CSS variables:
 
 ```css
---text-xxs: .8rem;
---text-xs: .875rem;
+--text-xxs: 0.8rem;
+--text-xs: 0.875rem;
 --text-sm: 1rem;
 --text-md: 1.125rem;
 --text-lg: 1.5rem;
@@ -41,6 +45,7 @@ This scale can be directly applied to text using the `.text-{size}` utility clas
 ```
 
 ## Line Height
+
 Three line heights are defined, with the `default` being applied globally, the `condensed` value used for headings, and the `expanded` value used for [content](#content).
 
 ```css
@@ -50,6 +55,7 @@ Three line heights are defined, with the `default` being applied globally, the `
 ```
 
 ## Headings
+
 Heading styles are applied to `<h1>`-`<h6>` elements globally.
 
 ```html render
@@ -68,13 +74,17 @@ These styles are also available as `.h1`-`.h6` classes, which are useful for cha
 ```
 
 ## Content
+
 User-generated content can be rendered inside a `.content` element to automatically apply styles and spacing to all semantic markup, including headings, quotes, lists, and code:
 
 ```html render
 <div class="content">
   <h4>User Generated Content</h4>
   <blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </blockquote>
   <ul>
     <li>List</li>
@@ -84,10 +94,11 @@ User-generated content can be rendered inside a `.content` element to automatica
 ```
 
 ## Weight
+
 Three font weights are defined:
 
-```css 
---weight-normal: 400;  
+```css
+--weight-normal: 400;
 --weight-medium: 500;
 --weight-bold: 600;
 ```
@@ -101,6 +112,7 @@ Use font weight utilities to apply these to text:
 ```
 
 ## Alignment
+
 Use text alignment utilities to left align, center, or right align text:
 
 ```html render
@@ -110,6 +122,7 @@ Use text alignment utilities to left align, center, or right align text:
 ```
 
 ## Measure
+
 Waterhole defines a [typographic measure](https://every-layout.dev/rudiments/axioms/), which is the maxiumum recommended width of the line of text to ensure readability. The measure is available in a variable and can be applied using a utility class:
 
 ```css
@@ -117,15 +130,22 @@ Waterhole defines a [typographic measure](https://every-layout.dev/rudiments/axi
 ```
 
 ```html render
-<p class="measure">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p class="measure">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+  in culpa qui officia deserunt mollit anim id est laborum.
+</p>
 ```
 
 ## Links
+
 Anchor elements are globally styled with the accent color, and an underline on hover. You can also use the `.link` class to apply matching styles to other elements and make them look like links.
 
 ```html render
-<a href="#">Hyperlink</a>
-<button class="link">Button Link</button>
+<a href="#">Hyperlink</a> <button class="link">Button Link</button>
 ```
 
 Anchor elements in a `.content` block are given a persistent underline to improve accessibility.

@@ -1,4 +1,5 @@
 # Tabs
+
 Tabs are a horizontal list of navigation links, used to switch between views.
 
 Use the `.tabs` class for the containing element and `.tab` on the clickable elements. For accessibility, tabs should be wrapped in a `<nav>` or element with `[role="navigation"]`.

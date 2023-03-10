@@ -1,12 +1,15 @@
 # Authentication
+
 Waterhole uses Laravel's Authentication system, and supports adding OAuth authentication providers via Laravel Socialite.
 
 ## OAuth
+
 Waterhole supports OAuth authentication via [Laravel Socialite](https://github.com/laravel/socialite), which includes support for Facebook, Twitter, LinkedIn, Google, GitHub, GitLab, and Bitbucket.
 
 The [Socialite Providers](https://socialiteproviders.com/) organization contains many more providers that you can use as well. And, if you require a provider not on the list, you can [create your own](https://medium.com/laravel-news/adding-auth-providers-to-laravel-socialite-ca0335929e42).
 
 ### Configuring OAuth
+
 Install Socialite with the following Composer command:
 
 ```

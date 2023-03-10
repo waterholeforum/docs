@@ -1,4 +1,5 @@
 # Design System
+
 Leverage Waterhole's design tokens, utilities, and components in your customizations.
 
 The Waterhole Design System provides a foundation on which to build consistent user interfaces. It consists of three parts:

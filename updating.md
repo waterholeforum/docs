@@ -1,4 +1,5 @@
 # Updating
+
 Keeping your Waterhole installation up-to-date is easy, thanks to Composer.
 
 > **Warning:**  
@@ -23,6 +24,7 @@ php artisan cache:clear
 ```
 
 ## Deployment Workflow
+
 We strongly recommend setting up a [deployment workflow](./deploying.md) where all updates are installed and tested locally before they are pushed into production.
 
 Before updating your production instance, you may wish to put your application into [maintenance mode](https://laravel.com/docs/9.x/configuration#pre-rendering-the-maintenance-mode-view) so that users do not encounter errors.
