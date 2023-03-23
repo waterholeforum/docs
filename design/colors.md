@@ -6,8 +6,8 @@ Use variables and utilities to apply consistent and accessible color.
 
 Waterhole's color palette consists of:
 
-- **Base colors** to help define user interface structure.
-- Several **functional colors** to convey interactivity and meaning (accent, success, warning, danger, activity).
+-   **Base colors** to help define user interface structure.
+-   Several **functional colors** to convey interactivity and meaning (accent, success, warning, danger, activity).
 
 All colors are selected to pass a minimum WCAG accessibility rating of [level AA](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Meeting these standards ensures that content is accessible by everyone, regardless of ability or device.
 
@@ -27,7 +27,7 @@ Both `--color-fill` and `--color-stroke` are semi-transparent colors so they can
 
 ```html render
 <div class="bg-fill p-md">
-  <div class="bg-fill p-md"></div>
+    <div class="bg-fill p-md"></div>
 </div>
 ```
 
@@ -72,7 +72,7 @@ The `.color-inherit` utility is available to set color inheritance:
 
 ```html render
 <div class="color-success">
-  This text is green, <a href="#" class="color-inherit">including the link</a>
+    This text is green, <a href="#" class="color-inherit">including the link</a>
 </div>
 ```
 

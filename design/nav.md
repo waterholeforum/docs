@@ -33,9 +33,9 @@ Use the `.nav-heading` class for a heading:
 
 The `<x-waterhole::nav-link>` component is available to easily construct nav links and conditionally apply the `[aria-current="page"]` attribute. In addition to a `label`, `icon`, `badge`, and `badge-class`, you can pass:
 
-- `route` to link to a named route (active if that is the current route)
-- `href` to link to a URL (active if the current URL starts with the given URL)
-- `active` as a boolean or `Closure` to manually set the item's active state
+-   `route` to link to a named route (active if that is the current route)
+-   `href` to link to a URL (active if the current URL starts with the given URL)
+-   `active` as a boolean or `Closure` to manually set the item's active state
 
 ```blade render
 <x-waterhole::nav-link
@@ -81,5 +81,5 @@ It accepts an array of Blade Component instances which will be rendered in a nav
 
 The component accepts the following optional slots:
 
-- `empty` can be used to override the button content when no item is active
-- `button` can be used to override the button content in all cases
+-   `empty` can be used to override the button content when no item is active
+-   `button` can be used to override the button content in all cases

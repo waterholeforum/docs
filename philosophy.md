@@ -16,11 +16,19 @@ Waterhole embodies this approach in its [Design System](./design/overview.md) â€
 
 Every community is different. Waterhole doesn't try and shy away from this fact with a one-size-fits-all approach. It embraces the challenges of integration and unique community requirements. Core features are thoughtfully implemented to serve multiple use cases. The concept of extensibility is pervasive throughout the codebase, allowing communities to implement custom functionality without accumulating technical debt.
 
+Sane defaults
+
 ## Simple Tech
 
 **Waterhole relies on a simple, resilient, proven technology stack.**
 
-Waterhole combines the simplicity of a [Laravel](https://laravel.com) Multi-Page Application (MPA) architecture with the improved user experience of Single-Page Applications (SPA) via [Hotwire](https://hotwired.dev). This makes for fast page loads, especially in unfavorable network conditions. And it significantly reduces codebase complexity, leading to a more productive and enjoyable development experience for anyone working with Waterhole.
+Waterhole combines the simplicity of a [Laravel](https://laravel.com) Multi-Page Application (MPA) architecture with the improved user experience of Single-Page Applications (SPA) via [Hotwire](https://hotwired.dev). This makes for fast page loads, even in unfavorable network conditions. And it significantly reduces codebase complexity, leading to a more productive and enjoyable development experience for anyone working with Waterhole.
+
+By adhering closely to Laravel conventions, there is less for new developers to learn
+
+## Great Documentation
+
+Waterhole is all about customization via code, so great documentation is imperative.
 
 ## Sustainably Independent
 

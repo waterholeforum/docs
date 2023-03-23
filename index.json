@@ -1,52 +1,52 @@
 [
-  {
-    "text": "Getting Started",
-    "items": [
-      { "text": "Installation", "link": "/installation" },
-      { "text": "Configuration", "link": "/configuration" },
-      { "text": "Deploying", "link": "/deploying" },
-      { "text": "Updating", "link": "/updating" },
-      { "text": "Migrating", "link": "/migrating" },
-      { "text": "Troubleshooting", "link": "/troubleshooting" }
-    ]
-  },
-  {
-    "text": "Customization",
-    "items": [
-      { "text": "Structure", "link": "/structure" },
-      { "text": "User Groups", "link": "/groups" },
-      { "text": "Design", "link": "/design" },
-      { "text": "Dashboard", "link": "/dashboard" },
-      { "text": "Localization", "link": "/localization" },
-      { "text": "Authentication", "link": "/authentication" }
-    ]
-  },
-  {
-    "text": "Extending",
-    "items": [
-      { "text": "Introduction", "link": "/extending" },
-      { "text": "Distribution", "link": "/distribution" },
-      { "text": "Actions", "link": "/actions" },
-      { "text": "Admin", "link": "/admin" },
-      { "text": "Assets", "link": "/assets" },
-      { "text": "Authorization", "link": "/authorization" },
-      { "text": "Database", "link": "/database" },
-      { "text": "Filters", "link": "/filters" },
-      { "text": "Formatting", "link": "/formatting" },
-      { "text": "Forms", "link": "/forms" },
-      { "text": "Frontend", "link": "/frontend" },
-      { "text": "Internationalization", "link": "/internationalization" },
-      { "text": "Notifications", "link": "/notifications" },
-      { "text": "Routes", "link": "/routes" }
-    ]
-  },
-  {
-    "text": "Resources",
-    "items": [
-      { "text": "Philosophy", "link": "/philosophy" },
-      { "text": "Code of Conduct", "link": "/code-of-conduct" },
-      { "text": "Contributing", "link": "/contributing" },
-      { "text": "Licensing", "link": "/licensing" }
-    ]
-  }
+    {
+        "text": "Getting Started",
+        "items": [
+            { "text": "Installation", "link": "/installation" },
+            { "text": "Configuration", "link": "/configuration" },
+            { "text": "Deploying", "link": "/deploying" },
+            { "text": "Updating", "link": "/updating" },
+            { "text": "Migrating", "link": "/migrating" },
+            { "text": "Troubleshooting", "link": "/troubleshooting" }
+        ]
+    },
+    {
+        "text": "Customization",
+        "items": [
+            { "text": "Structure", "link": "/structure" },
+            { "text": "User Groups", "link": "/groups" },
+            { "text": "Design", "link": "/design" },
+            { "text": "Dashboard", "link": "/dashboard" },
+            { "text": "Localization", "link": "/localization" },
+            { "text": "Authentication", "link": "/authentication" }
+        ]
+    },
+    {
+        "text": "Extending",
+        "items": [
+            { "text": "Introduction", "link": "/extending" },
+            { "text": "Distribution", "link": "/distribution" },
+            { "text": "Actions", "link": "/actions" },
+            { "text": "Admin", "link": "/admin" },
+            { "text": "Assets", "link": "/assets" },
+            { "text": "Authorization", "link": "/authorization" },
+            { "text": "Database", "link": "/database" },
+            { "text": "Filters", "link": "/filters" },
+            { "text": "Formatting", "link": "/formatting" },
+            { "text": "Forms", "link": "/forms" },
+            { "text": "Frontend", "link": "/frontend" },
+            { "text": "Internationalization", "link": "/internationalization" },
+            { "text": "Notifications", "link": "/notifications" },
+            { "text": "Routes", "link": "/routes" }
+        ]
+    },
+    {
+        "text": "Resources",
+        "items": [
+            { "text": "Philosophy", "link": "/philosophy" },
+            { "text": "Code of Conduct", "link": "/code-of-conduct" },
+            { "text": "Contributing", "link": "/contributing" },
+            { "text": "Licensing", "link": "/licensing" }
+        ]
+    }
 ]

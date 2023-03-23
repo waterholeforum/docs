@@ -1,35 +1,35 @@
 [
-  {
-    "text": "Design System",
-    "items": [
-      { "text": "Overview", "link": "/design/overview" },
-      { "text": "Layout", "link": "/design/layout" },
-      { "text": "Typography", "link": "/design/typography" },
-      { "text": "Colors", "link": "/design/colors" },
-      { "text": "Miscellaneous", "link": "/design/miscellaneous" }
-    ]
-  },
-  {
-    "text": "Components",
-    "items": [
-      { "text": "Alerts", "link": "/design/alerts" },
-      { "text": "Badge", "link": "/design/badge" },
-      { "text": "Breadcrumb", "link": "/design/breadcrumb" },
-      { "text": "Buttons", "link": "/design/buttons" },
-      { "text": "Cards", "link": "/design/cards" },
-      { "text": "Channels", "link": "/design/channels" },
-      { "text": "Dialog", "link": "/design/dialog" },
-      { "text": "Divider", "link": "/design/divider" },
-      { "text": "Forms & Inputs", "link": "/design/forms" },
-      { "text": "Icons", "link": "/design/icons" },
-      { "text": "Menu", "link": "/design/menu" },
-      { "text": "Nav", "link": "/design/nav" },
-      { "text": "Placeholder", "link": "/design/placeholder" },
-      { "text": "Spinner", "link": "/design/spinner" },
-      { "text": "Table", "link": "/design/table" },
-      { "text": "Tabs", "link": "/design/tabs" },
-      { "text": "Tooltips", "link": "/design/tooltips" },
-      { "text": "Users", "link": "/design/users" }
-    ]
-  }
+    {
+        "text": "Design System",
+        "items": [
+            { "text": "Overview", "link": "/design/overview" },
+            { "text": "Layout", "link": "/design/layout" },
+            { "text": "Typography", "link": "/design/typography" },
+            { "text": "Colors", "link": "/design/colors" },
+            { "text": "Miscellaneous", "link": "/design/miscellaneous" }
+        ]
+    },
+    {
+        "text": "Components",
+        "items": [
+            { "text": "Alerts", "link": "/design/alerts" },
+            { "text": "Badge", "link": "/design/badge" },
+            { "text": "Breadcrumb", "link": "/design/breadcrumb" },
+            { "text": "Buttons", "link": "/design/buttons" },
+            { "text": "Cards", "link": "/design/cards" },
+            { "text": "Channels", "link": "/design/channels" },
+            { "text": "Dialog", "link": "/design/dialog" },
+            { "text": "Divider", "link": "/design/divider" },
+            { "text": "Forms & Inputs", "link": "/design/forms" },
+            { "text": "Icons", "link": "/design/icons" },
+            { "text": "Menu", "link": "/design/menu" },
+            { "text": "Nav", "link": "/design/nav" },
+            { "text": "Placeholder", "link": "/design/placeholder" },
+            { "text": "Spinner", "link": "/design/spinner" },
+            { "text": "Table", "link": "/design/table" },
+            { "text": "Tabs", "link": "/design/tabs" },
+            { "text": "Tooltips", "link": "/design/tooltips" },
+            { "text": "Users", "link": "/design/users" }
+        ]
+    }
 ]

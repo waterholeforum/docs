@@ -6,17 +6,17 @@ Use the `.tabs` class for the containing element and `.tab` on the clickable ele
 
 ```html render
 <nav aria-label="example">
-  <ul class="tabs" role="list">
-    <li>
-      <a href="#" class="tab" aria-current="page">Tab 1</a>
-    </li>
-    <li>
-      <a href="#" class="tab">Tab 2</a>
-    </li>
-    <li>
-      <a href="#" class="tab">Tab 3</a>
-    </li>
-  </ul>
+    <ul class="tabs" role="list">
+        <li>
+            <a href="#" class="tab" aria-current="page">Tab 1</a>
+        </li>
+        <li>
+            <a href="#" class="tab">Tab 2</a>
+        </li>
+        <li>
+            <a href="#" class="tab">Tab 3</a>
+        </li>
+    </ul>
 </nav>
 ```
 

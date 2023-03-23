@@ -8,11 +8,11 @@ The `.dialog` class creates a border around the dialog, while the `.dialog__head
 
 ```html render
 <div class="dialog" aria-labelledby="dialog-title">
-  <div class="dialog__header">
-    <h1 class="h3" id="dialog-title">My Dialog</h1>
-  </div>
+    <div class="dialog__header">
+        <h1 class="h3" id="dialog-title">My Dialog</h1>
+    </div>
 
-  <div class="dialog__body">Hello, world!</div>
+    <div class="dialog__body">Hello, world!</div>
 </div>
 ```
 
@@ -38,8 +38,7 @@ As a shortcut for building dialog markup, you can use the `<x-waterhole::dialog>
 
 Dialogs can be displayed modally (superimposed over the page) using the following pattern.
 
-> **Tip:**  
-> If you are intending to use a modal dialog to confirm an action, it will be easier to use the [Actions](../actions.md) mechanism which takes care of this for you.
+> **Tip:** If you are intending to use a modal dialog to confirm an action, it will be easier to use the [Actions](../actions.md) mechanism which takes care of this for you.
 
 To open a dialog box in a modal overlay, first create a route and view that renders the dialog, wrapped in a `modal` [Turbo Frame](../frontend.md#turbo-frames):
 
@@ -70,11 +69,11 @@ Then, create a link to your route, targeting the `modal` Turbo Frame with the at
 
 There are a few ways to close the modal:
 
-- Call the `modal#hide` Stimulus action inside the modal.
+-   Call the `modal#hide` Stimulus action inside the modal.
 
-  ```blade
-  <a href="{{ url()->previous() }}" data-action="modal#hide">Back</a>
-  ```
+    ```blade
+    <a href="{{ url()->previous() }}" data-action="modal#hide">Back</a>
+    ```
 
-- Return a response without a `<turbo-frame id="modal">` element.
-- Return a [Turbo Stream](../frontend.md#turbo-streams) response.
+-   Return a response without a `<turbo-frame id="modal">` element.
+-   Return a [Turbo Stream](../frontend.md#turbo-streams) response.

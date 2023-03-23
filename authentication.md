@@ -52,9 +52,9 @@ You can customize the icon and name displayed on a provider's button by providin
 To style a provider button, target it using the `.oauth-button[data-provider]` selector:
 
 ```css
-.oauth-button[data-provider="github"] {
-  background: black;
-  color: white;
+.oauth-button[data-provider='github'] {
+    background: black;
+    color: white;
 }
 ```
 

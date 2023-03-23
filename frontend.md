@@ -20,11 +20,11 @@ Blade Components are only used to encapsulate more complex HTML structures and b
 
 Many parts of Waterhole's templates render **lists** of components. For example, the page header is made up of these components:
 
-- The forum title
-- A "spacer" element
-- The search button
-- The notifications button
-- The user menu
+-   The forum title
+-   A "spacer" element
+-   The search button
+-   The notifications button
+-   The user menu
 
 You can hook into these component lists and add your own components, or remove existing ones. All of these component lists are exposed as [extenders](./extending.md#extenders).
 
@@ -43,10 +43,10 @@ Extend\SiteHeader::add(HelloWorld::class);
 
 The component can be any one of the following:
 
-- The name of a Blade Component class (eg. `HelloWorld::class`)
-- A Blade Component instance (eg. `new HelloWorld()`)
-- The name of a view (eg. `waterhole.example`)
-- A callable that returns any of the above
+-   The name of a Blade Component class (eg. `HelloWorld::class`)
+-   A Blade Component instance (eg. `new HelloWorld()`)
+-   The name of a view (eg. `waterhole.example`)
+-   A callable that returns any of the above
 
 ### Component Positions
 

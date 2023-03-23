@@ -8,14 +8,14 @@ Waterhole defines three font families for use as CSS variables:
 
 ```css
 /* The default family used for most text */
---font-text: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+--font-text: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
 
 /* Display family for larger headings (no different by default) */
 --font-display: var(--font-text);
 
 /* Monospace family used for code blocks */
---font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+--font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace;
 ```
 
 ## Scale
@@ -79,17 +79,17 @@ User-generated content can be rendered inside a `.content` element to automatica
 
 ```html render
 <div class="content">
-  <h4>User Generated Content</h4>
-  <blockquote>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </blockquote>
-  <ul>
-    <li>List</li>
-    <li>Items</li>
-  </ul>
+    <h4>User Generated Content</h4>
+    <blockquote>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+        </p>
+    </blockquote>
+    <ul>
+        <li>List</li>
+        <li>Items</li>
+    </ul>
 </div>
 ```
 
@@ -131,12 +131,11 @@ Waterhole defines a [typographic measure](https://every-layout.dev/rudiments/axi
 
 ```html render
 <p class="measure">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-  in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 ```
 

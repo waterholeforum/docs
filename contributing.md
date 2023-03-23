@@ -8,11 +8,11 @@ Thank you for taking the time to consider a contribution. Please take a moment t
 
 Before proceeding, it's important to know that Waterhole is not "Free Open-Source Software". It is **propietary** open-source software. The code is open and you can download it for free, but there are limitations to what you can do with it:
 
-- You **cannot** alter code or behavior related to licensing, updating, version/edition checking, or anything else that would circumvent the enforcement of our business model.
+-   You **cannot** alter code or behavior related to licensing, updating, version/edition checking, or anything else that would circumvent the enforcement of our business model.
 
-- You **cannot** redistribute or use Waterhole as a dependency in another distributable project without prior permission or licensing.
+-   You **cannot** redistribute or use Waterhole as a dependency in another distributable project without prior permission or licensing.
 
-- You **cannot** publicly maintain a long-term fork of Waterhole.
+-   You **cannot** publicly maintain a long-term fork of Waterhole.
 
 ## Security Disclosures
 

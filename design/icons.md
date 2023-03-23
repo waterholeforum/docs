@@ -9,15 +9,15 @@ Use the `.icon` class to give an icon the correct size and alignment relative to
 ```html render
 Text
 <svg
-  class="icon"
-  fill="none"
-  viewBox="0 0 24 24"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
+    class="icon"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
 >
-  <path d="M6 18L18 6M6 6l12 12" />
+    <path d="M6 18L18 6M6 6l12 12" />
 </svg>
 Text
 ```
@@ -55,9 +55,9 @@ To pair an icon together with a text label, wrap them in an element with the `.w
 
 Use the `<x-waterhole::icon>` component to quickly emit icon markup. The `icon` attribute may be one of the following:
 
-- The name of a [Blade Icon](https://blade-ui-kit.com/blade-icons)
-- An emoji (prefixed with `emoji:`)
-- The path to a file in the public `icons` directory (prefixed with `file:`)
+-   The name of a [Blade Icon](https://blade-ui-kit.com/blade-icons)
+-   An emoji (prefixed with `emoji:`)
+-   The path to a file in the public `icons` directory (prefixed with `file:`)
 
 ```blade render
 <x-waterhole::icon icon="tabler-star"/>

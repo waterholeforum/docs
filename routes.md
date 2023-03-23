@@ -1,6 +1,6 @@
 # Routes
 
-Waterhole registers its routes with the [Laravel Router](https://laravel.com/docs/9.x/routing) in groups with a configurable prefix and custom middleware.
+Waterhole registers its routes with the [Laravel Router](https://laravel.com/docs/10.x/routing) in groups with a configurable prefix and custom middleware.
 
 ## Path Configuration
 

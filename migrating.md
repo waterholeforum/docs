@@ -69,7 +69,7 @@ Run the appropriate `waterhole:import:*` command to import data from the legacy 
 php artisan waterhole:import:flarum
 ```
 
-- Users and groups are imported.
-- Primary tags are imported as channels. All other tags are not.
-- "Discussions" are imported as posts, and "comment posts" are imported as comments, including likes. Private or deleted discussions and posts are not.
-- Subscriptions, read state, and mentions are not currently imported.
+-   Users and groups are imported.
+-   Primary tags are imported as channels. All other tags are not.
+-   "Discussions" are imported as posts, and "comment posts" are imported as comments, including likes. Private or deleted discussions and posts are not.
+-   Subscriptions, read state, and mentions are not currently imported.

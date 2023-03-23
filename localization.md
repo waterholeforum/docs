@@ -35,6 +35,6 @@ To contribute new or missing translations to Waterhole, follow these steps:
 
 1. Clone the `waterholeforum/core` Git repository locally.
 2. Make changes to the translations in `resources/lang`:
-   - To create translations for a new language, copy the files in the `en` directory into a new directory. You can name this directory a short 2 character language code (`fr`) or the full 4 character regional code (`fr_CA`).
-   - Edit the translation files. Refer to the [Fluent Syntax Guide](https://projectfluent.org/fluent/guide/) to learn about the syntax for `.ftl` files.
+    - To create translations for a new language, copy the files in the `en` directory into a new directory. You can name this directory a short 2 character language code (`fr`) or the full 4 character regional code (`fr_CA`).
+    - Edit the translation files. Refer to the [Fluent Syntax Guide](https://projectfluent.org/fluent/guide/) to learn about the syntax for `.ftl` files.
 3. Commit your changes and submit a PR.

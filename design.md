@@ -2,76 +2,97 @@
 
 Waterhole features a simple and adaptable design that's easy to customize and integrate with your brand.
 
-## Logo
-
-Place your brand's logo under a `public/images` directory, and then set `logo_url`:
-
-```php
-    'logo_url' => asset('images/logo.png'),
-```
-
-Your logo will show up in the forum header and in your forum's email template. For full support in email clients, you must use a JPG or PNG file.
-
-If you'd like to show an SVG version of your logo in the forum header, you can [override](https://laravel.com/docs/9.x/packages#overriding-package-views) the "header title" template by creating a file at `resources/views/vendor/waterhole/components/header-title.blade.php`:
-
-```blade
-<a href="{{ route('waterhole.home') }}">
-    <!-- Your logo SVG here -->
-</a>
-```
-
 ## Custom CSS
 
 Waterhole's [design system](./design/overview.md) makes heavy use of CSS variables and classes, both of which you can override and extend.
 
-New Waterhole projects are already hooked up with a file where you can place CSS customizations: `resources/css/waterhole/app.css`.
+New Waterhole projects are already hooked up with a file where you can place custom CSS: `resources/css/waterhole/app.css`. Simply add your CSS to this file and it will be concatenated onto the end of the main stylesheet bundle.
 
-Use your browser's dev tools to inspect elements and their classes and styles to help target your customizations.
-
-### Dark Mode
-
-Waterhole features a user Dark Mode toggle button in the header. To target changes to CSS variables and classes in dark mode, put them within a `:root[data-theme="dark"]` selector:
+For example, you can change the accent color of your forum by overriding the `accent-*` variables (from which the accent color variables are derived):
 
 ```css
-:root[data-theme="dark"] {
-  /* dark mode RULES! */
+:root {
+    --accent-h: 123;
+    --accent-s: 50%;
+    --accent-l: 50%;
 }
 ```
 
-If you don't want to support Dark Mode on your forum, you can disable the toggle completely by setting `support_dark_mode` to `false` in `config/waterhole/design.php`.
+> **Tip:** If [debug mode](./configuration.md#debug-mode) is turned off, Waterhole will cache the stylesheet bundle and changes will not be picked up. Run `php artisan waterhole:cache:clear` to flush the cache.
 
-## Custom HTML
+Use your browser's dev tools to inspect elements and their classes and styles to help target your customizations. If you find you're not able to target a specific element reliably, feel free to [report a bug](https://github.com/waterholeforum/core/issues/new) and suggest any missing classes.
 
-Waterhole's HTML is server-rended using [Blade](https://laravel.com/docs/9.x/blade) views and components. Many parts of Waterhole's templates render **dynamic lists of components**. For example, the page header is made up of these components:
+You are free to set up a CSS preprocessor (like Sass, LESS, or PostCSS) in your project to compile your custom CSS before it is added to the Waterhole bundle.
 
-- The forum title
-- A "spacer" element
-- The search button
-- The notifications button
-- The user menu
-- The theme selector
+Note that you **cannot remove** any of Waterhole's base CSS – you can only build on top of it. This is to make sure that as Waterhole is updated to newer versions with new or changed UI, there are always base styles available to display it properly.
 
-Using [extenders](./extending.md#extenders), you can hook into these component lists and add your own components at any position, or remove existing ones. Some common examples are listed below. To learn more about how component lists work, see the [Frontend](./frontend.md#component-lists) page.
+### Dark Mode
 
-### `<head>`
+Waterhole features a user Dark Mode toggle button in the header. To target changes to CSS variables and classes in dark mode, put them within a `[data-theme='dark']` selector:
 
-To add custom HTML inside the `<head>` tag, add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
+```css
+[data-theme='dark'] {
+    /* dark mode customizations */
+}
+```
+
+If you don't want to support Dark Mode on your forum, you can disable the toggle completely by setting `theme` to either `light` or `dark` in `config/waterhole/design.php`.
+
+## Injecting HTML
+
+Waterhole's HTML is server-rended using [Blade](https://laravel.com/docs/10.x/blade) views and components. Many parts of Waterhole's templates render **dynamic lists of components**. For example, the page header is made up of these components:
+
+-   The forum title
+-   A "spacer" element
+-   The search button
+-   The notifications button
+-   The user menu
+-   The theme selector
+
+Using [extenders](./extending.md#extenders), you can hook into these component lists and add your own components at any position, and replace or remove existing ones. Some common examples are listed below. To learn more about how component lists work, see the [Frontend](./frontend.md#component-lists) page.
+
+> **Danger:** Avoid overriding Waterhole's Blade templates directly, as this increases the likelihood that something will break when you upgrade to a future version of Waterhole.
+
+### Forum Title
+
+To customize the forum title in the header (for example, to add your logo), use the `Header` extender to replace the `title` component. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
+
+```php
+Extend\Header::replace(key: 'title', content: 'waterhole.title');
+```
+
+The value of `content` refers to a template located at `resources/views/waterhole/title.blade.php`. You can put whatever you want in here – for example, to display an SVG logo:
+
+```blade
+<a href="{{ route('waterhole.home') }}" class="row">
+    <svg width="30" height="30">
+        <title>Acme Inc.</title>
+        <circle cx="15" cy="15" r="15"/>
+    </svg>
+</a>
+```
+
+> **Tip:** If you're embedding an `<svg>` like in the example above, it's important to add a `<title>` alternative for screen reader users.
+
+### Document `<head>`
+
+To add custom HTML inside the `<head>` tag, use the `DocumentHead` extender. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
 
 ```php
 Extend\DocumentHead::add('waterhole.head');
 ```
 
-The argument is the name of a view where your custom template resides – in this example `waterhole.head` would correspond to a template which you should create at `resources/views/waterhole/head.blade.php`.
+The argument is the name of a view where your custom template resides – in this example `waterhole.head` would correspond to a template at `resources/views/waterhole/head.blade.php`.
 
 ### Site Header
 
-To add a custom site header above Waterhole's header, add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
+To add a custom site header above Waterhole's header, use the `LayoutBefore` extender. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
 
 ```php
 Extend\LayoutBefore::add('partials.header', position: -10);
 ```
 
-Here we're referring to a template which you should create at `resources/views/partials/header.blade.php`. We also pass the `position` parameter to render our custom header **before** Waterhole's header.
+Here we're referring to a template located at `resources/views/partials/header.blade.php`. We also pass a negative `position` parameter to insert our custom header **before** Waterhole's header.
 
 ### Hero
 
@@ -95,12 +116,20 @@ Your `resources/views/waterhole/hero.blade.php` template might look something li
 
 ### Footer
 
-Since some of Waterhole's interfaces make use of infinite scrolling, placing footer content at the very bottom of the page is not a good idea. Instead, it is recommended to append content to the bottom of the sidebar on the index page. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
+You can add a global footer with copyright information and links. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
 
 ```php
-Extend\IndexFooter::add('waterhole.footer');
+Extend\Footer::add('waterhole.footer');
+```
+
+Your `resources/views/waterhole/footer.blade.php` template might look something like this:
+
+```blade
+<footer class="section container text-center">
+    &copy; {{ date('Y') }} Acme Inc.
+</footer>
 ```
 
 ### Other Extenders
 
-Take a look at all of the extenders that are available under the [`Waterhole\Extend` namespace](https://waterhole.dev/docs/reference/Waterhole/Extend.html).
+Take a look at all of the extenders that are available under the [`Waterhole\Extend` namespace](https://waterhole.dev/docs/reference/Waterhole/Extend.html).

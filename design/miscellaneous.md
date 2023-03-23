@@ -14,8 +14,8 @@ The `.rounded` utility class will apply this border radius, while `.rounded-full
 
 ```html render
 <div class="stack gap-md">
-  <div class="rounded bg-fill p-sm">.rounded</div>
-  <input type="text" class="rounded-full input" value=".rounded-full" />
+    <div class="rounded bg-fill p-sm">.rounded</div>
+    <input type="text" class="rounded-full input" value=".rounded-full" />
 </div>
 ```
 
@@ -30,8 +30,8 @@ Waterhole defines two levels of shadow:
 
 ```html render
 <div class="row gap-md">
-  <div class="rounded p-sm" style="box-shadow: var(--shadow-sm)">shadow-sm</div>
-  <div class="rounded p-sm" style="box-shadow: var(--shadow-md)">shadow-md</div>
+    <div class="rounded p-sm" style="box-shadow: var(--shadow-sm)">shadow-sm</div>
+    <div class="rounded p-sm" style="box-shadow: var(--shadow-md)">shadow-md</div>
 </div>
 ```
 

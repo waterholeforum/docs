@@ -25,8 +25,8 @@ To customize the widgets on the dashboard, open up the `config/waterhole/admin.p
 
 Each widget configuration array must have the following keys:
 
-- `component`: The name of the widget component class.
-- `width`: The minimum width of the widget on the dashboard. Numeric values represent a percentage – in the above example, `100 / 3` will make the widget take up a third of the available width. You can also specify a string containing a raw CSS `width` value (eg. `10em`). Note that widgets will grow to take up any extra space if available.
+-   `component`: The name of the widget component class.
+-   `width`: The minimum width of the widget on the dashboard. Numeric values represent a percentage – in the above example, `100 / 3` will make the widget take up a third of the available width. You can also specify a string containing a raw CSS `width` value (eg. `10em`). Note that widgets will grow to take up any extra space if available.
 
 Any additional key-value pairs will be passed to the widget component as configuration options.
 
@@ -56,8 +56,8 @@ The Getting Started widget displays a few helpful pointers on where to begin whe
 
 The Feed widget displays the latest entries from an RSS or Atom feed, refreshing every 12 hours.
 
-- `url`: The URL of the RSS or Atom feed.
-- `limit`: The number of entries to display.
+-   `url`: The URL of the RSS or Atom feed.
+-   `limit`: The number of entries to display.
 
 ### Line Chart
 
@@ -72,7 +72,7 @@ The Feed widget displays the latest entries from an RSS or Atom feed, refreshing
 
 The Line Chart widget displays a line chart showing the number of models created across a selectable time period, compared to the previous period.
 
-- `title`: A title for the widget. This can be a [translation key](./localization.md) or the text itself.
-- `model`: The class name of the model for which to display statistics.
-- `column`: The name of the timestamp column to track. Defaults to `created_at`.
-- `defaultPeriod`: The default period selected. Available periods are: `today`, `last_7_days`, `last_4_weeks`, `last_3_months`, `last_12_months`, `this_month`, `this_quarter`, `this_year`, `all_time`. Defaults to `last_7_days`.
+-   `title`: A title for the widget. This can be a [translation key](./localization.md) or the text itself.
+-   `model`: The class name of the model for which to display statistics.
+-   `column`: The name of the timestamp column to track. Defaults to `created_at`.
+-   `defaultPeriod`: The default period selected. Available periods are: `today`, `last_7_days`, `last_4_weeks`, `last_3_months`, `last_12_months`, `this_month`, `this_quarter`, `this_year`, `all_time`. Defaults to `last_7_days`.

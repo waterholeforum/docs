@@ -67,7 +67,7 @@ Extensions can make widgets available to be displayed on the admin [Dashboard](.
 
 ### Defining a Widget
 
-Widgets are just [Blade components](https://laravel.com/docs/9.x/blade#components). So, to make a new widget available, simply define a new component:
+Widgets are just [Blade components](https://laravel.com/docs/10.x/blade#components). So, to make a new widget available, simply define a new component:
 
 ```php
 namespace App\Widgets;
@@ -87,8 +87,8 @@ Typically the widget view will contain a [card](./design/cards.md) beginning wit
 
 ```html
 <div class="card">
-  <h3>Latest Resources</h3>
-  <!-- ... -->
+    <h3>Latest Resources</h3>
+    <!-- ... -->
 </div>
 ```
 

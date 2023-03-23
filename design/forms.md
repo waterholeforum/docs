@@ -6,15 +6,15 @@ Use the `.input` class to style any element (`<input>`, `<textarea>`, and `<sele
 
 ```html render
 <div class="stack gap-sm">
-  <input type="text" class="input" value="Input" />
+    <input type="text" class="input" value="Input" />
 
-  <textarea class="input">Textarea</textarea>
+    <textarea class="input">Textarea</textarea>
 
-  <select class="input">
-    <option>Select</option>
-  </select>
+    <select class="input">
+        <option>Select</option>
+    </select>
 
-  <input type="file" class="input" />
+    <input type="file" class="input" />
 </div>
 ```
 
@@ -42,15 +42,15 @@ Apply the `.choice` class to a surrounding `<label>` for proper alignment of a c
 
 ```html render
 <div class="stack gap-sm">
-  <label class="choice">
-    <input type="checkbox" />
-    Checkbox
-  </label>
+    <label class="choice">
+        <input type="checkbox" />
+        Checkbox
+    </label>
 
-  <label class="choice">
-    <input type="radio" />
-    Radio
-  </label>
+    <label class="choice">
+        <input type="radio" />
+        Radio
+    </label>
 </div>
 ```
 
@@ -81,11 +81,11 @@ Fields are a standard way to lay out a form control, its label, and help text or
 
 ```html render
 <div class="field">
-  <label class="field__label">Email</label>
-  <div class="grow stack gap-xs">
-    <input type="email" class="input" />
-    <div class="field__description">Enter your email address.</div>
-  </div>
+    <label class="field__label">Email</label>
+    <div class="grow stack gap-xs">
+        <input type="email" class="input" />
+        <div class="field__description">Enter your email address.</div>
+    </div>
 </div>
 ```
 

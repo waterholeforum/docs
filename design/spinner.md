@@ -16,8 +16,8 @@ Use the `.spinner--sm` class to reduce the spinner size, making it suitable for 
 
 ```html render
 <span role="status">
-  <span class="spinner spinner--sm"></span>
-  Loading...
+    <span class="spinner spinner--sm"></span>
+    Loading...
 </span>
 ```
 

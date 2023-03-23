@@ -8,7 +8,7 @@ But there are also plenty of opportunities to extend Waterhole itself. This sect
 
 ## Service Providers
 
-In Laravel, all of the application bootstrapping – the registration of bindings, event listeners, middleware, routes – takes place in [service providers](https://laravel.com/docs/9.x/providers). This is also the place where you can put code to extend Waterhole.
+In Laravel, all of the application bootstrapping – the registration of bindings, event listeners, middleware, routes – takes place in [service providers](https://laravel.com/docs/10.x/providers). This is also the place where you can put code to extend Waterhole.
 
 If you're building customizations specific to your community, then you can simply add code to your project's service providers, found in `app/Providers`.
 
@@ -45,14 +45,14 @@ What did we just do? We used the `LayoutBefore` extender to inject a custom comp
 
 Using extenders in service providers, it's easy to achieve a whole range of things within Waterhole. You can:
 
-- Add [Actions](./actions.md) to the context menus of posts, comments, and other objects.
-- Add pages and widgets to the [Admin](./admin.md) section.
-- Inject frontend [Assets](./assets.md), like scripts and stylesheets.
-- Hook into Waterhole's [frontend](./frontend.md).
-- Run [Database](./database.md) migrations and queries.
-- Add custom ways to sort the post and comment lists using [Filters](./filters.md).
-- Add new text [Formatting](./formatting.md) syntax.
-- Make your features [localizable](./internationalization.md).
-- Add [Authentication](./authentication.md) providers.
-- Create new types of [Notifications](./notifications.md) to send to users.
-- Add your own [Routes](./routes.md) to the application.
+-   Add [Actions](./actions.md) to the context menus of posts, comments, and other objects.
+-   Add pages and widgets to the [Admin](./admin.md) section.
+-   Inject frontend [Assets](./assets.md), like scripts and stylesheets.
+-   Hook into Waterhole's [frontend](./frontend.md).
+-   Run [Database](./database.md) migrations and queries.
+-   Add custom ways to sort the post and comment lists using [Filters](./filters.md).
+-   Add new text [Formatting](./formatting.md) syntax.
+-   Make your features [localizable](./internationalization.md).
+-   Add [Authentication](./authentication.md) providers.
+-   Create new types of [Notifications](./notifications.md) to send to users.
+-   Add your own [Routes](./routes.md) to the application.

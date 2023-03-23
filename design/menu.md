@@ -35,9 +35,9 @@ Use `.menu-divider` to divide groups of related items.
 
 ```html render
 <ui-menu class="menu">
-  <button class="menu-item" role="menuitem">Menu Item</button>
-  <hr class="menu-divider" />
-  <button class="menu-item" role="menuitem">Menu Item</button>
+    <button class="menu-item" role="menuitem">Menu Item</button>
+    <hr class="menu-divider" />
+    <button class="menu-item" role="menuitem">Menu Item</button>
 </ui-menu>
 ```
 
@@ -47,8 +47,8 @@ Use the `.menu-heading` class for group headings.
 
 ```html render
 <ui-menu class="menu">
-  <h4 class="menu-heading">Heading</h4>
-  <button class="menu-item" role="menuitem">Menu Item</button>
+    <h4 class="menu-heading">Heading</h4>
+    <button class="menu-item" role="menuitem">Menu Item</button>
 </ui-menu>
 ```
 

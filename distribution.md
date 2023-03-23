@@ -2,8 +2,7 @@
 
 You can reuse and distribute your customizations and features as extensions – packages that can be installed with Composer.
 
-> **Tip:**  
-> If you're building customizations specific to your community, then you probably don't need to make an extension. You can simply put your customizations in your application-level service providers (`app/Providers`).
+> **Tip:** If you're building customizations specific to your community, then you probably don't need to make an extension. You can simply put your customizations in your application-level service providers (`app/Providers`).
 
 ## Creating an Extension
 
@@ -21,11 +20,11 @@ Your extension's `composer.json` is pretty standard – it contains a PSR-4 auto
 
 ```json
 {
-  "extra": {
-    "waterhole": {
-      "name": "Example"
+    "extra": {
+        "waterhole": {
+            "name": "Example"
+        }
     }
-  }
 }
 ```
 
@@ -35,9 +34,9 @@ You should specify which version(s) of Waterhole your extension is compatible wi
 
 ```json
 {
-  "require": {
-    "waterhole/core": "^0.1"
-  }
+    "require": {
+        "waterhole/core": "^0.1"
+    }
 }
 ```
 

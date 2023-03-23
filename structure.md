@@ -24,13 +24,13 @@ Feel free to keep these, change them, or delete them – you're the boss! In gen
 
 When creating a channel, you will need to choose a name, URL slug, icon, and a short description. There are also a number of additional options available:
 
-- **Posting Instructions** allow you to specify more detailed information to be displayed to users when they are creating a post in the channel. This is a good place to remind users about rules and guidelines for posting in the channel – such as information that is required in a support channel.
+-   **Posting Instructions** allow you to specify more detailed information to be displayed to users when they are creating a post in the channel. This is a good place to remind users about rules and guidelines for posting in the channel – such as information that is required in a support channel.
 
-* **Ignored by Default** makes the channel opt-in. Its posts will be hidden from the community homepage, so they can only be seen by navigating to the channel. However, users will still be able to individually follow the channel to include its posts on their homepage. This option is useful for more niche channels that only a small number of users will be interested in.
+*   **Ignored by Default** makes the channel opt-in. Its posts will be hidden from the community homepage, so they can only be seen by navigating to the channel. However, users will still be able to individually follow the channel to include its posts on their homepage. This option is useful for more niche channels that only a small number of users will be interested in.
 
-* **Default Layout** allows you to choose whether posts display in a list, or as expanded cards, when viewing the channel. This is useful for particular channels that are more post-oriented than discussion-oriented – for example, a blog channel.
+*   **Default Layout** allows you to choose whether posts display in a list, or as expanded cards, when viewing the channel. This is useful for particular channels that are more post-oriented than discussion-oriented – for example, a blog channel.
 
-* **Filter Options** allows you to override the [global filter options](./filters.md) for the channel. The first one will be used as the default.
+*   **Filter Options** allows you to override the [global filter options](./filters.md) for the channel. The first one will be used as the default.
 
 You can also configure permissions to restrict which [User Groups](./groups.md) can view, post, comment, and moderate (edit and delete content) in the channel.
 
@@ -60,5 +60,4 @@ Visibility permissions on headings aren't necessary, because they automatically 
 
 On the Structure page, below the main list of nodes, there is a spot for "unlisted" nodes. Unlisted channels and pages will not be shown in the navigation sidebar, and all of the content and posts inside of them will be hidden from search engines. However, they will still be accessible directly by their URL slug.
 
-> **Warning:**  
-> Just because an item is unlisted, it doesn't mean it's not accessible. If an unlisted item has open permissions and someone obtains the URL, they will be able to see it. Always ensure your permissions are configured correctly.
+> **Warning:** Just because an item is unlisted, it doesn't mean it's not accessible. If an unlisted item has open permissions and someone obtains the URL, they will be able to see it. Always ensure your permissions are configured correctly.

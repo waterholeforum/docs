@@ -1,6 +1,6 @@
 # Notifications
 
-Waterhole builds on top of the [Laravel Notifications](https://laravel.com/docs/9.x/notifications) system to make implementing notifications even easier.
+Waterhole builds on top of the [Laravel Notifications](https://laravel.com/docs/10.x/notifications) system to make implementing notifications even easier.
 
 Waterhole takes care of all the boilerplate: managing user preferences, generating HTML emails, handling secure unsubscribe links, and rendering notifications. All you have to do is implement various methods that describe the notification content.
 

@@ -14,8 +14,8 @@ Add a card header using the `.card__header` class:
 
 ```html render
 <div class="card">
-  <div class="card__header">Header</div>
-  <div class="card__body">Body</div>
+    <div class="card__header">Header</div>
+    <div class="card__body">Body</div>
 </div>
 ```
 
@@ -23,8 +23,8 @@ These classes can be applied to `<details>` and `<summary>` elements to create a
 
 ```html render
 <details class="card">
-  <summary class="card__header">Header</summary>
-  <div class="card__body">Body</div>
+    <summary class="card__header">Header</summary>
+    <div class="card__body">Body</div>
 </details>
 ```
 
@@ -34,8 +34,8 @@ To create a card containing a list or rows, use the `.card__row` class:
 
 ```html render
 <ul class="card" role="list">
-  <li class="card__row">Row 1</li>
-  <li class="card__row">Row 2</li>
-  <li class="card__row">Row 3</li>
+    <li class="card__row">Row 1</li>
+    <li class="card__row">Row 2</li>
+    <li class="card__row">Row 3</li>
 </ul>
 ```

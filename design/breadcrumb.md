@@ -6,11 +6,11 @@ A standalone breadcrumb can be wrapped in a `<nav>`, with `aria-current="page"` 
 
 ```html render
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Section</a></li>
-    <li><a href="#" aria-current="page">Current</a></li>
-  </ol>
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Section</a></li>
+        <li><a href="#" aria-current="page">Current</a></li>
+    </ol>
 </nav>
 ```
 
@@ -18,10 +18,10 @@ The breadcrumb can also be used inside a `<header>` to give context to the curre
 
 ```html render
 <header class="stack gap-xs">
-  <ol class="breadcrumb">
-    <li><a href="#">Home</a></li>
-    <li aria-hidden="true"></li>
-  </ol>
-  <h1 class="h2">Current</h1>
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li aria-hidden="true"></li>
+    </ol>
+    <h1 class="h2">Current</h1>
 </header>
 ```

@@ -10,7 +10,7 @@ Waterhole uses the [`laravel-fluent` package](https://github.com/jrmajor/laravel
 
 ## Defining Translations
 
-Translations are stored in files within the `resources/lang` directory. Within this directory, create a subdirectory for each language you want to support. You can add translations in both `.php` files in the Laravel [short key format](https://laravel.com/docs/9.x/localization#using-short-keys), and in Fluent `.ftl` files, with the latter taking precedence.
+Translations are stored in files within the `resources/lang` directory. Within this directory, create a subdirectory for each language you want to support. You can add translations in both `.php` files in the Laravel [short key format](https://laravel.com/docs/10.x/localization#using-short-keys), and in Fluent `.ftl` files, with the latter taking precedence.
 
 ```
 /resources
