@@ -47,4 +47,4 @@ If your search is proving unfruitful, [posting in the community](https://waterho
 
 ## Report a Bug
 
-If you're confident that you've found an issue with Waterhole itself – not a problem on your end, or with an extension – please lodge it in our issue tracker by following the instructions on [Reporting Bugs](./contributing.md#bug-reports).
+If you're confident that you've found an issue with Waterhole itself – not a problem on your end, or with an extension – please lodge it in our issue tracker by following the instructions on [Reporting Bugs](./contributing.md#bug-reports).

@@ -40,7 +40,7 @@ class NewComment extends Notification
 
 ### Sender
 
-The `sender` is the user whose action caused the notification to be sent. If present, the user's avatar will be displayed alongside the notification. In the case of a notification for a new comment, it is the author of the comment:
+The `sender` is the user whose action caused the notification to be sent. If present, the user's avatar will be displayed alongside the notification. In the case of a notification for a new comment, it is the author of the comment:
 
 ```php
 public function sender(): ?User

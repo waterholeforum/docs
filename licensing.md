@@ -14,7 +14,7 @@ You can run Waterhole in a development environment for free, without any limitat
 When you're ready to launch your community on a public domain:
 
 1. [Purchase a license](https://waterhole.dev/pricing) and specify which domain you will be using it on.
-2. You'll be provided with a unique site key – add this to your Waterhole `.env` configuration:
+2. You'll be provided with a unique site key – add this to your Waterhole `.env` configuration:
 
 ```ini
 WATERHOLE_SITE_KEY=your-site-key

@@ -18,7 +18,7 @@ You'll often need to use different configuration settings based on the environme
 
 You can store environment-specific configuration in the `.env` file, then refer to in the config files using the `env()` function. This allows you to commit the `config` directory to version control without including sensitive environment-specific information.
 
-> **Tip:** Any variable in your `.env` file can be overridden by external environment variables such as server-level or system-level environment variables.
+> **Tip:** Any variable in your `.env` file can be overridden by external environment variables such as server-level or system-level environment variables.
 
 > **Warning:** Your `.env` file should never be committed to version control. Each developer/server will likely require a different environment configuration. Furthermore, this would be a security risk in the event an intruder gains access to your source control repository, since any sensitive credentials would get exposed.
 
@@ -26,7 +26,7 @@ You can store environment-specific configuration in the `.env` file, then refer 
 
 Variables in your `.env` files are parsed as strings, with the exception of some reserved values to allow you to return a wider range of types:
 
-| `.env` Value         | `env()` Value  |
+| `.env` Value         | `env()` Value  |
 | -------------------- | -------------- |
 | `true` or `(true)`   | `(bool) true`  |
 | `false` or `(false)` | `(bool) false` |
@@ -41,13 +41,13 @@ APP_NAME="My Great Community"
 
 ### Retrieving Environment Variables
 
-All environment variables are available in your config files by using the `env()` helper function. An optional second argument allows you to pass a default value.
+All environment variables are available in your config files by using the `env()` helper function. An optional second argument allows you to pass a default value.
 
 ```php
 'debug' => env('APP_DEBUG', false),
 ```
 
-> **Warning:** If you execute the `config:cache` command during your deployment process, you should be sure that you are only calling the `env` function from within your configuration files. Once the configuration has been cached, the `.env` file will not be loaded; therefore, the `env` function will only return external, system level environment variables.
+> **Warning:** If you execute the `config:cache` command during your deployment process, you should be sure that you are only calling the `env` function from within your configuration files. Once the configuration has been cached, the `.env` file will not be loaded; therefore, the `env` function will only return external, system level environment variables.
 
 ## Mail Configuration
 
