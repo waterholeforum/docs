@@ -24,12 +24,12 @@ Add scripts to the bundle using the [`Script`](https://waterhole.dev/docs/refere
 Extend\Script::add('script.js');
 ```
 
-### Admin Bundle
+### CP Bundle
 
-By default, assets are added to the main bundle which is loaded on every page – both in the forum and admin section. If you want to add assets to be loaded only in the admin section, specify the bundle name as `admin`:
+By default, assets are added to the main bundle which is loaded on every page – both in the forum and CP. If you want to add assets to be loaded only in the CP, specify the bundle name as `cp`:
 
 ```php
-Extend\Stylesheet::add('styles.css', bundle: 'admin');
+Extend\Stylesheet::add('styles.css', bundle: 'cp');
 ```
 
 ## Public Assets

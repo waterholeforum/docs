@@ -72,7 +72,7 @@ The text editor component decorates a `<textarea>` with a markdown toolbar, auto
 Waterhole provides a color picker input component which allows the user to visually pick a hex (or hex alpha) color:
 
 ```blade render
-<x-waterhole::admin.color-picker name="color" value="abcdef"/>
+<x-waterhole::cp.color-picker name="color" value="abcdef"/>
 ```
 
 ## Fields

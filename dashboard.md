@@ -1,14 +1,14 @@
-# Admin Dashboard
+# Control Panel Dashboard
 
-Customize the widgets displayed on the Admin Dashboard.
+Customize the widgets displayed on the Control Panel Dashboard.
 
-The Dashboard page of the Admin Panel is a canvas on which you can lay out **widgets**. A widget might display useful information and insights about your community, or offer shortcuts or functionality. There are a few widgets available out of the box, and developers can also easily [build custom widgets](./admin.md#widgets) and distribute them as extensions.
+The Dashboard page of the Control Panel is a canvas on which you can lay out **widgets**. A widget might display useful information and insights about your community, or offer shortcuts or functionality. There are a few widgets available out of the box, and developers can also easily [build custom widgets](./cp.md#widgets) and distribute them as extensions.
 
 On a fresh Waterhole installation, the dashboard is configured to show a few simple widgets: a Getting Started widget, a feed of the Waterhole blog, and line chart widgets showing the number of new users, posts, and comments in your community.
 
 ## Configuring Widgets
 
-To customize the widgets on the dashboard, open up the `config/waterhole/admin.php` file and find the `widgets` setting. This is an array where each item represents a widget instance and its configuration:
+To customize the widgets on the dashboard, open up the `config/waterhole/cp.php` file and find the `widgets` setting. This is an array where each item represents a widget instance and its configuration:
 
 ```php
 'widgets' => [
@@ -16,7 +16,7 @@ To customize the widgets on the dashboard, open up the `config/waterhole/admin.p
     [
         'component' => Waterhole\Widgets\LineChart::class,
         'width' => 100 / 3,
-        'title' => 'waterhole::admin.dashboard-users-title',
+        'title' => 'waterhole::cp.dashboard-users-title',
         'model' => Waterhole\Models\User::class,
     ],
     // ...
@@ -65,7 +65,7 @@ The Feed widget displays the latest entries from an RSS or Atom feed, refreshing
 [
     'component' => Waterhole\Widgets\LineChart::class,
     'width' => 100 / 3,
-    'title' => 'waterhole::admin.dashboard-users-title',
+    'title' => 'waterhole::cp.dashboard-users-title',
     'model' => Waterhole\Models\User::class,
 ],
 ```

@@ -60,7 +60,7 @@ Navigate to your community URL in your favorite web browser. If everything's bee
 From here, there are a few things you might want to do:
 
 -   Learn how Waterhole [Configuration](./configuration.md) works and configure a mail driver.
--   Customize your community's [Structure](./structure.md), [User Groups](./groups.md), [Design](./design.md), and administration [Dashboard](./dashboard.md).
+-   Customize your community's [Structure](./structure.md), [User Groups](./groups.md), [Design](./design.md), and Control Panel [Dashboard](./dashboard.md).
 -   Learn the best practices for [Deploying](./deploying.md) your community to production.
 -   Learn how to [extend](./extending.md) Waterhole with custom functionality.
 

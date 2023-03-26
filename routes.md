@@ -4,13 +4,13 @@ Waterhole registers its routes with the [Laravel Router](https://laravel.com/doc
 
 ## Path Configuration
 
-You can configure the path prefix for the main Waterhole routes in `config/waterhole/forum.php`, and for the admin panel in `config/waterhole/admin.php`.
+You can configure the path prefix for the main Waterhole routes in `config/waterhole/forum.php`, and for the Control Panel in `config/waterhole/cp.php`.
 
 ## Registering Routes
 
-To register your own routes in Waterhole's route groups, use the [`Routes` extender](https://waterhole.dev/docs/references/Waterhole/Extend/Routes.html). You can do this in the boot method of a service provider, or in your `routes/web.php` file.
+To register your own routes in Waterhole's route groups, use the [`ForumRoutes` extender](https://waterhole.dev/docs/references/Waterhole/Extend/ForumRoutes.html). You can do this in the boot method of a service provider.
 
-For forum routes, use the `forum` method. Forum routes use the path prefix configured in `config/waterhole/forum.php`, a name prefix of `waterhole.`, and the `waterhole.web` middleware group.
+Forum routes use the path prefix configured in `config/waterhole/forum.php`, a name prefix of `waterhole.`, and the `waterhole.web` middleware group.
 
 ```php
 use Illuminate\Support\Facades\Route;
@@ -22,7 +22,7 @@ Extend\Routes::forum(function () {
 });
 ```
 
-For [admin routes](./admin.md#adding-routes), use the `admin` method. Admin routes use the path prefix configured in `config/waterhole/admin.php` and a name prefix of `waterhole.admin.`. In addition to the `waterhole.web` middleware group, they use the `waterhole.admin` middleware group too, which ensures they are only accessible to admin users and require password confirmation.
+For [Control Panel routes](./cp.md#adding-routes), use the `CpRoutes` extender. CP routes use the path prefix configured in `config/waterhole/cp.php` and a name prefix of `waterhole.cp.`. In addition to the `waterhole.web` middleware group, they use the `waterhole.cp` middleware group too, which ensures they are only accessible to admin users and require password confirmation.
 
 ## Adding Middleware
 
@@ -34,6 +34,6 @@ use Illuminate\Support\Facades\Route;
 // Run on all requests
 Route::pushMiddlewareToGroup('waterhole.web', MyMiddleware::class);
 
-// Run on admin panel requests only
-Route::pushMiddlewareToGroup('waterhole.admin', MyMiddleware::class);
+// Run on Control Panel requests only
+Route::pushMiddlewareToGroup('waterhole.cp', MyMiddleware::class);
 ```

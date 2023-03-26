@@ -4,7 +4,7 @@ Set up the structure of your community with customizable channels, pages, and li
 
 Your community structure will help users understand what your community is about, navigate it, and categorize and find discussions.
 
-You can manage your community structure in the **Structure** section of the admin panel. The structure you define will be displayed in the sidebar on your community's homepage, allowing users to easily find what they are looking for.
+You can manage your community structure in the **Structure** section of the Control Panel. The structure you define will be displayed in the sidebar on your community's homepage, allowing users to easily find what they are looking for.
 
 ## Channels
 

@@ -66,10 +66,10 @@ Use the `<x-waterhole::icon>` component to quickly emit icon markup. The `icon` 
 
 ## Icon Picker
 
-Use the `<x-waterhole::icon-picker>` component in a form to allow the user to choose an icon from a Blade Icon, Emoji, or an uploaded file:
+Use the `<x-waterhole::cp.icon-picker>` component in a form to allow the user to choose an icon from a Blade Icon, Emoji, or an uploaded file:
 
 ```blade render
-<x-waterhole::admin.icon-picker
+<x-waterhole::cp.icon-picker
   name="icon"
   :value="old('icon')"
 />
