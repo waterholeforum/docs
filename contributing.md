@@ -2,25 +2,29 @@
 
 There are many ways that you can contribute to Waterhole development, including bug reports, documentation edits, translations, and core enhancements.
 
-Thank you for taking the time to consider a contribution. Please take a moment to read through Waterhole's [Code of Conduct](). By participating here, you are expected to uphold this code.
+Thank you for taking the time to consider a contribution. Please take a moment to read through Waterhole's [Code of Conduct](contributing.md). By participating here, you are expected to uphold this code.
 
 ## Waterhole Is Not FOSS
 
-Before proceeding, it's important to know that Waterhole is not "Free Open-Source Software". It is **propietary** open-source software. The code is open and you can download it for free, but there are limitations to what you can do with it:
+Waterhole is not "Free Open-Source Software". It is **proprietary** open-source software. The code is open, and you can download it for free, but there are limitations to what you can do with it:
 
--   You **cannot** alter code or behavior related to licensing, updating, version/edition checking, or anything else that would circumvent the enforcement of our business model.
+-   You **cannot** alter code or behavior related to licensing, updating, version checking, or anything else that would circumvent the enforcement of our business model.
 
 -   You **cannot** redistribute or use Waterhole as a dependency in another distributable project without prior permission or licensing.
 
--   You **cannot** publicly maintain a long-term fork of Waterhole.
+-   You **cannot** publicly maintain a fork of Waterhole.
+
+For more information, see the [license terms](https://waterhole.dev/terms).
 
 ## Security Disclosures
 
-If you discover a security vulnerability, please review our [Security Policy](https://github.com/waterholeforum/core/security/policy), then report the issue directly to us from [waterhole.dev/support](https://waterhole.dev/support). We will review and respond privately via email.
+If you discover a security vulnerability, please review our [Security Policy](https://github.com/waterholeforum/core/security/policy), then report the issue directly to us from [waterhole.dev/support](https://waterhole.dev/support). We will review and respond privately via email. All security vulnerabilities will be promptly addressed.
 
 ## Bug Reports
 
-Found a bug? Great! We'd love to hear about it – but first you should search through the [forum](https://waterhole.dev/community) and [issue tracker](https://github.com/waterholeforum/core/issues) to make sure you're not wasting your time on a known issue.
+> **Warning:** Waterhole's GitHub issue trackers are not intended to provide help or support. Instead, get support from the [community](https://waterhole.dev/community/channel/support), or from [waterhole.dev/support](https://waterhole.dev/support) if you have an active license.
+
+Found a bug? Great! We'd love to hear about it – but first you should search through the [community](https://waterhole.dev/community) and [issue tracker](https://github.com/waterholeforum/core/issues) to make sure you're not wasting your time on a known issue.
 
 If you do find a similar issue, upvote it by adding a 👍 reaction. Only leave a comment if you have relevant information to add.
 
@@ -34,7 +38,7 @@ Have an idea for a feature? Head on over to the [Ideas](https://waterhole.dev/co
 
 ## Documentation Edits
 
-Waterhole's documentation lives in the [waterholeforum/docs](https://github.com/waterholeforum/docs)repository. Improvements or corrections to them can be submitted as a pull request.
+Waterhole's documentation lives in the [waterholeforum/docs](https://github.com/waterholeforum/docs) repository. Improvements or corrections to them can be submitted as a pull request.
 
 ## Core Enhancements
 
@@ -46,4 +50,4 @@ If you would like to work on a new feature, consider discussing it first in the 
 
 ## Translations
 
-We welcome new translations and updates to existing ones. Please follow [these instructions](Localization) on how to contribute to Waterhole's translation files.
+We welcome new translations and updates to existing ones. Please follow [these instructions](localization.md) on how to contribute to Waterhole's translation files.
