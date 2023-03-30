@@ -43,7 +43,7 @@ class Delete extends Action
 
 ## Registering an Action
 
-Register your action using the `Action` extender, which is an [ordered list](https://waterhole.dev/docs/reference/Waterhole/Extend/Concerns/OrderedList.html), in your service provider:
+Register your action using the `Action` extender, which is an [ordered list](https://waterhole.dev/reference/Waterhole/Extend/Concerns/OrderedList.html), in your service provider:
 
 ```php
 Extend\Action::add('delete', Delete::class);

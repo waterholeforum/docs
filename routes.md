@@ -16,7 +16,7 @@ Forum routes use the path prefix configured in `config/waterhole/forum.php`, a n
 use Illuminate\Support\Facades\Route;
 use Waterhole\Extend;
 
-Extend\Routes::forum(function () {
+Extend\ForumRoutes::add(function () {
     Route::get('my-route', MyController::class)
         ->name('my-route'); // Name: waterhole.my-route
 });

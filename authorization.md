@@ -16,7 +16,7 @@ The permissions database table defines permission entries which consist of the f
 -   **Ability** – the name of the ability (eg. `view` or `post`)
 -   **Scope** – the resource that the recipient has this ability for (usually a structure node, like a channel or page)
 
-Permission data can be inspected using the `Waterhole\Models\PermissionCollection` singleton. This class provides [various methods](https://waterhole.dev/docs/reference/Waterhole/Models/PermissionCollection.html) to filter and check for the existence of permission entries:
+Permission data can be inspected using the `Waterhole\Models\PermissionCollection` singleton. This class provides [various methods](https://waterhole.dev/reference/Waterhole/Models/PermissionCollection.html) to filter and check for the existence of permission entries:
 
 ```php
 use Waterhole\Models\PermissionCollection;

@@ -2,6 +2,49 @@
 
 Use variables and utilities to apply consistent and accessible color.
 
+## Variable System
+
+There are two sets of color variables:
+
+- The `--palette-*` variables are *constant* and define all of the available colors. These are set according to the theme (light or dark) and are where top-level customizations should be applied. Generally they should not be consumed directly by components (use the `color` variables instead).
+
+- The `--color-*` variables are *dynamic* and define the color scheme in the current context. By default these variables are set to their palette counterparts, but they can be overridden at an element-level to influence how children are styled. For example, if an element is styled with a dark background, it may also override the `--color-text` variable so that any children which consume this color will adapt.
+
+<details class="card">
+<summary class="card__header">Quick illustration of this system</summary>
+
+```css
+/* The themes define the palette variables */
+[data-theme='light'] {
+    --palette-bg: white;
+    --palette-text: black;
+}
+
+[data-theme='dark'] {
+    --palette-bg: black;
+    --palette-text: white;
+}
+
+/* The color variables default to the same */
+:root {
+    --color-bg: var(--palette-bg);
+    --color-text: var(--palette-text);
+}
+
+/* Components consume color variables */
+.btn {
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* An element might override them, so that any child components will adapt */
+.bg-dark {
+    --color-bg: var(--palette-text);
+    --color-text: var(--palette-bg);
+}
+```
+</details>
+
 ## Palette
 
 Waterhole's color palette consists of:
@@ -72,7 +115,7 @@ The `.color-inherit` utility is available to set color inheritance:
 
 ```html render
 <div class="color-success">
-    This text is green, <a href="#" class="color-inherit">including the link</a>
+    This text is green, <a href="#" class="color-inherit underline">including the link</a>
 </div>
 ```
 

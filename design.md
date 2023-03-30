@@ -132,4 +132,4 @@ Your `resources/views/waterhole/footer.blade.php` template might look something 
 
 ### Other Extenders
 
-Take a look at all of the extenders that are available under the [`Waterhole\Extend` namespace](https://waterhole.dev/docs/reference/Waterhole/Extend.html).
+Take a look at all of the extenders that are available under the [`Waterhole\Extend` namespace](https://waterhole.dev/reference/Waterhole/Extend.html).

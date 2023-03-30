@@ -8,7 +8,7 @@ Waterhole creates bundles of scripts and stylesheets to reduce the number of HTT
 
 ### Stylesheets
 
-Add stylesheets to the bundle using the [`Stylesheet`](https://waterhole.dev/docs/reference/Waterhole/Extend/Stylesheet.html) extender. Waterhole will concatenate stylesheets onto the end of the bundle:
+Add stylesheets to the bundle using the [`Stylesheet`](https://waterhole.dev/reference/Waterhole/Extend/Stylesheet.html) extender. Waterhole will concatenate stylesheets onto the end of the bundle:
 
 ```php
 use Waterhole\Extend;
@@ -18,7 +18,7 @@ Extend\Stylesheet::add('styles.css');
 
 ### Scripts
 
-Add scripts to the bundle using the [`Script`](https://waterhole.dev/docs/reference/Waterhole/Extend/Concerns/Script.html) extender. Waterhole will concatenate scripts onto the end of the bundle:
+Add scripts to the bundle using the [`Script`](https://waterhole.dev/reference/Waterhole/Extend/Concerns/Script.html) extender. Waterhole will concatenate scripts onto the end of the bundle:
 
 ```php
 Extend\Script::add('script.js');
@@ -47,7 +47,7 @@ $this->publishes(
 
 ## External Assets
 
-To link to an external asset (eg. Google Fonts or something else from a CDN), don't use the `Stylesheet` or `Script` extenders. Instead, use the [`DocumentHead` extender](https://waterhole.dev/docs/reference/Waterhole/Extend/DocumentHead.html), which is an [ordered list](https://waterhole.dev/docs/reference/Waterhole/Extend/Concerns/OrderedList.html) of views to output in the `<head>` tag.
+To link to an external asset (eg. Google Fonts or something else from a CDN), don't use the `Stylesheet` or `Script` extenders. Instead, use the [`DocumentHead` extender](https://waterhole.dev/reference/Waterhole/Extend/DocumentHead.html), which is an [ordered list](https://waterhole.dev/reference/Waterhole/Extend/Concerns/OrderedList.html) of views to output in the `<head>` tag.
 
 ```php
 use Waterhole\Extend;

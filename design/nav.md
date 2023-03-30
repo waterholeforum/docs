@@ -54,9 +54,9 @@ The `<x-waterhole::nav-heading>` component can be used for headings.
 <x-waterhole::nav-heading heading="Heading"/>
 ```
 
-### Responsive Nav
+### Collapsible Nav
 
-In combination with the [sidebar layout](./layout.md#sidebar), the `<x-waterhole::responsive-nav>` component is great for constructing navs which collapse into a button at smaller screen sizes.
+In combination with the [sidebar layout](./layout.md#sidebar), the `<x-waterhole::collapsible-nav>` component is great for constructing navs which collapse into a button at smaller screen sizes.
 
 It accepts an array of Blade Component instances which will be rendered in a nav. At smaller screen sizes, the nav will be hidden in a drawer, toggleable by a button. If there is an active `NavLink` component, its icon and label and will be displayed on the button; otherwise, it will be a generic "menu" button.
 
@@ -72,7 +72,7 @@ It accepts an array of Blade Component instances which will be rendered in a nav
 
 <div class="with-sidebar">
     <div class="sidebar">
-        <x-waterhole::responsive-nav :components="$components"/>
+        <x-waterhole::collapsible-nav :components="$components"/>
     </div>
 
     <div>Content</div>

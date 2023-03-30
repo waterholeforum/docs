@@ -4,9 +4,9 @@ Waterhole's frontend is made up of Laravel Blade views and components, and uses 
 
 ## Blade Components
 
-Waterhole exposes many Blade Components that you can use in your own views. These are documented in the [`Waterhole\View\Components` namespace](https://waterhole.dev/docs/reference/Waterhole/View/Components.html).
+Waterhole exposes many Blade Components that you can use in your own views. These are documented in the [`Waterhole\View\Components` namespace](https://waterhole.dev/reference/Waterhole/View/Components.html).
 
-Perhaps the most important of these to know is the [`<x-waterhole::layout>` component](https://waterhole.dev/docs/reference/Waterhole/View/Components/Layout.html). Use this to render your own views inside the Waterhole layout:
+Perhaps the most important of these to know is the [`<x-waterhole::layout>` component](https://waterhole.dev/reference/Waterhole/View/Components/Layout.html). Use this to render your own views inside the Waterhole layout:
 
 ```blade
 <x-waterhole::layout title="Hello World">
@@ -28,7 +28,7 @@ Many parts of Waterhole's templates render **lists** of components. For example,
 
 You can hook into these component lists and add your own components, or remove existing ones. All of these component lists are exposed as [extenders](./extending.md#extenders).
 
-Check out the [list of extenders](https://waterhole.dev/docs/reference/Waterhole/Extend.html) to learn about all the points where you can modify components. The documentation for each extender also describes what parameters will be passed into the components when they're rendered.
+Check out the [list of extenders](https://waterhole.dev/reference/Waterhole/Extend.html) to learn about all the points where you can modify components. The documentation for each extender also describes what parameters will be passed into the components when they're rendered.
 
 ### Adding Components
 
@@ -120,7 +120,7 @@ You may need to be mindful of Turbo Frames when hooking into Waterhole's views. 
 
 #### Streamable Components
 
-Waterhole includes a mechanism to simplify the process of rendering a Blade Component in a Turbo Stream. First, the component must include the [`Waterhole\View\Components\Concerns\Streamable` trait]()(https://waterhole.dev/docs/reference/Waterhole/View/Components/Concerns/Streamable.html):
+Waterhole includes a mechanism to simplify the process of rendering a Blade Component in a Turbo Stream. First, the component must include the [`Waterhole\View\Components\Concerns\Streamable` trait]()(https://waterhole.dev/reference/Waterhole/View/Components/Concerns/Streamable.html):
 
 ```php
 use Illuminate\View\Component;

@@ -22,7 +22,7 @@ Extend\CpRoutes::add(function () {
 
 ### Adding a Navigation Link
 
-The [`CpNav`](https://waterhole.dev/docs/reference/Waterhole/Extend/CpNav.html) extender represents an [ordered list](https://waterhole.dev/docs/reference/Waterhole/Extend/Concerns/OrderedList.html) of components that make up the CP navigation. You can add any component or view you want; typically you'll want to use a [`NavLink`](https://waterhole.dev/docs/reference/Waterhole/View/Components/NavLink.html) component instance:
+The [`CpNav`](https://waterhole.dev/reference/Waterhole/Extend/CpNav.html) extender represents an [ordered list](https://waterhole.dev/reference/Waterhole/Extend/Concerns/OrderedList.html) of components that make up the CP navigation. You can add any component or view you want; typically you'll want to use a [`NavLink`](https://waterhole.dev/reference/Waterhole/View/Components/NavLink.html) component instance:
 
 ```php
 use Waterhole\Components\NavLink;
@@ -40,7 +40,7 @@ Extend\CpNav::add(
 
 ### Rendering the CP Layout
 
-Use the [`<x-waterhole::cp>`](https://waterhole.dev/docs/reference/Waterhole/View/Components/Cp.html) component to render your views inside the CP layout:
+Use the [`<x-waterhole::cp>`](https://waterhole.dev/reference/Waterhole/View/Components/Cp.html) component to render your views inside the CP layout:
 
 ```blade
 <x-waterhole::cp title="My Page">
@@ -50,7 +50,7 @@ Use the [`<x-waterhole::cp>`](https://waterhole.dev/docs/reference/Waterhole/Vie
 
 ### Adding Assets
 
-To add styles or scripts to the Control Panel (without adding them to the global bundle), use the [`Stylesheet`](https://waterhole.dev/docs/reference/Waterhole/Extend/Stylesheet.html) and [`Script`](https://waterhole.dev/docs/reference/Waterhole/Extend/Script.html) extenders and specify `cp` as the bundle name.
+To add styles or scripts to the Control Panel (without adding them to the global bundle), use the [`Stylesheet`](https://waterhole.dev/reference/Waterhole/Extend/Stylesheet.html) and [`Script`](https://waterhole.dev/reference/Waterhole/Extend/Script.html) extenders and specify `cp` as the bundle name.
 
 ```php
 use Waterhole\Extend;

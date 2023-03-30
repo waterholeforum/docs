@@ -10,7 +10,7 @@ If you're developing an extension, don't forget to [load your migrations](https:
 
 ## Models
 
-Waterhole's [Eloquent](https://laravel.com/docs/10.x/eloquent) models are found in the [`Waterhole\Models` namespace](https://waterhole.dev/docs/reference/Waterhole/Models.html).
+Waterhole's [Eloquent](https://laravel.com/docs/10.x/eloquent) models are found in the [`Waterhole\Models` namespace](https://waterhole.dev/reference/Waterhole/Models.html).
 
 ### Defining Relationships
 

@@ -16,7 +16,7 @@ If, on the other hand, you want to reuse, distribute, or sell your features, you
 
 ## Extenders
 
-The main mechanism by which you'll hook into Waterhole is with **extenders**. These are static classes that provide methods to extend Waterhole in some way. You can see all of the extenders that are available under the [`Waterhole\Extend` namespace](https://waterhole.dev/docs/reference/Waterhole/Extend.html).
+The main mechanism by which you'll hook into Waterhole is with **extenders**. These are static classes that provide methods to extend Waterhole in some way. You can see all of the extenders that are available under the [`Waterhole\Extend` namespace](https://waterhole.dev/reference/Waterhole/Extend.html).
 
 As a quick example of how easy it is to get started, open up `app/Providers/WaterholeServiceProvider.php` and add the following code to the `boot` method:
 
@@ -40,6 +40,20 @@ public function boot()
 Now reload your forum to see your first customization!
 
 What did we just do? We used the `LayoutBefore` extender to inject a custom component into the Waterhole layout. There are dozens more extenders like this covering all parts of Waterhole's views and functionality, ready for you to hook into.
+
+> **Warning:** To avoid strange behavior when using Laravel Octane, extenders should always be called in the `boot` method of a service provider, and should never be guarded by a request-specific condition. For example, **don't** do this:
+>
+> ```php
+> if (Auth::check()) {
+>     Extend\Header::add('foo', 'bar');
+> }
+> ```
+>
+> Instead, pass a closure to the extender and put the condition inside:
+>
+> ```php
+> Extend\Header::add('foo', fn() => Auth::check() ? 'bar' : null);
+> ```
 
 ## Next Steps
 
