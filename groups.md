@@ -12,6 +12,10 @@ Newly created groups are invisible to non-admins – that is, no one (not even t
 
 If you would like to expose a group so that it is publicly visible, you can check the **show this group as a user badge** option. You can customize the color of the badge an optionally add an icon. Group badges are shown on user profiles and posts/comments.
 
+^^^
+![](images/groups-badges.png){width=258 height=67}
+^^^ Groups can be exposed as badges. Groups that appear with a dotted outline are only visible to admins.
+
 ## Permissions
 
 Waterhole has a powerful permissions system that allows you to control access and abilities in different parts of your community.

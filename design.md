@@ -46,12 +46,9 @@ If you don't want to support Dark Mode on your forum, you can disable the toggle
 
 Waterhole's HTML is server-rended using [Blade](https://laravel.com/docs/10.x/blade) views and components. Many parts of Waterhole's templates render **dynamic lists of components**. For example, the page header is made up of these components:
 
--   The forum title
--   A "spacer" element
--   The search button
--   The notifications button
--   The user menu
--   The theme selector
+^^^
+![](images/component-list-example.png){width=850 height=120}
+^^^ The header is made up of an ordered list of components: `title`, `spacer`, `search`, `notifications`, `user`, and `theme`.
 
 Using [extenders](./extending.md#extenders), you can hook into these component lists and add your own components at any position, and replace or remove existing ones. Some common examples are listed below. To learn more about how component lists work, see the [Frontend](./frontend.md#component-lists) page.
 

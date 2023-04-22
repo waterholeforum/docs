@@ -4,6 +4,11 @@ Actions are a mechanism for performing tasks on one or more models – for examp
 
 Each item's context menu is really just a list of actions, and extensions can add their own into the mix.
 
+^^^
+![](images/actions-example.png){width=204 height=333}
+^^^ The post controls menu is made up of a list of Actions.
+{style="float: right"}
+
 ## Defining an Action
 
 To define a new action, extend the `Waterhole\Actions\Action` class. Give your action a `label`, an `icon`, and a `run` method to execute your task on a collection of `$items`:

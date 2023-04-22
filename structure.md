@@ -4,33 +4,33 @@ Set up the structure of your community with customizable channels, pages, and li
 
 Your community structure will help users understand what your community is about, navigate it, and categorize and find discussions.
 
-You can manage your community structure in the **Structure** section of the Control Panel. The structure you define will be displayed in the sidebar on your community's homepage, allowing users to easily find what they are looking for.
+You can manage your community structure in the **Structure** section of the Control Panel. The structure you define will be displayed in the sidebar on your community's homepage, allowing users to easily navigate between sections.
+
+When you install Waterhole, we set up an example structure to get you started. Feel free to keep these, change them, or delete them – you're the boss!
+
+^^^
+![](images/structure-default.png){width=670 height=343}
+^^^ The default structure in a new Waterhole installation, consisting of a page and some channels to get started with.
 
 ## Channels
 
-Channels are the areas in your community where discussions take place. On a new installation, Waterhole automatically creates a few Channels to help you get started:
-
-| Channel              | Description                                              |
-| -------------------- | -------------------------------------------------------- |
-| 📣 **Announcements** | News and other updates from the team.                    |
-| 👋 **Introductions** | New to the community? Introduce yourself!                |
-| ❓ **Support**       | Get help setting up, using, and customising our product. |
-| 💡 **Ideas**         | Have an idea? We want to hear it!                        |
-| 🔒 **Staff Only**    | A private channel for staff discussion.                  |
-
-Feel free to keep these, change them, or delete them – you're the boss! In general, it's best to start simple with only a few channels so your users don't get overwhelmed.
+Channels are the areas in your community where discussions take place. In general, it's best to start simple with only a few channels so your users don't get overwhelmed.
 
 ### Channel Options
 
 When creating a channel, you will need to choose a name, URL slug, icon, and a short description. There are also a number of additional options available:
 
+-   **Ignored by Default** makes the channel opt-in. Its posts will be hidden from the community homepage, so they can only be seen by navigating to the channel. However, users will still be able to individually un-ignore the channel to include its posts on their homepage. This option is useful for more niche channels that only a small number of users will be interested in.
+
+-   **Features** allows you to configure various features including whether Answers are enabled, which Taxonomies to use, and which Reaction Sets to use for the channel's posts and comments.
+
+-   **Layout** allows you to choose whether posts will display in a compact list, or as expanded cards, when viewing the channel. This is useful for particular channels that are more post-oriented than discussion-oriented – for example, a blog channel.
+
+-   **Filters** allows you to override the [global filters](./filters.md) for the channel. The first one will be used as the default.
+
 -   **Posting Instructions** allow you to specify more detailed information to be displayed to users when they are creating a post in the channel. This is a good place to remind users about rules and guidelines for posting in the channel – such as information that is required in a support channel.
 
-*   **Ignored by Default** makes the channel opt-in. Its posts will be hidden from the community homepage, so they can only be seen by navigating to the channel. However, users will still be able to individually follow the channel to include its posts on their homepage. This option is useful for more niche channels that only a small number of users will be interested in.
-
-*   **Default Layout** allows you to choose whether posts display in a list, or as expanded cards, when viewing the channel. This is useful for particular channels that are more post-oriented than discussion-oriented – for example, a blog channel.
-
-*   **Filter Options** allows you to override the [global filter options](./filters.md) for the channel. The first one will be used as the default.
+-   **Similar Posts** can be enabled to show the user posts which look similar to the one they are creating.
 
 You can also configure permissions to restrict which [User Groups](./groups.md) can view, post, comment, and moderate (edit and delete content) in the channel.
 

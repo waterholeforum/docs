@@ -61,7 +61,7 @@ To test your mail configuration, request a password reset on your account.
 
 Waterhole can push out new activity over WebSockets so users will see updates in real-time without having to reload the page. To enable this, you'll need to configure a broadcaster in `config/broadcasting.php`.
 
-See the [Laravel Broadcasting documentation](https://laravel.com/docs/10.x/broadcasting#supported-drivers) for more information about the available drivers. You will only need to install the driver on the server-side – Waterhole already contains the client-side `pusher-js` package and will hook everything up for you.
+See the [Laravel Broadcasting documentation](https://laravel.com/docs/10.x/broadcasting#pusher-channels) for more information about how to configure a driver. You will only need to install the driver on the server-side – Waterhole already contains the client-side `pusher-js` package and will hook everything up for you.
 
 ## Queue Configuration
 

@@ -20,11 +20,9 @@ Blade Components are only used to encapsulate more complex HTML structures and b
 
 Many parts of Waterhole's templates render **lists** of components. For example, the page header is made up of these components:
 
--   The forum title
--   A "spacer" element
--   The search button
--   The notifications button
--   The user menu
+^^^
+![](images/component-list-example.png){width=850 height=120}
+^^^ The header is made up of an ordered list of components: `title`, `spacer`, `search`, `notifications`, `user`, and `theme`.
 
 You can hook into these component lists and add your own components, or remove existing ones. All of these component lists are exposed as [extenders](./extending.md#extenders).
 
