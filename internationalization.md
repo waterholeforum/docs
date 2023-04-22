@@ -4,7 +4,7 @@ Waterhole features a powerful localization system using [Project Fluent](https:/
 
 If you're developing an [extension](./distribution.md), or if your forum is multi-lingual, you should take advantage of Waterhole's internationalization capabilities.
 
-Fluent is a fully-featured localization system for natural-sounding translations. Read the [Fluent Syntax Guide](https://projectfluent.org/fluent/guide/) to learn more about syntax and its benefits.
+Fluent is a fully-featured localization system for natural-sounding translations. Read the [Fluent Syntax Guide](https://projectfluent.org/fluent/guide/) to learn more about syntax and its benefits. See also [Good Practices for Developers](https://github.com/projectfluent/fluent/wiki/Good-Practices-for-Developers).
 
 Waterhole uses the [`laravel-fluent` package](https://github.com/jrmajor/laravel-fluent) to replace the default Laravel translator with one that supports loading translations from `.ftl` files.
 
