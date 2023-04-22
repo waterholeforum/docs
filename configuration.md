@@ -77,11 +77,11 @@ See the [Laravel Cache documentation](https://laravel.com/docs/10.x/cache#config
 
 ## Debug Mode
 
-The `debug` option in your `config/app.php` configuration file determines how much information about an error is displayed to the user. By default, this option is set to respect the value of the `APP_DEBUG` environment variable, which is stored in your `.env` file.
+The `debug` option in your `config/app.php` configuration file determines how much information about an error is displayed to the user. When `true`, it also disables caching of asset bundles and translations.
 
-For local development, you should set the `APP_DEBUG` environment variable to `true`.
+By default, this option is set to respect the value of the `APP_DEBUG` environment variable, which is stored in your `.env` file. For local development, you should set the `APP_DEBUG` environment variable to `true`.
 
-> **Danger:** In your production environment, `APP_DEBUG` should always be set to `false`. If the variable is set to `true` in production, you risk exposing sensitive configuration values to your forum's users.
+> **Danger:** In your production environment, `APP_DEBUG` should always be set to `false`. If the variable is set to `true` in production, you risk exposing sensitive configuration values to your forum's users. Additionally, your forum's performance will be reduced.
 
 ## Maintenance Mode
 

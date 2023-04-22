@@ -8,20 +8,20 @@ Waterhole creates bundles of scripts and stylesheets to reduce the number of HTT
 
 ### Stylesheets
 
-Add stylesheets to the bundle using the [`Stylesheet`](https://waterhole.dev/reference/Waterhole/Extend/Stylesheet.html) extender. Waterhole will concatenate stylesheets onto the end of the bundle:
+Add stylesheets to the bundle using the [`Stylesheet`](reference://Waterhole/Extend/Stylesheet.html) extender. Waterhole will concatenate stylesheets onto the end of the bundle:
 
 ```php
 use Waterhole\Extend;
 
-Extend\Stylesheet::add('styles.css');
+Extend\Stylesheet::add(resource_path('css/styles.css'));
 ```
 
 ### Scripts
 
-Add scripts to the bundle using the [`Script`](https://waterhole.dev/reference/Waterhole/Extend/Concerns/Script.html) extender. Waterhole will concatenate scripts onto the end of the bundle:
+Add scripts to the bundle using the [`Script`](reference://Waterhole/Extend/Concerns/Script.html) extender. Waterhole will concatenate scripts onto the end of the bundle:
 
 ```php
-Extend\Script::add('script.js');
+Extend\Script::add(resource_path('js/script.js'));
 ```
 
 ### CP Bundle
@@ -29,12 +29,12 @@ Extend\Script::add('script.js');
 By default, assets are added to the main bundle which is loaded on every page – both in the forum and CP. If you want to add assets to be loaded only in the CP, specify the bundle name as `cp`:
 
 ```php
-Extend\Stylesheet::add('styles.css', bundle: 'cp');
+Extend\Stylesheet::add(resource_path('css/styles.css'), bundle: 'cp');
 ```
 
 ## Public Assets
 
-If you have public assets like images, or scripts and stylesheets that you don't want to include in the bundle, simply place them in your application's `public` directory and then refer to them using Laravel's `asset()` function.
+If you have public assets like images, or scripts and stylesheets that you don't want to include in the bundle, simply place them in your application's `public` directory and then refer to them in your views using Laravel's `asset()` function.
 
 If you're developing an [extension](./distribution.md), use the service provider's `publishes` method to publish your assets to the application's `public` directory:
 
@@ -47,7 +47,7 @@ $this->publishes(
 
 ## External Assets
 
-To link to an external asset (eg. Google Fonts or something else from a CDN), don't use the `Stylesheet` or `Script` extenders. Instead, use the [`DocumentHead` extender](https://waterhole.dev/reference/Waterhole/Extend/DocumentHead.html), which is an [ordered list](https://waterhole.dev/reference/Waterhole/Extend/Concerns/OrderedList.html) of views to output in the `<head>` tag.
+To link to an external asset (e.g. Google Fonts or something else from a CDN), don't use the `Stylesheet` or `Script` extenders. Instead, use the [`DocumentHead` extender](reference://Waterhole/Extend/DocumentHead.html) to add a view to output in the `<head>` tag.
 
 ```php
 use Waterhole\Extend;

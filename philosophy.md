@@ -12,7 +12,7 @@ Community management has matured since the early days of forums, and now there a
 
 Every feature in Waterhole is carefully considered and crafted with the flexibility to serve multiple use cases. For example, you can set up your community [Structure](./structure.md) with a mix of static Pages, Links, and Channels, each with their own unique layout, filters, instructions, taxonomies, and functionality. Reactions can be used to power ideation, and [Groups](./groups.md) can be used to elevate permissions or just reward users with status. All of these essential features are built right into the product, so you know they will be consistent, high quality, and well supported.
 
-Nevertheless, every community has different needs which may require further customization. We embrace this challenge and encourage communities to take full advantage of Waterhole's extensible open-source codebase, which makes it easy to implement bespoke functionality without accumulating technical debt.
+Nevertheless, every community has different needs which may require further customization. We embrace this challenge and encourage communities to work with developers and take full advantage of Waterhole's extensible open-source codebase, which makes it easy to implement bespoke functionality without accumulating technical debt.
 
 ## Sustainable Open Source
 

@@ -27,6 +27,10 @@ You can override individual translation strings in your project by placing files
 
 If, for example, you'd like to override the English translation strings in `forum.ftl`, then create a new file in your project called `resources/lang/vendor/waterhole/en/forum.ftl`. Within this file, you should only define the translation strings you wish to override. Any translation strings you don't override will still be loaded from the Waterhole's original language files.
 
+```fluent
+post-title-label = Subject
+```
+
 Refer to the [Fluent Syntax Guide](https://projectfluent.org/fluent/guide/) to learn about the syntax for `.ftl` files.
 
 ## Contributing New Translations

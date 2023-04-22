@@ -34,14 +34,14 @@ use Waterhole\Extend;
 use Waterhole\Formatter\Context;
 use s9e\TextFormatter\Parser;
 
-Extend\Formatter::parsing(function (Parser $parser, string &$text, Context $context) {
+Extend\Formatter::parsing(function (Parser $parser, string &$text, ?Context $context) {
     $parser->disablePlugin('BBCodes');
 });
 ```
 
 Here you can perform [runtime configuration](https://s9etextformatter.readthedocs.io/Getting_started/Runtime_configuration/) on the parser, or make manual alterations to the `$text` before it is parsed.
 
-The `$context` parameter provides information about the context in which the text is being parsed.
+The `$context` parameter may provide information about the model and user for which the text is being parsed.
 
 ## Rendering
 
@@ -52,11 +52,11 @@ use Waterhole\Extend;
 use Waterhole\Formatter\Context;
 use s9e\TextFormatter\Renderer;
 
-Extend\Formatter::rendering(function (Renderer $renderer, string &$xml, Context $context) {
+Extend\Formatter::rendering(function (Renderer $renderer, string &$xml, ?Context $context) {
     $renderer->setParameter('USER', 'Joe');
 });
 ```
 
 Here you can perform [runtime configuration](https://s9etextformatter.readthedocs.io/Getting_started/Runtime_configuration/) on the renderer, or make manual alterations to the `$xml` document before it is rendered.
 
-The `$context` parameter provides information about the context in which the text is being rendered.
+The `$context` parameter may provide information about the model and user for which the text is being rendered.

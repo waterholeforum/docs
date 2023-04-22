@@ -8,7 +8,7 @@ The Waterhole Design System provides a foundation on which to build consistent u
 
 -   A limited collection of **utility classes** to streamline construction of common layouts and consumption of design tokens.
 
--   A range of **components**, exposed as CSS classes and sometimes Blade Components, abstracting frequently used visual styles.
+-   A range of **components**, exposed as CSS classes and sometimes Blade Components, abstracting frequently used visual styles and patterns.
 
 The Design System is not exhaustive. Utility classes are only provided where they make sense as a way of encapsulating common declarations, but not to replace CSS in its entirety. You are encouraged to still use semantic class names to keep your code readable, apply additional styles beyond what the utility classes facilitate, and as an interface for other users to customize.
 

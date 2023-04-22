@@ -9,8 +9,8 @@ Whether you've encountered a White Screen of Death, a generic "internal server e
 -   **Check the logs.** These may contain more information about what's going wrong:
 
     -   Waterhole logs in `storage/logs`
-    -   Web server logs (eg. `/var/log/nginx/error.log`)
-    -   PHP-FPM logs (eg. `/var/log/php8.x-fpm.log`)
+    -   Web server logs (e.g. `/var/log/nginx/error.log`)
+    -   PHP-FPM logs (e.g. `/var/log/php8.x-fpm.log`)
 
 -   **Turn on debug mode.** Waterhole has a [debug mode](./configuration#debug-mode) which you can turn on to enable detailed error reporting in the browser. However, you should only use this for debugging on a development server – do NOT turn this on in production, as you risk exposing sensitive configuration values to the public.
 
@@ -18,7 +18,7 @@ Whether you've encountered a White Screen of Death, a generic "internal server e
 
 -   **Clear your browser cache.** Sometimes, old versions of JavaScript and CSS assets can be cached by your browser. Try clearing your browser cache or doing a hard-refresh of the page to make sure you've got the latest assets.
 
--   **Clear the Waterhole cache.** Likewise, sometimes old or corrupted data in the Waterhole/Laravel cache can cause outdated data and assets to be served. Run `php artisan cache:clear` to clear the cache.
+-   **Clear the application cache.** Likewise, sometimes old or corrupted data in the Waterhole/Laravel cache can cause outdated assets and translations to be served. Run `php artisan waterhole:cache:clear` to clear the Waterhole cache, and `php artisan cache:clear` to clear the Laravel cache.
 
 *   **Use the latest version of Waterhole.** Bugs and other issues can be fixed with newer versions of the software, so it's always a good idea to [keep up to date](./updating.md).
 

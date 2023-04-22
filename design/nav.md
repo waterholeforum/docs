@@ -9,11 +9,11 @@ Use the `.nav` class for the containing element and `.nav-link` on the clickable
 ```blade render
 <nav class="nav" aria-label="forum">
   <a href="#" class="nav-link" aria-current="page">
-    <x-waterhole::icon icon="heroicon-o-home"/>
+    @icon('heroicon-o-home')
     <span>Home</span>
   </a>
   <a href="#" class="nav-link">
-    <x-waterhole::icon icon="heroicon-o-home"/>
+    @icon('heroicon-o-home')
     <span>Home</span>
   </a>
 </nav>

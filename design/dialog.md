@@ -30,7 +30,7 @@ As a shortcut for building dialog markup, you can use the `<x-waterhole::dialog>
 
 ```blade render
 <x-waterhole::dialog title="My Dialog">
-  Hello, world!
+    Hello, world!
 </x-waterhole::dialog>
 ```
 
@@ -40,7 +40,7 @@ Dialogs can be displayed modally (superimposed over the page) using the followin
 
 > **Tip:** If you are intending to use a modal dialog to confirm an action, it will be easier to use the [Actions](../actions.md) mechanism which takes care of this for you.
 
-To open a dialog box in a modal overlay, first create a route and view that renders the dialog, wrapped in a `modal` [Turbo Frame](../frontend.md#turbo-frames):
+To open a dialog box in a modal overlay, first create a route and view that renders the dialog, wrapped in a [Turbo Frame](../frontend.md#turbo-frames) with `id="modal"`:
 
 ```php
 Route::get('my-dialog', function () {

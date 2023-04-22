@@ -27,8 +27,8 @@ Text
 For line icons, the stroke thickness can be modulated using the `.icon--thin` and `.icon--thick` classes:
 
 ```blade render
-<x-waterhole::icon icon="tabler-star" class="icon--thin text-xl"/>
-<x-waterhole::icon icon="tabler-star" class="icon--thick text-xl"/>
+@icon('tabler-star', ['class' => 'icon--thin text-xl'])
+@icon('tabler-star', ['class' => 'icon--thick text-xl'])
 ```
 
 ### Width
@@ -36,8 +36,8 @@ For line icons, the stroke thickness can be modulated using the `.icon--thin` an
 While icon elements are always square, sometimes the icon glyph itself doesn't take up much room and ends up with too much whitespace around it. In this situation, use `.icon--narrow` to reduce the whitespace.
 
 ```blade render
-<p>Text <x-waterhole::icon icon="tabler-chevron-down"/> Text</p>
-<p>Text <x-waterhole::icon icon="tabler-chevron-down" class="icon--narrow"/> Text</p>
+<p>Text @icon('tabler-chevron-down') Text</p>
+<p>Text @icon('tabler-chevron-down', ['class' => 'icon--narrow']) Text</p>
 ```
 
 ### Text Label
@@ -46,27 +46,33 @@ To pair an icon together with a text label, wrap them in an element with the `.w
 
 ```blade render
 <span class="with-icon">
-    <x-waterhole::icon icon="tabler-star"/>
+    @icon('tabler-star')
     Favorite
 </span>
 ```
 
-## Icon Component
+## Blade Directive
 
-Use the `<x-waterhole::icon>` component to quickly emit icon markup. The `icon` attribute may be one of the following:
+Use the `@icon` Blade directive to quickly emit icon markup. The value may be one of the following:
 
 -   The name of a [Blade Icon](https://blade-ui-kit.com/blade-icons)
 -   An emoji (prefixed with `emoji:`)
 -   The path to a file in the public `icons` directory (prefixed with `file:`)
 
 ```blade render
-<x-waterhole::icon icon="tabler-star"/>
-<x-waterhole::icon icon="emoji:🐡"/>
+@icon('tabler-star')
+@icon('emoji:🐡')
+```
+
+You can pass an array of attributes to apply to the icon element as the second argument:
+
+```blade render
+@icon('tabler-star', ['class' => 'text-lg'])
 ```
 
 ## Icon Picker
 
-Use the `<x-waterhole::cp.icon-picker>` component in a form to allow the user to choose an icon from a Blade Icon, Emoji, or an uploaded file:
+Use the `<x-waterhole::cp.icon-picker>` component in a form to allow the user to choose an icon from a Blade Icon, Emoji, or an uploaded file. This component is only available in the context of the CP.
 
 ```blade render
 <x-waterhole::cp.icon-picker

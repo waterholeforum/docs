@@ -4,9 +4,9 @@ Waterhole's frontend is made up of Laravel Blade views and components, and uses 
 
 ## Blade Components
 
-Waterhole exposes many Blade Components that you can use in your own views. These are documented in the [`Waterhole\View\Components` namespace](https://waterhole.dev/reference/Waterhole/View/Components.html).
+Waterhole exposes many Blade Components that you can use in your own views. These are documented in the [`Waterhole\View\Components` namespace](reference://Waterhole/View/Components.html).
 
-Perhaps the most important of these to know is the [`<x-waterhole::layout>` component](https://waterhole.dev/reference/Waterhole/View/Components/Layout.html). Use this to render your own views inside the Waterhole layout:
+Perhaps the most important of these to know is the [`<x-waterhole::layout>` component](reference://Waterhole/View/Components/Layout.html). Use this to render your own views inside the Waterhole layout:
 
 ```blade
 <x-waterhole::layout title="Hello World">
@@ -28,7 +28,7 @@ Many parts of Waterhole's templates render **lists** of components. For example,
 
 You can hook into these component lists and add your own components, or remove existing ones. All of these component lists are exposed as [extenders](./extending.md#extenders).
 
-Check out the [list of extenders](https://waterhole.dev/reference/Waterhole/Extend.html) to learn about all the points where you can modify components. The documentation for each extender also describes what parameters will be passed into the components when they're rendered.
+Check out the [list of extenders](reference://Waterhole/Extend.html) to learn about all the points where you can modify components. The documentation for each extender also describes what parameters will be passed into the components when they're rendered.
 
 ### Adding Components
 
@@ -43,14 +43,14 @@ Extend\SiteHeader::add(HelloWorld::class);
 
 The component can be any one of the following:
 
--   The name of a Blade Component class (eg. `HelloWorld::class`)
--   A Blade Component instance (eg. `new HelloWorld()`)
--   The name of a view (eg. `waterhole.example`)
--   A callable that returns any of the above
+-   The name of a Blade Component class (e.g. `HelloWorld::class`)
+-   A Blade Component instance (e.g. `new HelloWorld()`)
+-   The name of a view (e.g. `waterhole.example`)
+-   A callable that returns any of the above, which will be evaluated every time the list is rendered
 
 ### Component Positions
 
-Each item in a component list has a "position", and components are rendered by their position in ascending order. To specify a position, pass it as the third argument. Otherwise, a default of `0` will be used.
+Each item in a component list has a "position", and components are rendered by their position in ascending order. To specify a position, pass it as a named argument. Otherwise, a default of `0` will be used.
 
 ```php
 Extend\SiteHeader::add(HelloWorld::class, position: 10);
@@ -64,15 +64,15 @@ When adding a component to an extender, you can specify a unique key. This will 
 Extend\SiteHeader::add(HelloWorld::class, key: 'hello');
 
 // Replace the existing `hello` component
-Extend\SiteHeader::add(HelloWorld::class, key: 'hello');
+Extend\SiteHeader::replace('hello', HelloWorld::class);
 
 // Remove the `hello` component
 Extend\SiteHeader::remove('hello');
 ```
 
-### Rendering Component Lists
+### Creating Component Lists
 
-If you're building an extension, you can expose your own extendable component lists. First, create an extender using the `Waterhole\Extend\Concerns\OrderedList` and `OfComponents` traits and add any default components:
+If you're building an extension, you can expose your own extendable component lists. Create an extender using the `Waterhole\Extend\Concerns\OrderedList` and `OfComponents` traits and add any default components statically:
 
 ```php
 namespace Acme\Example\Extend;
@@ -88,7 +88,9 @@ class PortalHeader
 PortalHeader::add(PortalTitle::class, -10);
 ```
 
-Now, in your view, you can retrive the ordered component instances using the `components` method of your extender (passing in any props), and then use the `@components` Blade directive to render them:
+### Rendering Component Lists
+
+You can retrieve the ordered component instances using the `components` method of an extender (passing in any props), and then use the `@components` Blade directive to render them:
 
 ```blade
 @components(Acme\Example\Extend\PortalHeader::components(['foo' => 'bar']))
@@ -96,13 +98,13 @@ Now, in your view, you can retrive the ordered component instances using the `co
 
 ## Hotwire
 
-Waterhole uses [Hotwire](https://hotwired.dev) to achieve the speed and responsiveness of a single-page application, while keeping template rendering on the server.
+Waterhole uses [Hotwire](https://hotwired.dev) to achieve the speed and responsiveness of a single-page application, while rendering templates on the server.
 
 The [turbo-laravel](https://github.com/tonysm/turbo-laravel) library is included and can be used to help mark-up Turbo Frames and build Turbo Stream responses.
 
 ### Stimulus & Custom Elements
 
-Waterhole's templates are all server-rendered HTML, progressively enhanced with sprinklings of JavaScript via both [Stimulus](https://stimulus.hotwired.dev) and [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
+Waterhole's templates are all server-rendered HTML, progressively enhanced with sprinklings of JavaScript via both [Stimulus](https://stimulus.hotwired.dev) and [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements). Waterhole includes all the elements from the [Inclusive Elements](https://github.com/tobyzerner/inclusive-elements) library.
 
 ### Turbo Drive
 
@@ -120,7 +122,7 @@ You may need to be mindful of Turbo Frames when hooking into Waterhole's views. 
 
 #### Streamable Components
 
-Waterhole includes a mechanism to simplify the process of rendering a Blade Component in a Turbo Stream. First, the component must include the [`Waterhole\View\Components\Concerns\Streamable` trait]()(https://waterhole.dev/reference/Waterhole/View/Components/Concerns/Streamable.html):
+Waterhole includes a mechanism to simplify the process of rendering a Blade Component in a Turbo Stream. First, the component must include the [`Waterhole\View\Components\Concerns\Streamable` trait](reference://Waterhole/View/Components/Concerns/Streamable.html):
 
 ```php
 use Illuminate\View\Component;
@@ -146,7 +148,7 @@ class PostTitle extends Component
 }
 ```
 
-This trait exposes an `id()` method on the component, and the `$attributes` bag will automatically be populated with an `id` attribute using this value. By default, the ID will be derived from the component name and the component's first public property (`$post` in this example). You can override the method if you'd like to specify a custom ID.
+This trait exposes an `id()` method on the component, and the `$attributes` bag will automatically be populated with an `id` attribute using this value. By default, the ID will be derived from the component name and the component's first public property that is a `Model` instance (`$post` in this example). You can override the method if you'd like to specify a custom ID.
 
 To render a `<turbo-stream>` element for the streamable component, use the `Waterhole\Views\TurboStream` class. There is a method for each available Turbo Stream action. Pass in an instance of the streamable component:
 
@@ -155,8 +157,8 @@ use Waterhole\Views\TurboStream;
 
 TurboStream::replace(new PostTitle($post));
 TurboStream::remove(new PostTitle($post));
-TurboStream::append(new PostTitle($post), 'target_id');
-TurboStream::prepend(new PostTitle($post), 'target_id');
-TurboStream::before(new PostTitle($post), 'target_id');
-TurboStream::after(new PostTitle($post), 'target_id');
+TurboStream::append(new PostTitle($post), '#target_id');
+TurboStream::prepend(new PostTitle($post), '#target_id');
+TurboStream::before(new PostTitle($post), '#target_id');
+TurboStream::after(new PostTitle($post), '#target_id');
 ```

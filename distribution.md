@@ -50,4 +50,4 @@ Once your extension is ready for the world, you can [publish it on Packagist](ht
 composer require acme/example
 ```
 
-An official Waterhole Marketplace is coming soon, where you'll be able to list and sell your extensions.
+An official Waterhole Marketplace is planned, where you'll be able to list and sell your extensions.

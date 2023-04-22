@@ -31,9 +31,10 @@ Whenever new changes are pushed into the repository, you can pull them in on you
 ```
 composer install
 php artisan migrate
+php artisan waterhole:cache:clear
 ```
 
-This will install the latest dependencies and update the database.
+This will install the latest dependencies, update the database, and clear Waterhole caches.
 
 With a service like [Laravel Forge](https://forge.laravel.com) or a tool like [Deployer](https://deployer.org) you can even automate this process so deployments will automatically be triggered when you push changes to a particular branch.
 
@@ -70,3 +71,15 @@ php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 ```
+
+### Icon Caching
+
+Waterhole also makes use of the [Blade Icons library](https://blade-ui-kit.com/blade-icons) which has a caching mechanism that you should run in your deployment script:
+
+```php
+php artisan icons:cache
+```
+
+### Laravel Octane
+
+To supercharge your community's performance, you can use [Laravel Octane](https://laravel.com/docs/10.x/octane). Refer to the Laravel documentation to learn more about how to set up Octane.

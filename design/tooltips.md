@@ -7,13 +7,13 @@ Waterhole uses the [inclusive tooltip element](https://github.com/tobyzerner/inc
 ```blade render
 <!-- Tooltip as primary label -->
 <button class="btn btn--icon">
-  <x-waterhole::icon icon="tabler-bookmark"/>
+  @icon('tabler-bookmark')
   <ui-tooltip>Bookmarks</ui-tooltip>
 </button>
 
 <!-- Tooltip as auxiliary description -->
 <button class="btn" aria-describedby="settings-description">
-  <x-waterhole::icon icon="tabler-settings"/>
+  @icon('tabler-settings')
   Settings
   <ui-tooltip id="settings-description" hidden>
     View and manage settings

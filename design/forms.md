@@ -2,19 +2,21 @@
 
 ## Input
 
-Use the `.input` class to style any element (`<input>`, `<textarea>`, and `<select>`) as a input:
+`<input>`, `<textarea>`, and `<select>` elements are styled globally. You can apply identical styles to other elements using the `.input`, `.textarea`, and `.select` classes:
 
 ```html render
 <div class="stack gap-sm">
-    <input type="text" class="input" value="Input" />
+    <input type="text" value="Input" />
 
-    <textarea class="input">Textarea</textarea>
+    <textarea>Textarea</textarea>
 
-    <select class="input">
+    <select>
         <option>Select</option>
     </select>
 
-    <input type="file" class="input" />
+    <input type="file" />
+
+    <div class="input">Div that looks like an input</div>
 </div>
 ```
 
@@ -24,19 +26,19 @@ Wrap an input in an `.input-container` to decorate it with icons or buttons:
 
 ```blade render
 <div class="input-container">
-  <x-waterhole::icon icon="tabler-search" class="no-pointer"/>
-  <input type="text" class="input">
-  <span>
-      <button class="btn btn--icon btn--sm btn--transparent">
-        <x-waterhole::icon icon="tabler-x"/>
-      </button>
-  </span>
+    @icon('tabler-search', ['class' => 'no-pointer'])
+    <input type="text">
+    <span>
+        <button class="btn btn--icon btn--sm btn--transparent">
+            @icon('tabler-x')
+        </button>
+    </span>
 </div>
 ```
 
 ## Checkbox & Radio
 
-Checkboxes and radio inputs are globally styled to match the Waterhole theme.
+Checkboxes and radio inputs are styled globally.
 
 Apply the `.choice` class to a surrounding `<label>` for proper alignment of a checkbox/radio input and its text label:
 
@@ -56,20 +58,20 @@ Apply the `.choice` class to a surrounding `<label>` for proper alignment of a c
 
 ## Text Editor
 
-The text editor component decorates a `<textarea>` with a markdown toolbar, auto-suggests users for `@` mentions, and supports the ability to preview the formatted content:
+The [TextEditor component](reference://Waterhole/View/Components/TextEditor.html) decorates a `<textarea>` with a markdown toolbar, auto-suggests users for `@` mentions, and supports the ability to preview the formatted content:
 
 ```blade render
 <x-waterhole::text-editor
-  name="body"
-  value="Hello, world!"
-  placeholder="Enter your text"
-  class="input"
+    name="body"
+    value="Hello, world!"
+    placeholder="Enter your text"
+    class="input"
 />
 ```
 
 ## Color Picker
 
-Waterhole provides a color picker input component which allows the user to visually pick a hex (or hex alpha) color:
+The [ColorPicker component](reference://Waterhole/View/Components/Cp/ColorPicker.html) allows the user to visually pick a hex (or hex alpha) color. This component is only available in the context of the CP.
 
 ```blade render
 <x-waterhole::cp.color-picker name="color" value="abcdef"/>
@@ -83,42 +85,42 @@ Fields are a standard way to lay out a form control, its label, and help text or
 <div class="field">
     <label class="field__label">Email</label>
     <div class="grow stack gap-xs">
-        <input type="email" class="input" />
+        <input type="email" />
         <div class="field__description">Enter your email address.</div>
     </div>
 </div>
 ```
 
-The `<x-waterhole::field>` Blade component can be used to efficiently construct this markup. It will also automatically show validation errors for the field:
+The [Field component](reference://Waterhole/View/Components/Field.html) can be used to efficiently construct this markup. It will also automatically show validation errors for the field:
 
 ```blade render
 <x-waterhole::field
-  name="email"
-  label="Email"
-  description="Enter your email address."
->
-  <input type="email" name="email" class="input">
-</x-waterhole::field>
-```
-
-Multiple fields can be spaced using the `.stack` layout utility – commonly with `.dividers`:
-
-```blade render
-<div class="stack dividers">
-  <x-waterhole::field
-    name="name"
-    label="Name"
-    description="Enter your full name."
-  >
-    <input type="text" name="name" class="input">
-  </x-waterhole::field>
-
-  <x-waterhole::field
     name="email"
     label="Email"
     description="Enter your email address."
-  >
-    <input type="email" name="email" class="input">
-  </x-waterhole::field>
+>
+    <input type="email" name="email">
+</x-waterhole::field>
+```
+
+Multiple fields can be spaced using the `.stack` layout utility – commonly together with `.dividers`:
+
+```blade render
+<div class="stack dividers">
+    <x-waterhole::field
+        name="name"
+        label="Name"
+        description="Enter your full name."
+    >
+        <input type="text" name="name">
+    </x-waterhole::field>
+
+    <x-waterhole::field
+        name="email"
+        label="Email"
+        description="Enter your email address."
+    >
+        <input type="email" name="email">
+    </x-waterhole::field>
 </div>
 ```

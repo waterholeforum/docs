@@ -37,7 +37,7 @@ Add your provider credentials to `config/services.php`, and set the `redirect` o
 
 ### Button Customization
 
-You can customize the icon and name displayed on a provider's button by providing a configuration array:
+Waterhole includes styles for the default providers supported by Socialite, but if you wish to change them, or for any additional providers, you can customize the icon and name displayed on a provider's button by providing a configuration array:
 
 ```php
 'oauth_providers' => [

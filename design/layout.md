@@ -28,7 +28,7 @@ There is also a `--space-gutter` variable which changes based on the viewport wi
 
 ## Container & Section
 
-The `.container` class centers page content and applies viewport-appropriate horizontal padding, while the `.section` class applies vertical padding. These can be used together to construct basic page sections:
+The `.container` class centers page content and applies horizontal gutter padding, while the `.section` class applies vertical gutter padding. These can be used together to construct basic page sections:
 
 ```html render
 <section class="section">
@@ -64,6 +64,7 @@ They can be used together with various utility classes to intuitively construct 
 | `.gap-y-{size}`    | `row-gap: var(--space-{size})`    |
 | `.gap-x-{size}`    | `column-gap: var(--space-{size})` |
 | `.wrap`            | `flex-wrap: wrap`                 |
+| `.wrap-reverse`    | `flex-wrap: wrap-reverse`         |
 | `.justify-start`   | `justify-content: flex-start`     |
 | `.justify-center`  | `justify-content: center`         |
 | `.justify-end`     | `justify-content: flex-end`       |
@@ -77,15 +78,20 @@ They can be used together with various utility classes to intuitively construct 
 
 The following utility classes can be used on children:
 
-| Class          | CSS                                                                     |
-| -------------- | ----------------------------------------------------------------------- |
-| `.grow`        | `flex-grow: 1`                                                          |
-| `.shrink`      | `min-width: 0`                                                          |
-| `.no-shrink`   | `flex-shrink: 0`                                                        |
-| `.push-start`  | `margin-inline-end: auto`                                               |
-| `.push-center` | `margin-inline: auto`                                                   |
-| `.push-end`    | `margin-inline-start: auto`                                             |
-| `.break-sm`    | In a wrapping context, move the item onto its own row on small screens. |
+| Class                  | CSS                                                                     |
+| ---------------------- | ----------------------------------------------------------------------- |
+| `.grow`                | `flex-grow: 1`                                                          |
+| `.shrink`              | `min-width: 0`                                                          |
+| `.no-shrink`           | `flex-shrink: 0`                                                        |
+| `.align-self-center`   | `align-self: center`                                                    |
+| `.align-self-start`    | `align-self: start`                                                     |
+| `.align-self-end`      | `align-self: end`                                                       |
+| `.align-self-baseline` | `align-self: baseline`                                                  |
+| `.align-self-stretch`  | `align-self: stretch`                                                   |
+| `.push-start`          | `margin-inline-end: auto`                                               |
+| `.push-center`         | `margin-inline: auto`                                                   |
+| `.push-end`            | `margin-inline-start: auto`                                             |
+| `.break-sm`            | In a wrapping context, move the item onto its own row on small screens. |
 
 Together these utilities provide a basis on which to construct responsive layouts, even without the use of breakpoints in many cases. They should be used in combination with semantic class names to apply additional specific rules as required. The below example demonstrates a responsive "hero" component:
 
@@ -149,9 +155,11 @@ A basic responsive "sidebar" layout can be constructed using the `.with-sidebar`
 
 The sidebar can also be positioned on the right by making it the second child, after the main content.
 
-The sidebar is a flexbox container. On larger screens when it is displayed on the side, children are stacked in a column; on small screens when it wraps above the main content, children are laid out horizontally and may wrap.
+The sidebar is a flexbox container. On larger screens when it is displayed on the side, children are stacked in a column; on small screens when it wraps above or below the main content, children are laid out in a row and may wrap.
 
 The `.sidebar--sticky` class can be used to make the sidebar content stick to the top of the viewport as the user scrolls down.
+
+For right-sided sidebars, the `.sidebar--bottom` class can be applied to make the sidebar stick to the bottom of the viewport on small screens.
 
 ## Overlay
 
@@ -166,13 +174,13 @@ Use the `.overlay` class to overlay the element itself, useful for overlaying te
 </div>
 ```
 
-Use the `.pseudo-overlay` class to overlay a pseudo element, useful for making a link cover its entire card, for example:
+Use the `.has-overlay` class to overlay a pseudo element, useful for making a link cover its entire card, for example:
 
 ```html render
 <div class="card card__body overlay-container stack gap-sm">
     <h3>Card Title</h3>
     <p>Card Body</p>
-    <a href="#" class="pseudo-overlay">Read more</a>
+    <a href="#" class="has-overlay">Read more</a>
 </div>
 ```
 

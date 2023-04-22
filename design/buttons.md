@@ -41,7 +41,7 @@ Icons can be used in buttons to supplement text labels:
 
 ```blade render
 <button class="btn">
-    <x-waterhole::icon icon="tabler-check"/>
+    @icon('tabler-check')
     Accept
 </button>
 ```
@@ -50,7 +50,7 @@ Use the `.btn--icon` class to create an icon-only button. Don't forget to add an
 
 ```blade render
 <button class="btn btn--icon" aria-label="Accept">
-    <x-waterhole::icon icon="tabler-check"/>
+    @icon('tabler-check')
 </button>
 ```
 

@@ -4,14 +4,6 @@ Actions are a mechanism for performing tasks on one or more models – for examp
 
 Each item's context menu is really just a list of actions, and extensions can add their own into the mix.
 
-## Actionables
-
-Actions can only be applied to models that have been registered as **actionable**. To register a model as actionable, use the `Actionables` extender:
-
-```php
-Extend\Actionables::add('dogs', App\Models\Dog::class);
-```
-
 ## Defining an Action
 
 To define a new action, extend the `Waterhole\Actions\Action` class. Give your action a `label`, an `icon`, and a `run` method to execute your task on a collection of `$items`:
@@ -41,15 +33,7 @@ class Delete extends Action
 }
 ```
 
-## Registering an Action
-
-Register your action using the `Action` extender, which is an [ordered list](https://waterhole.dev/reference/Waterhole/Extend/Concerns/OrderedList.html), in your service provider:
-
-```php
-Extend\Action::add('delete', Delete::class);
-```
-
-## Filtering
+### Filtering
 
 Most actions only apply to certain types of items. For example, the Mark as Read action can only be applied to unread posts. To enforce this, implement the `appliesTo` method in your action:
 
@@ -60,7 +44,7 @@ public function appliesTo($item): bool
 }
 ```
 
-## Authorization
+### Authorization
 
 Some actions can only be performed by users with special privileges. To enforce this, implement the `authorize` method in your action:
 
@@ -73,7 +57,7 @@ public function authorize(?User $user, $item): bool
 
 > See the [Authorization](./authorization.md) page for more information about how Waterhole's permission system works.
 
-## Confirmation & Input
+### Confirmation & Input
 
 Some actions may need confirmation or additional input from the user before they are executed. To show a confirmation dialog, return a confirmation message from the `confirm` method. You can customize the "confirm" button text with the `confirmButton` method:
 
@@ -105,7 +89,7 @@ public function run(Collection $items)
 }
 ```
 
-## Destructive Actions
+### Destructive Actions
 
 If your action is potentially destructive, set the `$destructive` property to `true` to give the action a special appearance:
 
@@ -113,7 +97,7 @@ If your action is potentially destructive, set the `$destructive` property to `t
 public bool $destructive = true;
 ```
 
-## Responses & Streams
+### Responses & Streams
 
 In your action's `run` method, you can optionally return a response, such as a redirect or a file download:
 
@@ -137,7 +121,7 @@ public function stream($item)
 
 > See the [Frontend](./frontend.md#turbo-streams) page for more information about how Turbo Streams work.
 
-## Links
+### Links
 
 Some actions don't actually perform an action at all – they just redirect to another location. A good example is the "edit post" action, which just sends the user to the post's edit route.
 
@@ -159,13 +143,40 @@ class EditPost extends Link
 
 This will render the action as an `<a>` element rather than a `<button>`.
 
+### Conditional Rendering
+
+If you only want your action to render in menus in a certain context (e.g. only in the Control Panel), or you don't want it to render in menus at all (e.g. you want to render it manually in a view), you can implement the `shouldRender` method:
+
+```php
+public function shouldRender(Collection $models): bool
+{
+    return Waterhole::isCpRoute();
+}
+```
+
+## Registering an Action
+
+Register your action using the [`Actions` extender](reference://Waterhole/Extend/Actions.html) in your service provider:
+
+```php
+Extend\Actions::add(Delete::class);
+```
+
+### Actionables
+
+Actions can only be applied to models that have been registered as **actionable**. To register a model as actionable, use the `Actionables` extender:
+
+```php
+Extend\Actionables::add('dogs', App\Models\Dog::class);
+```
+
 ## Rendering Action Buttons
 
-Waterhole provides UI components to render action buttons and menus.
+Waterhole provides various UI components to render action buttons and menus:
 
-### Action Button
+### [Action Button](reference://Waterhole/View/Components/ActionButton.html)
 
-Render a single button that will execute the given action on the given item.
+Render a single button that will execute the given action on the given item(s).
 
 ```blade
 <x-waterhole::action-button
@@ -174,20 +185,20 @@ Render a single button that will execute the given action on the given item.
 />
 ```
 
-### Action Buttons
+### [Action Buttons](reference://Waterhole/View/Components/ActionButtons.html)
 
-Render all of the actions for a given item.
+Render all of the actions for the given item(s). If you specify a `limit`, remaining actions will be displayed in an overflow menu.
 
 ```blade
 <x-waterhole::action-buttons
     :for="$item"
-    :button-attributes="['class' => 'btn btn--icon btn--transparent btn--sm']"
-    tooltips
+    :button-attributes="['class' => 'btn btn--icon btn--transparent']"
     :limit="3"
+    tooltips
 />
 ```
 
-### Action Menu
+### [Action Menu](reference://Waterhole/View/Components/ActionMenu.html)
 
 Render a menu button containing all of the actions that apply to the given item(s).
 

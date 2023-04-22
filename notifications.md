@@ -6,7 +6,7 @@ Waterhole takes care of all the boilerplate: managing user preferences, generati
 
 ## Notification Types
 
-To define a new Waterhole Notification type, begin by extending the [`Waterhole\Notifications\Notification` class](https://waterhole.dev/reference/Waterhole/Notifications/Notification.html):
+To define a new Waterhole Notification type, begin by extending the [`Waterhole\Notifications\Notification` class](reference://Waterhole/Notifications/Notification.html):
 
 ```php
 namespace App\Notifications;
@@ -193,3 +193,7 @@ public static function load(Collection $notifications): void
     $notifications->load('content.post', 'content.user');
 }
 ```
+
+## Sending Notifications
+
+Refer to the [Laravel documentation](https://laravel.com/docs/10.x/notifications#sending-notifications) for information on how to send notifications.

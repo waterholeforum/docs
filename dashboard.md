@@ -1,4 +1,4 @@
-# Control Panel Dashboard
+# Dashboard
 
 Customize the widgets displayed on the Control Panel Dashboard.
 
@@ -15,7 +15,7 @@ To customize the widgets on the dashboard, open up the `config/waterhole/cp.php`
     // ...
     [
         'component' => Waterhole\Widgets\LineChart::class,
-        'width' => 100 / 3,
+        'width' => 1 / 3,
         'title' => 'waterhole::cp.dashboard-users-title',
         'model' => Waterhole\Models\User::class,
     ],
@@ -26,7 +26,7 @@ To customize the widgets on the dashboard, open up the `config/waterhole/cp.php`
 Each widget configuration array must have the following keys:
 
 -   `component`: The name of the widget component class.
--   `width`: The minimum width of the widget on the dashboard. Numeric values represent a percentage – in the above example, `100 / 3` will make the widget take up a third of the available width. You can also specify a string containing a raw CSS `width` value (eg. `10em`). Note that widgets will grow to take up any extra space if available.
+-   `width`: The minimum width of the widget on the dashboard. Numeric values represent a fraction – in the above example, `1 / 3` will make the widget take up a third of the available width. You can also specify a string containing a raw CSS `width` value (e.g. `10rem`). Note that widgets will grow to take up any extra space if available.
 
 Any additional key-value pairs will be passed to the widget component as configuration options.
 
@@ -37,7 +37,7 @@ Any additional key-value pairs will be passed to the widget component as configu
 ```php
 [
     'component' => Waterhole\Widgets\GettingStarted::class,
-    'width' => 50,
+    'width' => 1 / 2,
 ],
 ```
 
@@ -48,7 +48,7 @@ The Getting Started widget displays a few helpful pointers on where to begin whe
 ```php
 [
     'component' => Waterhole\Widgets\Feed::class,
-    'width' => 50,
+    'width' => 1 / 2,
     'url' => 'https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss',
     'limit' => 4,
 ],
@@ -58,13 +58,14 @@ The Feed widget displays the latest entries from an RSS or Atom feed, refreshing
 
 -   `url`: The URL of the RSS or Atom feed.
 -   `limit`: The number of entries to display.
+-   `title`: An optional title for the widget – otherwise, the feed title will be used.
 
 ### Line Chart
 
 ```php
 [
     'component' => Waterhole\Widgets\LineChart::class,
-    'width' => 100 / 3,
+    'width' => 1 / 3,
     'title' => 'waterhole::cp.dashboard-users-title',
     'model' => Waterhole\Models\User::class,
 ],

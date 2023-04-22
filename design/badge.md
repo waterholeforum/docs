@@ -1,6 +1,6 @@
 # Badge
 
-Badges are compact elements that indicate a particular state or association.
+Badges are compact elements that indicate a particular attribute.
 
 For example, badges are used to display user groups, post state like "locked", or the number of unread comments or notifications.
 
@@ -23,7 +23,7 @@ Badges may have an icon as well as a label:
 
 ```blade render
 <span class="badge">
-    <x-waterhole::icon icon="tabler-lock"/>
+    @icon('tabler-lock')
     Locked
 </span>
 ```

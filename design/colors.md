@@ -4,46 +4,11 @@ Use variables and utilities to apply consistent and accessible color.
 
 ## Variable System
 
-There are two sets of color variables:
+Waterhole's color system contains two sets of color variables:
 
-- The `--palette-*` variables are *constant* and define all of the available colors. These are set according to the theme (light or dark) and are where top-level customizations should be applied. Generally they should not be consumed directly by components (use the `color` variables instead).
+-   The `palette` variables are _constant_ and define all of the available colors. These are set according to the theme (light or dark) and are where top-level customizations should be applied. Generally they should **not** be consumed directly by components (use the `color` variables instead).
 
-- The `--color-*` variables are *dynamic* and define the color scheme in the current context. By default these variables are set to their palette counterparts, but they can be overridden at an element-level to influence how children are styled. For example, if an element is styled with a dark background, it may also override the `--color-text` variable so that any children which consume this color will adapt.
-
-<details class="card">
-<summary class="card__header">Quick illustration of this system</summary>
-
-```css
-/* The themes define the palette variables */
-[data-theme='light'] {
-    --palette-bg: white;
-    --palette-text: black;
-}
-
-[data-theme='dark'] {
-    --palette-bg: black;
-    --palette-text: white;
-}
-
-/* The color variables default to the same */
-:root {
-    --color-bg: var(--palette-bg);
-    --color-text: var(--palette-text);
-}
-
-/* Components consume color variables */
-.btn {
-    background: var(--color-bg);
-    color: var(--color-text);
-}
-
-/* An element might override them, so that any child components will adapt */
-.bg-dark {
-    --color-bg: var(--palette-text);
-    --color-text: var(--palette-bg);
-}
-```
-</details>
+-   The `color` variables are _dynamic_ and define the color scheme in the current context. By default these variables are set to their palette counterparts, but they can be overridden at an element-level to influence how children are styled. For example, if an element is styled with a dark background, it may also set the `--color-text` variable to a light color so that any children which consume this color will adapt.
 
 ## Palette
 
@@ -56,17 +21,17 @@ All colors are selected to pass a minimum WCAG accessibility rating of [level AA
 
 ### Base Colors
 
-| Color                                                                                                       | Usage                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| <span class="swatch" style="background: var(--color-bg)"></span> `--color-bg`                               | Page background color.                                                |
-| <span class="swatch" style="background: var(--color-text)"></span> `--color-text`                           | Default color for text and icons.                                     |
-| <span class="swatch" style="background: var(--color-muted)"></span> `--color-muted`                         | Secondary color for text and icons.                                   |
-| <span class="swatch" style="background: var(--color-fill)"></span> `--color-fill`                           | Provides subtle contrast against a background.                        |
-| <span class="swatch" style="background: var(--color-stroke)"></span> `--color-stroke`                       | Use for borders or dividers.                                          |
-| <span class="swatch" style="background: var(--color-emphasis)"></span> `--color-emphasis`                   | Highest contrast against the default background, such as in tooltips. |
-| <span class="swatch" style="background: var(--color-emphasis-contrast)"></span> `--color-emphasis-contrast` | Optimal contrast against the emphasis color.                          |
+| Color                                                                                                           | Usage                                                                 |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| <span class="swatch" style="background: var(--palette-bg)"></span> `--palette-bg`                               | Page background color.                                                |
+| <span class="swatch" style="background: var(--palette-text)"></span> `--palette-text`                           | Default color for text and icons.                                     |
+| <span class="swatch" style="background: var(--palette-muted)"></span> `--palette-muted`                         | Secondary color for text and icons.                                   |
+| <span class="swatch" style="background: var(--palette-fill)"></span> `--palette-fill`                           | Provides subtle contrast against a background.                        |
+| <span class="swatch" style="background: var(--palette-stroke)"></span> `--palette-stroke`                       | Use for borders or dividers.                                          |
+| <span class="swatch" style="background: var(--palette-emphasis)"></span> `--palette-emphasis`                   | Highest contrast against the default background, such as in tooltips. |
+| <span class="swatch" style="background: var(--palette-emphasis-contrast)"></span> `--palette-emphasis-contrast` | Optimal contrast against the emphasis color.                          |
 
-Both `--color-fill` and `--color-stroke` are semi-transparent colors so they can be layered:
+Both `--palette-fill` and `--palette-stroke` are semi-transparent colors so they can be layered:
 
 ```html render
 <div class="bg-fill p-md">
@@ -88,12 +53,12 @@ Functional colors are used to convey interactivity and meaning. The functional c
 
 Each functional color has four associated varieties:
 
-| Variable                                                                                                | Usage                                                                    |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| <span class="swatch bg-accent"></span> `--color-{name}`                                                 | Background color for elements like buttons and alerts.                   |
-| <span class="swatch" style="background: var(--color-accent-contrast)"></span> `--color-{name}-contrast` | Optimal contrast against the background color.                           |
-| <span class="swatch bg-accent-soft"></span> `--color-{name}-soft`                                       | Soft background color to subtly highlight an element.                    |
-| <span class="swatch" style="background: var(--color-accent-text)"></span> `--color-{name}-text`         | Optimal contrast against the soft color (and the page background color). |
+| Variable                                                                                                    | Usage                                                                    |
+| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| <span class="swatch bg-accent"></span> `--palette-{name}`                                                   | Background color for elements like buttons and alerts.                   |
+| <span class="swatch" style="background: var(--palette-accent-contrast)"></span> `--palette-{name}-contrast` | Optimal contrast against the background color.                           |
+| <span class="swatch bg-accent-soft"></span> `--palette-{name}-soft`                                         | Soft background color to subtly highlight an element.                    |
+| <span class="swatch" style="background: var(--palette-accent-text)"></span> `--palette-{name}-text`         | Optimal contrast against the soft color (and the page background color). |
 
 ## Utilities
 

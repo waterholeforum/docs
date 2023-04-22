@@ -16,10 +16,10 @@ And run any outstanding database migrations:
 php artisan migrate
 ```
 
-You should clear the application cache after updating to ensure that assets and other cached data is refreshed:
+You should clear the Waterhole cache after updating to ensure that asset bundles and translations are refreshed:
 
 ```
-php artisan cache:clear
+php artisan waterhole:cache:clear
 ```
 
 ## Deployment Workflow

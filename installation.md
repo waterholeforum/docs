@@ -13,7 +13,7 @@ Waterhole has minimal hardware requirements and runs well on a [$4/month Digital
 
 You will need **command line access** (locally or via SSH) in order to run Composer and Waterhole commands.
 
-> Waterhole is free to use in development environments, but you'll need to buy a license to use it in production. Read more about [licensing](./licensing.md) and the recommended [deployment workflow](./deploying.md).
+> **Warning:** Waterhole is free to use in development environments, but you'll need to buy a license to use it in production. Read more about [licensing](./licensing.md) and the recommended [deployment workflow](./deploying.md).
 
 ## Installing
 
@@ -27,7 +27,7 @@ composer create-project waterhole/waterhole path/to/forum
 
 ### 2. Configure the Database
 
-Once this command has finished running, edit the `.env` file at the root of your new Waterhole installation. This file contains environment configuration settings like your community name, URL, and database details. See [Configuration](./configuration.md) for more details. For the purposes of installation, fill out the following values:
+Once this command has finished running, edit the `.env` file at the root of your new Waterhole installation. This file contains environment configuration settings like your community name, URL, and database details. See [Configuration](./configuration.md) for more details. To get up and running, fill out the following values:
 
 -   `APP_NAME`: The name of your community
 -   `APP_URL`: The root URL of your Waterhole installation

@@ -6,7 +6,7 @@ Use the `.placeholder` class on the container, which centers and adds appropriat
 
 ```blade render
 <div class="placeholder">
-    <x-waterhole::icon icon="tabler-star" class="placeholder__icon"/>
+    @icon('tabler-star', ['class' => 'placeholder__icon'])
     <h4>No Stars</h4>
     <p>Add a star to get star-ted.</p>
     <button class="btn">Add Star</button>

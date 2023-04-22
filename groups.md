@@ -24,7 +24,7 @@ Permissions can be managed from two perspectives:
 
 ### Admin
 
-There is a special user group called **Admin**. Users assigned to this group have globally elevated permissions – they can view all content and perform all actions.
+There is a special user group called **Admin**. Users assigned to this group have globally elevated permissions – they can view all content and perform all actions. As such, you should only assign this group to people you trust.
 
 ## Assigning Users
 

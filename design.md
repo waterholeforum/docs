@@ -8,13 +8,13 @@ Waterhole's [design system](./design/overview.md) makes heavy use of CSS variabl
 
 New Waterhole projects are already hooked up with a file where you can place custom CSS: `resources/css/waterhole/app.css`. Simply add your CSS to this file and it will be concatenated onto the end of the main stylesheet bundle.
 
-For example, you can change the accent color of your forum by overriding the `accent-*` variables (from which the accent color variables are derived):
+For example, you can change the accent color of your forum by overriding the `--palette-accent-*` variables (from which the accent color variables are derived):
 
 ```css
 :root {
-    --accent-h: 123;
-    --accent-s: 50%;
-    --accent-l: 50%;
+    --palette-accent-h: 250;
+    --palette-accent-s: 93%;
+    --palette-accent-l: 58%;
 }
 ```
 
@@ -28,9 +28,13 @@ Note that you **cannot remove** any of Waterhole's base CSS – you can only bui
 
 ### Dark Mode
 
-Waterhole features a user Dark Mode toggle button in the header. To target changes to CSS variables and classes in dark mode, put them within a `[data-theme='dark']` selector:
+Waterhole features a user Dark Mode toggle button in the header. To target changes to CSS variables and classes specifically to light or dark mode, put them within a `[data-theme]` selector:
 
 ```css
+[data-theme='light'] {
+    /* light mode customizations */
+}
+
 [data-theme='dark'] {
     /* dark mode customizations */
 }
@@ -51,17 +55,15 @@ Waterhole's HTML is server-rended using [Blade](https://laravel.com/docs/10.x/bl
 
 Using [extenders](./extending.md#extenders), you can hook into these component lists and add your own components at any position, and replace or remove existing ones. Some common examples are listed below. To learn more about how component lists work, see the [Frontend](./frontend.md#component-lists) page.
 
-> **Danger:** Avoid overriding Waterhole's Blade templates directly, as this increases the likelihood that something will break when you upgrade to a future version of Waterhole.
-
 ### Forum Title
 
-To customize the forum title in the header (for example, to add your logo), use the `Header` extender to replace the `title` component. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
+To customize the forum title in the header (for example, to add your logo), use the `Header` extender to replace the default `title` component. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
 
 ```php
 Extend\Header::replace(key: 'title', content: 'waterhole.title');
 ```
 
-The value of `content` refers to a template located at `resources/views/waterhole/title.blade.php`. You can put whatever you want in here – for example, to display an SVG logo:
+The corresponding view is located at `resources/views/waterhole/title.blade.php`. You can put whatever you want in here – for example, to display an SVG logo:
 
 ```blade
 <a href="{{ route('waterhole.home') }}" class="row">
@@ -82,7 +84,7 @@ To add custom HTML inside the `<head>` tag, use the `DocumentHead` extender. Add
 Extend\DocumentHead::add('waterhole.head');
 ```
 
-The argument is the name of a view where your custom template resides – in this example `waterhole.head` would correspond to a template at `resources/views/waterhole/head.blade.php`.
+This refers to a view located at `resources/views/waterhole/head.blade.php`.
 
 ### Site Header
 
@@ -92,7 +94,7 @@ To add a custom site header above Waterhole's header, use the `LayoutBefore` ext
 Extend\LayoutBefore::add('partials.header', position: -10);
 ```
 
-Here we're referring to a template located at `resources/views/partials/header.blade.php`. We also pass a negative `position` parameter to insert our custom header **before** Waterhole's header.
+This refers to a view located at `resources/views/partials/header.blade.php`. We also pass a negative `position` parameter to insert our custom header **before** Waterhole's header.
 
 ### Hero
 
@@ -132,4 +134,4 @@ Your `resources/views/waterhole/footer.blade.php` template might look something 
 
 ### Other Extenders
 
-Take a look at all of the extenders that are available under the [`Waterhole\Extend` namespace](https://waterhole.dev/reference/Waterhole/Extend.html).
+Take a look at all of the extenders that are available under the [`Waterhole\Extend` namespace](reference://Waterhole/Extend.html).

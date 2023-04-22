@@ -22,7 +22,7 @@ Extend\CpRoutes::add(function () {
 
 ### Adding a Navigation Link
 
-The [`CpNav`](https://waterhole.dev/reference/Waterhole/Extend/CpNav.html) extender represents an [ordered list](https://waterhole.dev/reference/Waterhole/Extend/Concerns/OrderedList.html) of components that make up the CP navigation. You can add any component or view you want; typically you'll want to use a [`NavLink`](https://waterhole.dev/reference/Waterhole/View/Components/NavLink.html) component instance:
+The [`CpNav`](reference://Waterhole/Extend/CpNav.html) extender is a list of components that make up the CP navigation. You can add any component or view you want; typically you'll want to use a closure returning a [`NavLink`](reference://Waterhole/View/Components/NavLink.html) component instance:
 
 ```php
 use Waterhole\Components\NavLink;
@@ -30,7 +30,7 @@ use Waterhole\Extend;
 
 Extend\CpNav::add(
     'resources',
-    new NavLink(
+    fn() => new NavLink(
         label: 'Resources',
         icon: 'tabler-star',
         route: 'waterhole.cp.resources',
@@ -40,7 +40,7 @@ Extend\CpNav::add(
 
 ### Rendering the CP Layout
 
-Use the [`<x-waterhole::cp>`](https://waterhole.dev/reference/Waterhole/View/Components/Cp.html) component to render your views inside the CP layout:
+Use the [`<x-waterhole::cp>`](reference://Waterhole/View/Components/Cp.html) component to render your views inside the CP layout:
 
 ```blade
 <x-waterhole::cp title="My Page">
@@ -50,7 +50,7 @@ Use the [`<x-waterhole::cp>`](https://waterhole.dev/reference/Waterhole/View/Com
 
 ### Adding Assets
 
-To add styles or scripts to the Control Panel (without adding them to the global bundle), use the [`Stylesheet`](https://waterhole.dev/reference/Waterhole/Extend/Stylesheet.html) and [`Script`](https://waterhole.dev/reference/Waterhole/Extend/Script.html) extenders and specify `cp` as the bundle name.
+To add styles or scripts to the Control Panel (without adding them to the global bundle), use the [`Stylesheet`](reference://Waterhole/Extend/Stylesheet.html) and [`Script`](reference://Waterhole/Extend/Script.html) extenders and specify `cp` as the bundle name.
 
 ```php
 use Waterhole\Extend;
@@ -92,25 +92,6 @@ Typically the widget view will contain a [card](./design/cards.md) beginning wit
 </div>
 ```
 
-### Widget Assets
-
-If your widget needs to include additional styles or scripts, you can call the `Styles` or `Scripts` extenders in your component constructor. This way, the resources will only be included if your widget is in use.
-
-```php
-use Waterhole\Extend;
-
-class LatestResources extends Component
-{
-    public function __construct()
-    {
-        Extend\Stylesheet::add(__DIR__.'/../../resources/less/widget.less', bundle: 'cp');
-        Extend\Script::add(__DIR__.'/../../resources/dist/widget.js', bundle: 'cp');
-    }
-
-    // ...
-}
-```
-
 ### Widget Configuration
 
 Each Waterhole project can configure its widget layout in `config/waterhole/cp.php` – refer to the [Dashboard](./dashboard.md) customization documentation.
@@ -120,11 +101,8 @@ Any extra configuration options will be passed in when the widget is instantiate
 ```php
 class LatestResources extends Component
 {
-    public int $limit;
-
-    public function __construct(int $limit = 3)
+    public function __construct(public int $limit = 3)
     {
-        $this->limit = $limit;
     }
 
     // ...
@@ -137,7 +115,7 @@ And then consumers can override it:
 'widgets' => [
     [
         'component' => App\Widgets\LatestResources::class,
-        'width' => 50,
+        'width' => 1 / 2,
         'limit' => 5,
     ],
 ]

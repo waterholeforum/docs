@@ -14,8 +14,16 @@ Waterhole defines three font families for use as CSS variables:
 /* Display family for larger headings (no different by default) */
 --font-display: var(--font-text);
 
-/* Monospace family used for code blocks */
+/* Monospace family used for <code> elements */
 --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace;
+```
+
+In addition to being applied directly to heading and code elements, these fonts can be applied selectively using the `.font-{family}` utility classes:
+
+```html render
+<div class="font-text">.font-text</div>
+<div class="font-display">.font-display</div>
+<div class="font-mono">.font-mono</div>
 ```
 
 ## Scale
@@ -56,7 +64,7 @@ Three line heights are defined, with the `default` being applied globally, the `
 
 ## Headings
 
-Heading styles are applied to `<h1>`-`<h6>` elements globally.
+Heading styles are applied to `<h1>`-`<h6>` elements globally, using the defined typographic scale.
 
 ```html render
 <h1>Heading 1</h1>
@@ -126,7 +134,7 @@ Use text alignment utilities to left align, center, or right align text:
 Waterhole defines a [typographic measure](https://every-layout.dev/rudiments/axioms/), which is the maxiumum recommended width of the line of text to ensure readability. The measure is available in a variable and can be applied using a utility class:
 
 ```css
---measure: 80ch;
+--measure: 100ch;
 ```
 
 ```html render
@@ -148,3 +156,5 @@ Anchor elements are globally styled with the accent color, and an underline on h
 ```
 
 Anchor elements in a `.content` block are given a persistent underline to improve accessibility.
+
+Use the `.underline` and `.no-underline` utility classes to force an underline or not.

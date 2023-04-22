@@ -12,17 +12,17 @@ Use the `.menu-item` class for menu items, which can be buttons, links, or label
 <ui-popup placement="bottom-start">
   <button class="btn">
     Controls
-    <x-waterhole::icon icon="tabler-chevron-down"/>
+    @icon('tabler-chevron-down')
   </button>
 
   <ui-menu class="menu" hidden>
     <button class="menu-item" role="menuitem">
-      <x-waterhole::icon icon="tabler-star"/>
+      @icon('tabler-star')
       Star
     </button>
 
     <button class="menu-item color-danger" role="menuitem">
-      <x-waterhole::icon icon="tabler-trash"/>
+      @icon('tabler-trash')
       Delete...
     </button>
   </ui-menu>
@@ -59,7 +59,7 @@ Menu items may have a title and description, rather than just a text label. Use 
 ```blade render
 <ui-menu class="menu">
   <button class="menu-item" role="menuitem">
-    <x-waterhole::icon icon="tabler-star"/>
+    @icon('tabler-star')
     <span>
       <span class="menu-item__title">Follow</span>
       <span class="menu-item__description">Get notifications about new comments.</span>
@@ -76,7 +76,7 @@ Menu items will be styled as "selected" if they have the `.is-active` class, or 
 <ui-menu class="menu">
   <button class="menu-item" role="menuitemradio" aria-checked="true">
     <span>Menu Item</span>
-    <x-waterhole::icon icon="tabler-check" class="menu-item__check"/>
+    @icon('tabler-check', ['class' => 'menu-item__check'])
   </button>
   <button class="menu-item" role="menuitem">Menu Item</button>
 </ui-menu>

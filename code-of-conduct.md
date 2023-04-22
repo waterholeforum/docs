@@ -2,7 +2,7 @@
 
 This code of conduct applies to all spaces managed used by the Waterhole community for communication. This includes the Waterhole forum, GitHub, Twitter, and any other relevant forums.
 
-If you believe someone is violating the code of conduct, we ask that you report it by emailing [hello@waterhole.dev](mailto:hello@waterhole.dev). Your identity will remain confidential.
+If you believe someone is violating the code of conduct, please report it by emailing [hello@waterhole.dev](mailto:hello@waterhole.dev). Your identity will remain confidential.
 
 -   **Be civil.** This is an inclusive community that welcomes and supports people of all backgrounds and identities. Be kind, patient, and respectful towards everyone, including people outside of the Waterhole community.
 
