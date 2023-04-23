@@ -54,7 +54,7 @@ Using [extenders](./extending.md#extenders), you can hook into these component l
 
 ### Forum Title
 
-To customize the forum title in the header (for example, to add your logo), use the `Header` extender to replace the default `title` component. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
+To customize the forum title in the header (for example, to add your logo), use the `Header` extender to replace the default `title` component. Add the following to the `register` method of `app/Providers/WaterholeServiceProvider.php`:
 
 ```php
 Extend\Header::replace(key: 'title', content: 'waterhole.title');
@@ -75,7 +75,7 @@ The corresponding view is located at `resources/views/waterhole/title.blade.php`
 
 ### Document `<head>`
 
-To add custom HTML inside the `<head>` tag, use the `DocumentHead` extender. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
+To add custom HTML inside the `<head>` tag, use the `DocumentHead` extender. Add the following to the `register` method of `app/Providers/WaterholeServiceProvider.php`:
 
 ```php
 Extend\DocumentHead::add('waterhole.head');
@@ -85,7 +85,7 @@ This refers to a view located at `resources/views/waterhole/head.blade.php`.
 
 ### Site Header
 
-To add a custom site header above Waterhole's header, use the `LayoutBefore` extender. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
+To add a custom site header above Waterhole's header, use the `LayoutBefore` extender. Add the following to the `register` method of `app/Providers/WaterholeServiceProvider.php`:
 
 ```php
 Extend\LayoutBefore::add('partials.header', position: -10);
@@ -95,7 +95,7 @@ This refers to a view located at `resources/views/partials/header.blade.php`. We
 
 ### Hero
 
-You can add a "hero" to your forum's index page to welcome users to your community. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
+You can add a "hero" to your forum's index page to welcome users to your community. Add the following to the `register` method of `app/Providers/WaterholeServiceProvider.php`:
 
 ```php
 Extend\LayoutBefore::add('waterhole.hero');
@@ -115,7 +115,7 @@ Your `resources/views/waterhole/hero.blade.php` template might look something li
 
 ### Footer
 
-You can add a global footer with copyright information and links. Add the following to the `boot` method of `app/Providers/WaterholeServiceProvider.php`:
+You can add a global footer with copyright information and links. Add the following to the `register` method of `app/Providers/WaterholeServiceProvider.php`:
 
 ```php
 Extend\Footer::add('waterhole.footer');

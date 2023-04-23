@@ -8,7 +8,7 @@ You can configure the path prefix for the main Waterhole routes in `config/water
 
 ## Registering Routes
 
-To register your own routes in Waterhole's route groups, use the [`ForumRoutes` extender](reference://Waterhole/Extend/ForumRoutes.html). You can do this in the boot method of a service provider.
+To register your own routes in Waterhole's route groups, use the [`ForumRoutes` extender](reference://Waterhole/Extend/ForumRoutes.html). You can do this in the `register` method of a service provider.
 
 Forum routes use the path prefix configured in `config/waterhole/forum.php`, a name prefix of `waterhole.`, and the `waterhole.web` middleware group.
 

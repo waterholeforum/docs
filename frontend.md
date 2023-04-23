@@ -30,7 +30,7 @@ Check out the [list of extenders](reference://Waterhole/Extend.html) to learn ab
 
 ### Adding Components
 
-To add a component, call the `add` method on the applicable extender in the boot method of a service provider:
+To add a component, call the `add` method on the applicable extender in the `register` method of a service provider:
 
 ```php
 use Waterhole\Extend;
