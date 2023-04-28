@@ -62,12 +62,14 @@ public function icon(): string
 
 ### Title
 
-Specify the `title` of the notification using Markdown syntax. This allows the notification to be expressed both in HTML and plain-text:
+Specify the `title` of the notification as a plain string or an `HtmlString`. If returning the latter, be sure to escape user-generated content:
 
 ```php
-public function title(): string
+public function title(): HtmlString
 {
-    return "New comment in **{$this->comment->post->title}**";
+    return new HtmlString(
+        'New comment in <strong>' . e($this->comment->post->title) . '</strong>'
+    );
 }
 ```
 
