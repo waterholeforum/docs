@@ -1,6 +1,6 @@
 # Updating
 
-Keeping your Waterhole installation up-to-date is easy, thanks to Composer.
+Keep your Waterhole installation up-to-date with Composer.
 
 > **Warning:** In production, you should always back up your database before updating.
 

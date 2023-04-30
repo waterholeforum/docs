@@ -1,6 +1,6 @@
 # Installation
 
-Waterhole is a self-hosted PHP application that's quick and easy to install.
+Waterhole is a self-hosted PHP application.
 
 ## Prerequisites
 

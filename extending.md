@@ -1,6 +1,6 @@
 # Extending Waterhole
 
-Waterhole is highly extensible, and it's easy to add new features tailored to your community.
+Waterhole is highly extensible, making it possible to add new features tailored to your community.
 
 Waterhole is a Laravel package, meaning right off the bat you can add your own routes, views, middleware, container bindings, database migrations, console commands, and more, in the [standard Laravel way](https://laravel.com/docs/10.x).
 
@@ -18,7 +18,7 @@ If, on the other hand, you want to reuse, distribute, or sell your features, you
 
 The main mechanism by which you'll hook into Waterhole is with **extenders**. These are static classes that provide methods to extend Waterhole in some way. You can see all of the extenders that are available under the [`Waterhole\Extend` namespace](reference://Waterhole/Extend.html).
 
-As a quick example of how easy it is to get started, open up `app/Providers/WaterholeServiceProvider.php` and add the following code to the `register` method:
+As a quick example, open up `app/Providers/WaterholeServiceProvider.php` and add the following code to the `register` method:
 
 ```php
 use Illuminate\View\Component;
@@ -57,7 +57,7 @@ What did we just do? We used the `LayoutBefore` extender to inject a custom comp
 
 ## Next Steps
 
-Using extenders in service providers, it's easy to achieve a whole range of things within Waterhole. You can:
+Using extenders in service providers, you can achieve a whole range of things within Waterhole:
 
 -   Add [Actions](./actions.md) to the context menus of posts, comments, and other objects.
 -   Add pages and widgets to the [Control Panel](./cp.md).

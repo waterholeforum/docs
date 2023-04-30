@@ -1,6 +1,6 @@
 # Customizing The Design
 
-Waterhole features a simple and adaptable design that's easy to customize and integrate with your brand.
+Waterhole features a simple and adaptable design that you can customize and integrate with your brand.
 
 ## Custom CSS
 
