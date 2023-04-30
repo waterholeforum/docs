@@ -67,7 +67,7 @@ Extensions can make widgets available to be displayed on the CP [Dashboard](./da
 
 ### Defining a Widget
 
-Widgets are just [Blade components](https://laravel.com/docs/10.x/blade#components). So, to make a new widget available, simply define a new component:
+Widgets are just [Blade components](https://laravel.com/docs/10.x/blade#components). So, to make a new widget available, define a new component:
 
 ```php
 namespace App\Widgets;
@@ -125,7 +125,7 @@ And then consumers can override it:
 
 If your widget is a bit resource intensive – if it makes a HTTP request, or runs an expensive database query, for example – you can indicate that it should be loaded lazily, so as to not slow down the whole Dashboard loading.
 
-Simply set a static `$lazy` property to true on your component, and Waterhole will take care of the rest:
+Set a static `$lazy` property to true on your component, and Waterhole will take care of the rest:
 
 ```php
 class LatestResources extends Component

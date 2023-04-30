@@ -10,7 +10,7 @@ But there are also plenty of opportunities to extend Waterhole itself. This sect
 
 In Laravel, all of the application bootstrapping – the registration of bindings, event listeners, middleware, routes – takes place in [service providers](https://laravel.com/docs/10.x/providers). This is also the place where you can put code to extend Waterhole.
 
-If you're building customizations specific to your community, then you can simply add code to your project's service providers, found in `app/Providers`.
+If you're building customizations specific to your community, then you can add code to your project's service providers, found in `app/Providers`.
 
 If, on the other hand, you want to reuse, distribute, or sell your features, you can [make an extension](./distribution.md). The premise is the same though – the starting point is your extension's service providers.
 

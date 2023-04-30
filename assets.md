@@ -34,7 +34,7 @@ Extend\Stylesheet::add(resource_path('css/styles.css'), bundle: 'cp');
 
 ## Public Assets
 
-If you have public assets like images, or scripts and stylesheets that you don't want to include in the bundle, simply place them in your application's `public` directory and then refer to them in your views using Laravel's `asset()` function.
+If you have public assets like images, or scripts and stylesheets that you don't want to include in the bundle, place them in your application's `public` directory and then refer to them in your views using Laravel's `asset()` function.
 
 If you're developing an [extension](./distribution.md), use the service provider's `publishes` method to publish your assets to the application's `public` directory:
 

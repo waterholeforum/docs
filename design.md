@@ -6,7 +6,7 @@ Waterhole features a simple and adaptable design that's easy to customize and in
 
 Waterhole's [design system](./design/overview.md) makes heavy use of CSS variables and classes, both of which you can override and extend.
 
-New Waterhole projects are already hooked up with a file where you can place custom CSS: `resources/css/waterhole/app.css`. Simply add your CSS to this file and it will be concatenated onto the end of the main stylesheet bundle.
+New Waterhole projects are already hooked up with a file where you can place custom CSS: `resources/css/waterhole/app.css`. Add your CSS to this file and it will be concatenated onto the end of the main stylesheet bundle.
 
 For example, you can change the accent color of your forum by overriding the `--palette-accent-*` variables (from which the accent color variables are derived):
 
