@@ -23,7 +23,7 @@ Translations are stored in files within the `resources/lang` directory. Within t
       messages.php
 ```
 
-If you're developing an extension, you'll need to register your translation files with a namespace in the boot method of a service provider:
+If you're developing an extension, you'll need to register your translation files with a namespace in the `boot` method of a service provider:
 
 ```php
 $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'acme-example');

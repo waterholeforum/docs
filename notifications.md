@@ -150,7 +150,7 @@ public static function description(): string
 
 Note that this is a **static** method, as it describes the notification type itself rather than a particular notification instance.
 
-Then, register your notification type with the `NotificationTypes` extender in the `register` method of a service provider:
+Then, register your notification type with the `NotificationTypes` extender in the `extend` method of your service provider:
 
 ```php
 use Waterhole\Extend;
