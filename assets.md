@@ -18,7 +18,7 @@ Extend\Stylesheet::add(resource_path('css/styles.css'));
 
 ### Scripts
 
-Add scripts to the bundle using the [`Script`](reference://Waterhole/Extend/Concerns/Script.html) extender. Waterhole will concatenate scripts onto the end of the bundle:
+Add scripts to the bundle using the [`Script`](reference://Waterhole/Extend/Script.html) extender. Waterhole will concatenate scripts onto the end of the bundle:
 
 ```php
 Extend\Script::add(resource_path('js/script.js'));
