@@ -80,6 +80,10 @@ Waterhole also makes use of the [Blade Icons library](https://blade-ui-kit.com/b
 php artisan icons:cache
 ```
 
+### OPcache
+
+Since Waterhole and the Laravel framework include a lot of PHP files, you can get a significant performance boost by [enabling OPcache](https://www.php.net/manual/en/opcache.installation.php). If using Laravel Octane, ensure that the `opcache.enable_cli` flag is on.
+
 ### Laravel Octane
 
 To supercharge your community's performance, you can use [Laravel Octane](https://laravel.com/docs/10.x/octane). Refer to the Laravel documentation to learn more about how to set up Octane.
