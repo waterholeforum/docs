@@ -3,6 +3,7 @@
         "text": "Getting Started",
         "items": [
             { "text": "Installation", "link": "/installation" },
+            { "text": "Laravel Integration", "link": "/laravel" },
             { "text": "Configuration", "link": "/configuration" },
             { "text": "Deploying", "link": "/deploying" },
             { "text": "Updating", "link": "/updating" },
