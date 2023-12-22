@@ -67,7 +67,7 @@ See the [Laravel Broadcasting documentation](https://laravel.com/docs/10.x/broad
 
 You should strongly consider setting up a queue to process time-intensive tasks (like sending email notifications) in the background, so they don't slow down web requests. Queue configuration can be found in `config/queue.php`.
 
-See the Laravel documentation for more information about the [available drivers](https://laravel.com/docs/10.x/queues#driver-prerequisites), how to [run the queue worker](https://laravel.com/docs/10.x/queues#running-the-queue-worker), and how to [configure Supervisor](https://laravel.com/docs/10.x/queues#supervisor-configuration) to ensure the queue works reliably in production.
+See the Laravel documentation for more information about the [available drivers](https://laravel.com/docs/10.x/queues#driver-prerequisites), how to [run the queue worker](https://laravel.com/docs/10.x/queues#running-the-queue-worker), and how to [configure Supervisor](https://laravel.com/docs/10.x/queues#supervisor-configuration) to ensure the queue works reliably in production. Or, you may wish to set up [Laravel Horizon](https://laravel.com/docs/10.x/horizon) to manage your queue workers.
 
 ## Cache Configuration
 
