@@ -134,8 +134,8 @@ If your website does not use PHP, you will need to write code to perform the fol
 
 #### `PendingUser` Parameters
 
--   `externalId` (required) is a unique ID for the user in your system that will never change.
+-   `identifier` (required) is a unique ID for the user in your system that will never change.
 -   `email` (required) must be a **verified** email address.
--   `username` is a suggested username for the user if they are new.
--   `avatarUrl` will be downloaded and set as the user's avatar if they are new.
+-   `name` is a suggested username for the user if they are new.
+-   `avatar` is a URL that will be downloaded and set as the user's avatar if they are new.
 -   `groups` is an array of group IDs that will be assigned to the user if they are new.
