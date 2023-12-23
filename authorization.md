@@ -42,12 +42,12 @@ Additionally, some logic is applied globally across all Gate checks:
 -   If the user is an administrator, permission is granted
 -   If the user has not yet verified their email, or if they have been suspended, they are treated as if they are a guest
 
-Gate abilities are named using the format `resource.ability`. For example, the Gate to check whether a post can be edited is named `post.edit`.
+Gate abilities are named using the format `waterhole.resource.ability`. For example, the Gate to check whether a post can be edited is named `waterhole.post.edit`.
 
 Use Gate methods, as per the [Laravel Gate documentation](https://laravel.com/docs/10.x/authorization#authorizing-actions-via-gates), to authorize actions. For example, to assert that the current user can edit a post:
 
 ```php
-Gate::authorize('post.edit', $post);
+Gate::authorize('waterhole.post.edit', $post);
 ```
 
 > Refer to Waterhole's [`AuthServiceProvider`](https://github.com/waterholeforum/core/blob/main/src/Providers/AuthServiceProvider.php) class to see the available abilities.
@@ -58,7 +58,7 @@ To extend the logic for an existing ability, use the `Gate::before` method to co
 
 ```php
 Gate::before(function (User $user, $ability, $arguments) {
-    if ($ability === 'post.edit') {
+    if ($ability === 'waterhole.post.edit') {
         $post = $arguments[0];
         // return true if permission is granted
         // return false if permission is denied

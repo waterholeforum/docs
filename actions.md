@@ -56,7 +56,7 @@ Some actions can only be performed by users with special privileges. To enforce 
 ```php
 public function authorize(?User $user, $item): bool
 {
-    return $user && $user->can('moderate', $item);
+    return $user && $user->can('waterhole.moderate', $item);
 }
 ```
 
