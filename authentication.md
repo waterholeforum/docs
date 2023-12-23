@@ -115,10 +115,10 @@ Route::middleware('auth', 'verified')->get('sso', function () {
         new PendingUser(
             identifier: $user->id,
             email: $user->email,
-            username: $user->name,
-            avatarUrl: $user->avatar_url,
+            name: $user->name,
+            avatar: $user->avatar_url,
         )
-    )
+    );
 });
 ```
 
