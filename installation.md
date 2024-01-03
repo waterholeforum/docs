@@ -4,7 +4,7 @@ Waterhole is a self-hosted PHP application.
 
 ## Prerequisites
 
-Waterhole has minimal hardware requirements and runs well on a [$4/month DigitalOcean droplet](https://m.do.co/c/197189285163). It has the following software requirements:
+Waterhole has minimal hardware requirements and runs well on a [$4/month DigitalOcean droplet](https://m.do.co/c/096d2838affb). It has the following software requirements:
 
 -   A web server like **Nginx** or **Apache**
 -   **PHP 8.0.2+** with the following extensions: dom, gd, json, mbstring, openssl, pdo_mysql, tokenizer
