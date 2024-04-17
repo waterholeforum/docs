@@ -1,8 +1,6 @@
 # Laravel Integration
 
-Waterhole can be installed into an existing Laravel application, and you can set it up to use your existing Laravel user base too.
-
-Currently only Laravel 10 is supported.
+Waterhole can be installed into an existing Laravel 10 or 11 application, and you can set it up to use your existing Laravel user base too.
 
 ## Installation
 
