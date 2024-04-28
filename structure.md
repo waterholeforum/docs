@@ -60,4 +60,4 @@ Visibility permissions on headings aren't necessary, because they automatically 
 
 On the Structure page, below the main list of nodes, there is a spot for "unlisted" nodes. Unlisted items will not be shown in the navigation sidebar, and all of the content and posts inside of them will be hidden from search engines. However, they will still be accessible directly by their URL slug.
 
-> **Warning:** Just because an item is unlisted, it doesn't mean it's private. If an unlisted item has open permissions and someone obtains the URL, they will be able to see it. Always ensure your permissions are configured correctly.
+> **Warning:** Just because an item is unlisted, it doesn't mean it's private. If an unlisted item has open permissions and someone obtains (or guesses) the URL, they will be able to see it. Always ensure your permissions are configured correctly.
