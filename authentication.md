@@ -23,13 +23,13 @@ You can configure OAuth behavior in `config/waterhole/auth.php`. Add the OAuth p
 ],
 ```
 
-Add your provider credentials to `config/services.php`, and set the `redirect` option to `auth/{provider}/callback`:
+Add your provider credentials to `config/services.php`, and set the `redirect` option to `/auth/{provider}/callback`:
 
 ```php
 'github' => [
     'client_id' => env('GITHUB_CLIENT_ID'),
     'client_secret' => env('GITHUB_CLIENT_SECRET'),
-    'redirect' => 'auth/github/callback',
+    'redirect' => '/auth/github/callback',
 ],
 ```
 
