@@ -6,7 +6,7 @@ Thank you for taking the time to consider a contribution. Please take a moment t
 
 ## Waterhole Is Not FOSS
 
-Waterhole is not "Free Open-Source Software". It is **proprietary** open-source software. The code is open, and you can download it for free, but there are limitations to what you can do with it:
+Waterhole is not "Free Open-Source Software". It is **proprietary** source-available software. The code is available, and you can download it for free, but there are limitations to what you can do with it:
 
 -   You **cannot** alter code or behavior related to licensing, updating, version checking, or anything else that would circumvent the enforcement of our business model.
 

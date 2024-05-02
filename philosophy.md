@@ -10,15 +10,15 @@ Community management has matured since the early days of forums, and now there a
 
 Every feature in Waterhole is carefully considered and crafted with the flexibility to serve multiple use cases. For example, you can set up your community [Structure](./structure.md) with a mix of static Pages, Links, and Channels, each with their own unique layout, filters, instructions, taxonomies, and other functionality. Reactions can be used to power ideation, and [Groups](./groups.md) can be used to elevate permissions or reward users with status. All of these essential features are built right into the product, so you know they will be consistent, high quality, and well supported.
 
-Nevertheless, every community has different needs which may require further customization. We embrace this challenge and encourage communities to work with developers to take full advantage of Waterhole's extensible open-source codebase, which makes it easy to implement bespoke functionality without accumulating technical debt.
+Nevertheless, every community has different needs which may require further customization. We embrace this challenge and encourage communities to work with developers to take full advantage of Waterhole's extensible codebase, which makes it easy to implement bespoke functionality without accumulating technical debt.
 
-## Sustainable Open Source
+## Sustainable Business Model
 
-**Waterhole has a sustainable open source business model.**
+**Waterhole has a sustainable source-available business model.**
 
 The Waterhole business model is very simple: We make great software. You pay to use it. That money goes back into making the software even better.
 
-Meanwhile, Waterhole is open source. This has some disadvantages, but we believe that the benefits outweigh them. It means that anyone can contribute, build extensions, and you can try Waterhole and make sure it's the right fit for you before you buy a license.
+Meanwhile, Waterhole's source code is public. This has some disadvantages, but we believe that the benefits outweigh them. It means that anyone can contribute, build extensions, and you can try Waterhole and make sure it's the right fit for you before you buy a license.
 
 By charging for licenses, we avoid having to undertake other activities which would distract from product development, like soliciting donations, or running services. We believe that others are better placed to offer services around Waterhole, and we encourage freelancers, agencies, and entrepreneurs to seize this opportunity and become a part of the ecosystem.
 
