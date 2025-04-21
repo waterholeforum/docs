@@ -81,17 +81,20 @@ First, we need to disable Waterhole's own authentication system. In the Waterhol
 'password_enabled' => false,
 ```
 
-Since all authentication methods have been disabled, Waterhole will no longer register its login route. You can re-register it so that actions requiring authentication will redirect guests to your app's own login page. Add the following to a Service Provider:
+Since all authentication methods have been disabled, Waterhole will no longer register its login route. You can re-register it so that actions requiring authentication will redirect guests to your app's own login page. Add the following to a Service Provider's `register` method:
 
 ```php
-Extend\ForumRoutes::add(function () {
-    Route::name('login')->get(
-        'login',
-        fn() => redirect()
-            ->setIntendedUrl(url()->previous())
-            ->route('login'),
-    );
-});
+public function register()
+{
+    Extend\ForumRoutes::add(function () {
+        Route::name('login')->get(
+            'login',
+            fn() => redirect()
+                ->setIntendedUrl(url()->previous())
+                ->route('login'),
+        );
+    });
+}
 ```
 
 ### 2. Update Your User Model
