@@ -6,13 +6,13 @@ You can add your own pages and dashboard widgets to Waterhole's Control Panel.
 
 ### Adding Routes
 
-The Control Panel is accessible under `/cp` by default (configurable in `config/waterhole/cp.php`), and all routes are named with the `waterhole.cp.` prefix. To register your own routes with these attributes, use the `cp` method of the `Routes` extender:
+The Control Panel is accessible under `/cp` by default (configurable in `config/waterhole/cp.php`), and all routes are named with the `waterhole.cp.` prefix. To register your own routes with these attributes, use the `CpRoutes` extender and define routes directly inside the extender callback using the `Route` facade:
 
 ```php
 use Illuminate\Support\Facades\Route;
 use Waterhole\Extend;
 
-Extend\CpRoutes::add(function () {
+$this->extend(function (Extend\Routing\CpRoutes $routes) {
     Route::get('my-route', MyController::class) // Path: /cp/my-route
         ->name('my-route');                     // Name: waterhole.cp.my-route
 });
@@ -22,20 +22,22 @@ Extend\CpRoutes::add(function () {
 
 ### Adding a Navigation Link
 
-The [`CpNav`](reference://Waterhole/Extend/CpNav.html) extender is a list of components that make up the CP navigation. You can add any component or view you want; typically you'll want to use a closure returning a [`NavLink`](reference://Waterhole/View/Components/NavLink.html) component instance:
+The [`CpNav`](reference://Waterhole/Extend/Ui/CpNav.html) extender is a list of components that make up the CP navigation. You can add any component or view you want; typically you'll want to use a closure returning a [`NavLink`](reference://Waterhole/View/Components/NavLink.html) component instance:
 
 ```php
-use Waterhole\Components\NavLink;
+use Waterhole\View\Components\NavLink;
 use Waterhole\Extend;
 
-Extend\CpNav::add(
-    'resources',
-    fn() => new NavLink(
-        label: 'Resources',
-        icon: 'tabler-star',
-        route: 'waterhole.cp.resources',
-    )
-);
+$this->extend(function (Extend\Ui\CpNav $nav) {
+    $nav->add(
+        key: 'resources',
+        content: fn() => new NavLink(
+            label: 'Resources',
+            icon: 'tabler-star',
+            route: 'waterhole.cp.resources',
+        ),
+    );
+});
 ```
 
 ### Rendering the CP Layout
@@ -50,13 +52,18 @@ Use the [`<x-waterhole::cp>`](reference://Waterhole/View/Components/Cp.html) com
 
 ### Adding Assets
 
-To add styles or scripts to the Control Panel (without adding them to the global bundle), use the [`Stylesheet`](reference://Waterhole/Extend/Stylesheet.html) and [`Script`](reference://Waterhole/Extend/Script.html) extenders and specify `cp` as the bundle name.
+To add styles or scripts to the Control Panel (without adding them to the global bundle), use the [`Stylesheet`](reference://Waterhole/Extend/Assets/Stylesheet.html) and [`Script`](reference://Waterhole/Extend/Assets/Script.html) extenders and specify `cp` as the bundle name.
 
 ```php
 use Waterhole\Extend;
 
-Extend\Stylesheet::add(__DIR__.'/../resources/less/test.css', bundle: 'cp');
-Extend\Script::add(__DIR__.'/../resources/dist/test.js', bundle: 'cp');
+$this->extend(function (Extend\Assets\Stylesheet $stylesheets) {
+    $stylesheets->add(__DIR__.'/../resources/less/test.css', 'cp');
+});
+
+$this->extend(function (Extend\Assets\Script $scripts) {
+    $scripts->add(__DIR__.'/../resources/dist/test.js', 'cp');
+});
 ```
 
 > See [Assets](./assets.md) for more information about how Waterhole manages assets.

@@ -81,12 +81,15 @@ First, we need to disable Waterhole's own authentication system. In the Waterhol
 'password_enabled' => false,
 ```
 
-Since all authentication methods have been disabled, Waterhole will no longer register its login route. You can re-register it so that actions requiring authentication will redirect guests to your app's own login page. Add the following to a Service Provider's `register` method:
+Since all authentication methods have been disabled, Waterhole will no longer register its login route. You can re-register it so that actions requiring authentication will redirect guests to your app's own login page. Add the following to your `app/Providers/WaterholeServiceProvider.php`:
 
 ```php
-public function register()
+use Illuminate\Support\Facades\Route;
+use Waterhole\Extend;
+
+public function register(): void
 {
-    Extend\ForumRoutes::add(function () {
+    $this->extend(function (Extend\Routing\ForumRoutes $routes) {
         Route::name('login')->get(
             'login',
             fn() => redirect()

@@ -11,11 +11,13 @@ By default, Waterhole [configures the formatter](https://github.com/waterholefor
 To apply your own configuration to the formatter, pass a callback to the `Formatter` extender's `configure` method:
 
 ```php
-use Waterhole\Extend;
 use s9e\TextFormatter\Configurator;
+use Waterhole\Extend;
 
-Extend\Formatter::configure(function (Configurator $configurator) {
-    $configurator->BBCodes->addFromRepository('B');
+$this->extend(function (Extend\Core\Formatter $formatter) {
+    $formatter->configure(function (Configurator $configurator) {
+        $configurator->BBCodes->addFromRepository('B');
+    });
 });
 ```
 
@@ -30,12 +32,14 @@ php artisan waterhole:cache:clear
 In the parsing phase, user-submitted text is parsed into an XML document for storage in the database. To hook into this phase of formatting, pass a callback to the `Formatter` extender's `parsing` method:
 
 ```php
+use s9e\TextFormatter\Parser;
 use Waterhole\Extend;
 use Waterhole\Formatter\Context;
-use s9e\TextFormatter\Parser;
 
-Extend\Formatter::parsing(function (Parser $parser, string &$text, ?Context $context) {
-    $parser->disablePlugin('BBCodes');
+$this->extend(function (Extend\Core\Formatter $formatter) {
+    $formatter->parsing(function (Parser $parser, string &$text, ?Context $context) {
+        $parser->disablePlugin('BBCodes');
+    });
 });
 ```
 
@@ -48,12 +52,14 @@ The `$context` parameter may provide information about the model and user for wh
 The rendering phase is when the XML document stored in the database is transformed into HTML. To hook into this phase of formatting, pass a callback to the `Formatter` extender's `rendering` method:
 
 ```php
+use s9e\TextFormatter\Renderer;
 use Waterhole\Extend;
 use Waterhole\Formatter\Context;
-use s9e\TextFormatter\Renderer;
 
-Extend\Formatter::rendering(function (Renderer $renderer, string &$xml, ?Context $context) {
-    $renderer->setParameter('USER', 'Joe');
+$this->extend(function (Extend\Core\Formatter $formatter) {
+    $formatter->rendering(function (Renderer $renderer, string &$xml, ?Context $context) {
+        $renderer->setParameter('USER', 'Joe');
+    });
 });
 ```
 

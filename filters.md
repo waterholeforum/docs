@@ -42,11 +42,13 @@ class Unanswered extends Filter
 
 ## Registering Post Filters
 
-Post filters need to be registered in order to make them available for selection when configuring a channel. To register a post filter, call the `add` method on the `PostFilters` extenders:
+Post filters need to be registered in order to make them available for selection when configuring a channel. To register a post filter, call the `add` method on the `PostFilters` extender:
 
 ```php
 use App\Filters;
 use Waterhole\Extend;
 
-Extend\PostFilters::add(Filters\Unanswered::class);
+$this->extend(function (Extend\Core\PostFilters $filters) {
+    $filters->add(Filters\Unanswered::class);
+});
 ```

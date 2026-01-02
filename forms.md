@@ -88,40 +88,49 @@ public function saved(FormRequest $request)
 
 ### Adding a Field to a Form
 
-Most of the forms throughout Waterhole have a corresponding extender to which you can add fields. For example, to add a field to the registration form, we would use the [`RegistrationForm` extender](reference://Waterhole/Extend/RegistrationForm.html):
+Most of the forms throughout Waterhole have a corresponding extender to which you can add fields. For example, to add a field to the registration form, we would use the [`RegistrationForm` extender](reference://Waterhole/Extend/Forms/RegistrationForm.html):
 
 ```php
 use App\Fields\FullNameField;
 use Waterhole\Extend;
 
-Extend\RegistrationForm::add(FullNameField::class);
+$this->extend(function (Extend\Forms\RegistrationForm $form) {
+    $form->add(FullNameField::class);
+});
 ```
 
 ### Adding a Field to a Form Section
 
 Some forms are more complex and group fields into distinct **sections**. One example is the form for editing channels, which divides fields into various collapsible sections.
 
-Like their parent forms, most of the distinct form sections throughout Waterhole have a corresponding extender to which you can add fields. For example, to add a field to the "Details" section of the channel editing form, we would use the `ChannelFormDetails` extender:
+Like their parent forms, most of the distinct form sections throughout Waterhole have a corresponding list to which you can add fields. For example, to add a field to the "Details" section of the channel editing form, we would use the `details` list on the `ChannelForm` extender:
 
 ```php
-Extend\ChannelFormDetails::add(ChannelColorField::class);
+use App\Fields\ChannelColorField;
+use Waterhole\Extend;
+
+$this->extend(function (Extend\Forms\ChannelForm $form) {
+    $form->details->add(ChannelColorField::class);
+});
 ```
 
 ### Adding a Form Section
 
-You can add a new section to a form using the [`FormSection` component](reference://Waterhole/View/Components/FormSection.html), which can be constructed with a title and an array of field component instances. In the following example, we add a new "Membership" section to the channel editing form. Note how the `$channel` model is forwarded onto the field instances:
+You can add a new section to a form using the [`FormSection` component](reference://Waterhole/Forms/FormSection.html), which can be constructed with a title and an array of field component instances. In the following example, we add a new "Membership" section to the channel editing form. Note how the `$channel` model is forwarded onto the field instances:
 
 ```php
+use Waterhole\Extend;
 use Waterhole\Forms\FormSection;
 use Waterhole\Models\Channel;
 
-Extend\ChannelForm::add(
-    'membership',
-    fn(Channel $channel) => new FormSection('Membership', [
-        new MembershipEnabledField($channel),
-        new MembershipPriceField($channel),
-    ])
-);
+$this->extend(function (Extend\Forms\ChannelForm $form) {
+    $form->add(
+        fn(Channel $channel) => new FormSection('Membership', [
+            new MembershipEnabledField($channel),
+            new MembershipPriceField($channel),
+        ]),
+    );
+});
 ```
 
 <!--

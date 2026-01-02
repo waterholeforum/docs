@@ -161,18 +161,15 @@ public function shouldRender(Collection $models): bool
 
 ## Registering an Action
 
-Register your action using the [`Actions` extender](reference://Waterhole/Extend/Actions.html) in your service provider:
+Register your action using the [`Actions` extender](reference://Waterhole/Extend/Core/Actions.html) in your service provider:
 
 ```php
-Extend\Actions::add(Delete::class);
-```
+use Waterhole\Extend;
+use Waterhole\Models\Post;
 
-### Actionables
-
-Actions can only be applied to models that have been registered as **actionable**. To register a model as actionable, use the `Actionables` extender:
-
-```php
-Extend\Actionables::add('dogs', App\Models\Dog::class);
+$this->extend(function (Extend\Core\Actions $actions) {
+    $actions->for(Post::class)->add(Delete::class);
+});
 ```
 
 ## Rendering Action Buttons

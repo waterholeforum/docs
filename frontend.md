@@ -30,13 +30,15 @@ Check out the [list of extenders](reference://Waterhole/Extend.html) to learn ab
 
 ### Adding Components
 
-To add a component, call the `add` method on the applicable extender in the `extend` method of your service provider:
+To add a component, call the `add` method on the applicable component list in your service provider:
 
 ```php
 use Waterhole\Extend;
 use App\Views\Components\HelloWorld;
 
-Extend\SiteHeader::add(HelloWorld::class);
+$this->extend(function (Extend\Ui\Layout $layout) {
+    $layout->header->add(HelloWorld::class);
+});
 ```
 
 The component can be any one of the following:
@@ -51,7 +53,11 @@ The component can be any one of the following:
 Each item in a component list has a "position", and components are rendered by their position in ascending order. To specify a position, pass it as a named argument. Otherwise, a default of `0` will be used.
 
 ```php
-Extend\SiteHeader::add(HelloWorld::class, position: 10);
+use Waterhole\Extend;
+
+$this->extend(function (Extend\Ui\Layout $layout) {
+    $layout->header->add(HelloWorld::class, position: 10);
+});
 ```
 
 ### Component Keys
@@ -59,39 +65,47 @@ Extend\SiteHeader::add(HelloWorld::class, position: 10);
 When adding a component to an extender, you can specify a unique key. This will allow other extensions to replace the component by using the same key, or remove it:
 
 ```php
-Extend\SiteHeader::add(HelloWorld::class, key: 'hello');
+use Waterhole\Extend;
+
+$this->extend(function (Extend\Ui\Layout $layout) {
+    $layout->header->add(HelloWorld::class, 'hello');
+});
 
 // Replace the existing `hello` component
-Extend\SiteHeader::replace('hello', HelloWorld::class);
+$this->extend(function (Extend\Ui\Layout $layout) {
+    $layout->header->replace('hello', HelloWorld::class);
+});
 
 // Remove the `hello` component
-Extend\SiteHeader::remove('hello');
+$this->extend(function (Extend\Ui\Layout $layout) {
+    $layout->header->remove('hello');
+});
 ```
 
 ### Creating Component Lists
 
-If you're building an extension, you can expose your own extendable component lists. Create an extender using the `Waterhole\Extend\Concerns\OrderedList` and `OfComponents` traits and add any default components statically:
+If you're building an extension, you can expose your own extendable component lists. Create a class extending `Waterhole\Extend\Support\ComponentList` and add any default components in the constructor:
 
 ```php
 namespace Acme\Example\Extend;
 
-use Waterhole\Extend\Concerns\OrderedList;
-use Waterhole\Extend\Concerns\OfComponents;
+use Waterhole\Extend\Support\ComponentList;
 
-class PortalHeader
+class PortalHeader extends ComponentList
 {
-    use OrderedList, OfComponents;
+    public function __construct()
+    {
+        $this->add(PortalTitle::class, 'title', position: -10);
+    }
 }
-
-PortalHeader::add(PortalTitle::class, -10);
 ```
 
 ### Rendering Component Lists
 
-You can retrieve the ordered component instances using the `components` method of an extender (passing in any props), and then use the `@components` Blade directive to render them:
+You can retrieve the ordered component instances using the `components` method (passing in any props), and then use the `@components` Blade directive to render them:
 
 ```blade
-@components(Acme\Example\Extend\PortalHeader::components(['foo' => 'bar']))
+@components(resolve(Acme\Example\Extend\PortalHeader::class)->components(['foo' => 'bar']))
 ```
 
 ## Hotwire
