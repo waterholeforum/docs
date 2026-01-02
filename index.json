@@ -37,6 +37,7 @@
             { "text": "Forms", "link": "/forms" },
             { "text": "Frontend", "link": "/frontend" },
             { "text": "Internationalization", "link": "/internationalization" },
+            { "text": "JSON:API", "link": "/api" },
             { "text": "Notifications", "link": "/notifications" },
             { "text": "Routes", "link": "/routes" }
         ]
