@@ -60,7 +60,7 @@ To customize the forum title in the header (for example, to add your logo), use 
 use Waterhole\Extend;
 
 $this->extend(function (Extend\Ui\Layout $layout) {
-    $layout->header->replace(key: 'title', content: 'waterhole.title');
+    $layout->header->replace('title', 'waterhole.title');
 });
 ```
 
