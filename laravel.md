@@ -12,10 +12,11 @@ Add the `waterhole/core` package to your Laravel project by running the followin
 composer require waterhole/core --with-all-dependencies
 ```
 
-Then, publish Waterhole's configuration files by running the command:
+Then, publish Waterhole's configuration files, and make sure the storage directory is linked, by running the commands:
 
 ```bash
 php artisan vendor:publish --tag=waterhole-config
+php artisan storage:link
 ```
 
 ### 2. Configure the Database
