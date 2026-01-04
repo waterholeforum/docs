@@ -6,7 +6,7 @@ In Waterhole, a **form** is made up of an ordered list of **fields**. Each field
 
 ## Defining a Field
 
-To define a new field, extend the `Waterhole\Forms\Field` class. The constructor will receive an instance of the model that is the subject of the form. A field is a Blade component, so you will need to define a `render` method that returns the field's view. Feel free to use the [`<x-waterhole::field>` component](./design/forms.md#fields) to take care of the boilerplate:
+To define a new field, extend the `Waterhole\Forms\Field` class. The constructor will receive an instance of the model that is the subject of the form, and the parameter must be named `$model` because Waterhole constructs fields by passing a `$model` argument. A field is a Blade component, so you will need to define a `render` method that returns the field's view. Feel free to use the [`<x-waterhole::field>` component](./design/forms.md#fields) to take care of the boilerplate:
 
 ```php
 namespace App\Fields;
@@ -15,7 +15,7 @@ use Waterhole\Forms\Field;
 
 class FullNameField extends Field
 {
-    public function __construct(public ?User $user)
+    public function __construct(public ?User $model)
     {
     }
 
@@ -26,7 +26,7 @@ class FullNameField extends Field
                 <input
                     type="text"
                     name="full_name"
-                    value="{{ old('full_name', $user->full_name ?? '') }}"
+                    value="{{ old('full_name', $model->full_name ?? '') }}"
                     class="input"
                 >
             </x-waterhole::field>
@@ -71,7 +71,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 public function saving(FormRequest $request)
 {
-    $this->user->full_name = $request->validated('full_name');
+    $this->model->full_name = $request->validated('full_name');
 }
 ```
 
@@ -80,7 +80,7 @@ Likewise, by implementing the `saved` method, fields can run code after the mode
 ```php
 public function saved(FormRequest $request)
 {
-    logger("User {$this->user->id} was saved with a full name!");
+    logger("User {$this->model->id} was saved with a full name!");
 }
 ```
 
