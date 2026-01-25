@@ -208,7 +208,7 @@ For the simple case of hiding elements at certain breakpoints, the following cla
 For any other breakpoint-dependent styling, you will need to use `@media` queries. If you're using PostCSS, you can import Waterhole's [`breakpoints.css` file](https://github.com/waterholeforum/core/blob/main/resources/css/system/breakpoints.css) and make use of the `@custom-media` queries defined in this file. Use the [Global Data](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-global-data) plugin to make them globally available:
 
 ```js
-// postcss.config.js
+// postcss.config.cjs
 module.exports = {
     plugins: [
         require('@csstools/postcss-global-data')({
