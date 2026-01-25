@@ -76,8 +76,8 @@ To get started, add the `sso` provider to the `providers` array in `config/water
 
 You will also need to configure the `sso` settings in this file:
 
--   `url` is your website's URL where Waterhole will send users when they attempt to log in. For example, this might be `https://example.com/sso`.
--   `secret` is a secret string that will be used to sign payloads and ensure they are authentic. You should set this to a random string of 10 or more characters.
+- `url` is your website's URL where Waterhole will send users when they attempt to log in. For example, this might be `https://example.com/sso`.
+- `secret` is a secret string that will be used to sign payloads and ensure they are authentic. You should set this to a random string of 10 or more characters.
 
 ```php
 'sso' => [
@@ -134,8 +134,9 @@ If your website does not use PHP, you will need to write code to perform the fol
 
 #### `PendingUser` Parameters
 
--   `identifier` (required) is a unique ID for the user in your system that will never change.
--   `email` (required) must be a **verified** email address.
--   `name` is a suggested username for the user if they are new.
--   `avatar` is a URL that will be downloaded and set as the user's avatar if they are new.
--   `groups` is an array of group IDs that will be assigned to the user if they are new.
+- `identifier` (required) is a unique ID for the user in your system that will never change.
+- `email` (required) must be a **verified** email address.
+- `name` is the username to use for new users; it is treated as a suggestion unless `forceName` is enabled.
+- `forceName` locks the username to `name` on creation.
+- `avatar` is a URL that will be downloaded and set as the user's avatar if they are new.
+- `groups` is an array of group IDs that will be assigned to the user if they are new.

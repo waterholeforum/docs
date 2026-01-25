@@ -127,6 +127,7 @@ public function toWaterholeUser(): ?PendingUser
         identifier: $this->getAuthIdentifier(),
         email: $this->email,
         name: $this->name,
+        forceName: true,
     );
 }
 ```
