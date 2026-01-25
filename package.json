@@ -1,5 +1,8 @@
 {
+    "scripts": {
+        "prettier": "prettier --write '**/*' --ignore-unknown"
+    },
     "dependencies": {
-        "prettier": "^2.8.4"
+        "prettier": "^3.8.1"
     }
 }

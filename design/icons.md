@@ -55,9 +55,9 @@ To pair an icon together with a text label, wrap them in an element with the `.w
 
 Use the `@icon` Blade directive to quickly emit icon markup. The value may be one of the following:
 
--   The name of a [Blade Icon](https://blade-ui-kit.com/blade-icons)
--   An emoji (prefixed with `emoji:`)
--   The path to a file in the public `icons` directory (prefixed with `file:`)
+- The name of a [Blade Icon](https://blade-ui-kit.com/blade-icons)
+- An emoji (prefixed with `emoji:`)
+- The path to a file in the public `icons` directory (prefixed with `file:`)
 
 ```blade render
 @icon('tabler-star')

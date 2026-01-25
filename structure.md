@@ -20,17 +20,17 @@ Channels are the areas in your community where discussions take place. In genera
 
 When creating a channel, you will need to choose a name, URL slug, icon, and a short description. There are also a number of additional options available:
 
--   **Ignored by Default** makes the channel opt-in. Its posts will be hidden from the community homepage, so they can only be seen by navigating to the channel. However, users will still be able to individually un-ignore the channel to include its posts on their homepage. This option is useful for more niche channels that only a small number of users will be interested in.
+- **Ignored by Default** makes the channel opt-in. Its posts will be hidden from the community homepage, so they can only be seen by navigating to the channel. However, users will still be able to individually un-ignore the channel to include its posts on their homepage. This option is useful for more niche channels that only a small number of users will be interested in.
 
--   **Features** allows you to configure various features including whether Answers are enabled, which Taxonomies to use, and which Reaction Sets to use for the channel's posts and comments.
+- **Features** allows you to configure various features including whether Answers are enabled, which Taxonomies to use, and which Reaction Sets to use for the channel's posts and comments.
 
--   **Layout** allows you to choose whether posts will display in a compact list, or as expanded cards, when viewing the channel. This is useful for particular channels that are more post-oriented than discussion-oriented – for example, a blog channel.
+- **Layout** allows you to choose whether posts will display in a compact list, or as expanded cards, when viewing the channel. This is useful for particular channels that are more post-oriented than discussion-oriented – for example, a blog channel.
 
--   **Filters** allows you to override the [global filters](./filters.md) for the channel. The first one will be used as the default.
+- **Filters** allows you to override the [global filters](./filters.md) for the channel. The first one will be used as the default.
 
--   **Posting Instructions** allow you to specify more detailed information to be displayed to users when they are creating a post in the channel. This is a good place to remind users about rules and guidelines for posting in the channel – such as information that is required in a support channel.
+- **Posting Instructions** allow you to specify more detailed information to be displayed to users when they are creating a post in the channel. This is a good place to remind users about rules and guidelines for posting in the channel – such as information that is required in a support channel.
 
--   **Similar Posts** can be enabled to show the user posts which look similar to the one they are creating.
+- **Similar Posts** can be enabled to show the user posts which look similar to the one they are creating.
 
 You can also configure permissions to restrict which [User Groups](./groups.md) can view, post, comment, and moderate (edit and delete content) in the channel.
 

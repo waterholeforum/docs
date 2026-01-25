@@ -8,8 +8,9 @@ Waterhole defines three font families for use as CSS variables:
 
 ```css
 /* The default family used for most text */
---font-text: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
+--font-text:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
 /* Display family for larger headings (no different by default) */
 --font-display: var(--font-text);

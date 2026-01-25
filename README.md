@@ -20,6 +20,6 @@ In order to ensure that the Waterhole community is welcoming to all, please revi
 
 ## Important Links
 
--   [Waterhole Website](https://waterhole.dev)
--   [Waterhole Documentation](https://waterhole.dev/docs)
--   [Waterhole Community](https://waterhole.dev/community)
+- [Waterhole Website](https://waterhole.dev)
+- [Waterhole Documentation](https://waterhole.dev/docs)
+- [Waterhole Community](https://waterhole.dev/community)

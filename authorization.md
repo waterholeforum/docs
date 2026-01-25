@@ -4,17 +4,17 @@ Waterhole has a powerful permissions system to allow granular control over what 
 
 The authorization layer is made up of two parts:
 
--   **A permissions table**, which allows the forum admin to define which user groups have access and abilities for each structure node (channels, pages, links).
+- **A permissions table**, which allows the forum admin to define which user groups have access and abilities for each structure node (channels, pages, links).
 
--   **[Laravel Gates](https://laravel.com/docs/10.x/authorization#gates)**, which enforce authorization on resources using the information in the permissions table, along with additional domain logic.
+- **[Laravel Gates](https://laravel.com/docs/10.x/authorization#gates)**, which enforce authorization on resources using the information in the permissions table, along with additional domain logic.
 
 ## The Permissions Table
 
 The permissions database table defines permission entries which consist of the following:
 
--   **Recipient** – the user or group that receives the permission
--   **Ability** – the name of the ability (e.g. `view` or `post`)
--   **Scope** – the resource that the recipient has this ability for (usually a structure node, like a channel or page)
+- **Recipient** – the user or group that receives the permission
+- **Ability** – the name of the ability (e.g. `view` or `post`)
+- **Scope** – the resource that the recipient has this ability for (usually a structure node, like a channel or page)
 
 Permission data can be inspected using the `Waterhole::permissions()` collection. This class provides [various methods](reference://Waterhole/Models/PermissionCollection.html) to filter and check for the existence of permission entries:
 
@@ -39,8 +39,8 @@ A Gate is defined for each ability. The permissions table is generally used to d
 
 Additionally, some logic is applied globally across all Gate checks:
 
--   If the user is an administrator, permission is granted
--   If the user has not yet verified their email, or if they have been suspended, they are treated as if they are a guest
+- If the user is an administrator, permission is granted
+- If the user has not yet verified their email, or if they have been suspended, they are treated as if they are a guest
 
 Gate abilities are named using the format `waterhole.resource.ability`. For example, the Gate to check whether a post can be edited is named `waterhole.post.edit`.
 

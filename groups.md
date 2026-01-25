@@ -22,9 +22,9 @@ Waterhole has a powerful permissions system that allows you to control access an
 
 Permissions can be managed from two perspectives:
 
--   When editing a [structure](./structure.md) node (channel, page, or link), you can choose which user groups have permission to see the node. For channels you can also choose which user groups are allowed to post, comment, and moderate the channel. This is the best way to restrict access to a specific area of your community.
+- When editing a [structure](./structure.md) node (channel, page, or link), you can choose which user groups have permission to see the node. For channels you can also choose which user groups are allowed to post, comment, and moderate the channel. This is the best way to restrict access to a specific area of your community.
 
--   When editing a user group, you can choose which structure nodes the group has permission to see and act on. This is useful if you want to grant global permissions to a particular user group (such as global moderation powers).
+- When editing a user group, you can choose which structure nodes the group has permission to see and act on. This is useful if you want to grant global permissions to a particular user group (such as global moderation powers).
 
 ### Admin
 

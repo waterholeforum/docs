@@ -6,10 +6,10 @@ Waterhole is a self-hosted PHP application.
 
 Waterhole has minimal hardware requirements and runs well on a [$4/month DigitalOcean droplet](https://m.do.co/c/096d2838affb). It has the following software requirements:
 
--   A web server like **Nginx** or **Apache**
--   **PHP 8.2+** with the following extensions: dom, gd, json, mbstring, openssl, pdo_mysql, tokenizer
--   **MySQL 8.0.23+**
--   **Composer 2+**
+- A web server like **Nginx** or **Apache**
+- **PHP 8.2+** with the following extensions: dom, gd, json, mbstring, openssl, pdo_mysql, tokenizer
+- **MySQL 8.0.23+**
+- **Composer 2+**
 
 You will need **command line access** (locally or via SSH) in order to run Composer and Waterhole commands.
 
@@ -29,9 +29,9 @@ composer create-project waterhole/waterhole path/to/forum
 
 Once this command has finished running, edit the `.env` file at the root of your new Waterhole installation. This file contains environment configuration settings like your community name, URL, and database details. See [Configuration](./configuration.md) for more details. To get up and running, fill out the following values:
 
--   `APP_NAME`: The name of your community
--   `APP_URL`: The root URL of your Waterhole installation
--   `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` with your database details
+- `APP_NAME`: The name of your community
+- `APP_URL`: The root URL of your Waterhole installation
+- `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` with your database details
 
 Make sure that any values that contain spaces are enclosed in double quotes:
 
@@ -59,9 +59,9 @@ Navigate to your community URL in your favorite web browser. If everything's bee
 
 From here, there are a few things you might want to do:
 
--   Learn how Waterhole [Configuration](./configuration.md) works and configure a mail driver.
--   Customize your community's [Structure](./structure.md), [User Groups](./groups.md), [Design](./design.md), and Control Panel [Dashboard](./dashboard.md).
--   Learn the best practices for [Deploying](./deploying.md) your community to production.
--   Learn how to [extend](./extending.md) Waterhole with custom functionality.
+- Learn how Waterhole [Configuration](./configuration.md) works and configure a mail driver.
+- Customize your community's [Structure](./structure.md), [User Groups](./groups.md), [Design](./design.md), and Control Panel [Dashboard](./dashboard.md).
+- Learn the best practices for [Deploying](./deploying.md) your community to production.
+- Learn how to [extend](./extending.md) Waterhole with custom functionality.
 
 <!-- - Learn how to install and manage [Extensions](extensions.md). -->

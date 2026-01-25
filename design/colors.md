@@ -6,16 +6,16 @@ Use variables and utilities to apply consistent and accessible color.
 
 Waterhole's color system contains two sets of color variables:
 
--   The `palette` variables are _constant_ and define all of the available colors. These are set according to the theme (light or dark) and are where top-level customizations should be applied. Generally they should **not** be consumed directly by components (use the `color` variables instead).
+- The `palette` variables are _constant_ and define all of the available colors. These are set according to the theme (light or dark) and are where top-level customizations should be applied. Generally they should **not** be consumed directly by components (use the `color` variables instead).
 
--   The `color` variables are _dynamic_ and define the color scheme in the current context. By default these variables are set to their palette counterparts, but they can be overridden at an element-level to influence how children are styled. For example, if an element is styled with a dark background, it may also set the `--color-text` variable to a light color so that any children which consume this color will adapt.
+- The `color` variables are _dynamic_ and define the color scheme in the current context. By default these variables are set to their palette counterparts, but they can be overridden at an element-level to influence how children are styled. For example, if an element is styled with a dark background, it may also set the `--color-text` variable to a light color so that any children which consume this color will adapt.
 
 ## Palette
 
 Waterhole's color palette consists of:
 
--   **Base colors** to help define user interface structure.
--   Several **functional colors** to convey interactivity and meaning (accent, success, warning, danger, activity).
+- **Base colors** to help define user interface structure.
+- Several **functional colors** to convey interactivity and meaning (accent, success, warning, danger, activity).
 
 All colors are selected to pass a minimum WCAG accessibility rating of [level AA](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Meeting these standards ensures that content is accessible by everyone, regardless of ability or device.
 

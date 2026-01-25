@@ -69,11 +69,11 @@ Then, create a link to your route, targeting the `modal` Turbo Frame with the at
 
 There are a few ways to close the modal:
 
--   Call the `modal#hide` Stimulus action inside the modal.
+- Call the `modal#hide` Stimulus action inside the modal.
 
     ```blade
     <a href="{{ url()->previous() }}" data-action="modal#hide">Back</a>
     ```
 
--   Return a response without a `<turbo-frame id="modal">` element.
--   Return a [Turbo Stream](../frontend.md#turbo-streams) response.
+- Return a response without a `<turbo-frame id="modal">` element.
+- Return a [Turbo Stream](../frontend.md#turbo-streams) response.

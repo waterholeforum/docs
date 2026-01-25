@@ -43,10 +43,10 @@ $this->extend(function (Extend\Ui\Layout $layout) {
 
 The component can be any one of the following:
 
--   The name of a Blade Component class (e.g. `HelloWorld::class`)
--   A Blade Component instance (e.g. `new HelloWorld()`)
--   The name of a view (e.g. `waterhole.example`)
--   A callable that returns any of the above, which will be evaluated every time the list is rendered
+- The name of a Blade Component class (e.g. `HelloWorld::class`)
+- A Blade Component instance (e.g. `new HelloWorld()`)
+- The name of a view (e.g. `waterhole.example`)
+- A callable that returns any of the above, which will be evaluated every time the list is rendered
 
 ### Component Positions
 

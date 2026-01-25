@@ -6,8 +6,8 @@ Waterhole is free to use in development environments, but you'll need to buy a l
 
 You can run Waterhole in a development environment for free, without any limitations. This includes domains with any of the following properties:
 
--   A single segment, like `localhost`
--   A local TLD, like `.local`, `.localhost`, `.test`, or `.example`.
+- A single segment, like `localhost`
+- A local TLD, like `.local`, `.localhost`, `.test`, or `.example`.
 
 ## Production
 

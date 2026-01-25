@@ -7,7 +7,6 @@ Uh oh, something's gone wrong! Here are some handy debugging tips, and some comm
 Whether you've encountered a White Screen of Death, a generic "internal server error" message, or some other broken behavior – sometimes it can be hard to work out what's gone wrong with your Waterhole installation. Here are a few things to try:
 
 - **Check the logs.** These may contain more information about what's going wrong:
-
     - Waterhole logs in `storage/logs`
     - Web server logs (e.g. `/var/log/nginx/error.log`)
     - PHP-FPM logs (e.g. `/var/log/php8.x-fpm.log`)

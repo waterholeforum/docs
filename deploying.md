@@ -42,8 +42,8 @@ With a service like [Laravel Forge](https://forge.laravel.com) or a tool like [D
 
 The main things that need to be configured on the web server are:
 
--   The document root, which should point to the `public` directory
--   URL rewriting to route all requests to the `public/index.php` file
+- The document root, which should point to the `public` directory
+- URL rewriting to route all requests to the `public/index.php` file
 
 > **Danger:** Never attempt to move the `index.php` file to your project's root, as serving the application from the project root will expose many sensitive configuration files to the public Internet.
 
