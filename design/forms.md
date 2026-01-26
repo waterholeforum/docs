@@ -2,7 +2,9 @@
 
 ## Input
 
-`<input>`, `<textarea>`, and `<select>` elements are styled globally. You can apply identical styles to other elements using the `.input`, `.textarea`, and `.select` classes:
+`<input>`, `<textarea>`, and `<select>` elements are styled globally. You can
+apply identical styles to other elements using the `.input`, `.textarea`, and
+`.select` classes:
 
 ```html render
 <div class="stack gap-sm">
@@ -40,7 +42,8 @@ Wrap an input in an `.input-container` to decorate it with icons or buttons:
 
 Checkboxes and radio inputs are styled globally.
 
-Apply the `.choice` class to a surrounding `<label>` for proper alignment of a checkbox/radio input and its text label:
+Apply the `.choice` class to a surrounding `<label>` for proper alignment of a
+checkbox/radio input and its text label:
 
 ```html render
 <div class="stack gap-sm">
@@ -58,7 +61,10 @@ Apply the `.choice` class to a surrounding `<label>` for proper alignment of a c
 
 ## Text Editor
 
-The [TextEditor component](reference://Waterhole/View/Components/TextEditor.html) decorates a `<textarea>` with a markdown toolbar, auto-suggests users for `@` mentions, and supports the ability to preview the formatted content:
+The
+[TextEditor component](reference://Waterhole/View/Components/TextEditor.html)
+decorates a `<textarea>` with a markdown toolbar, auto-suggests users for `@`
+mentions, and supports the ability to preview the formatted content:
 
 ```blade render
 <x-waterhole::text-editor
@@ -71,7 +77,10 @@ The [TextEditor component](reference://Waterhole/View/Components/TextEditor.html
 
 ## Color Picker
 
-The [ColorPicker component](reference://Waterhole/View/Components/Cp/ColorPicker.html) allows the user to visually pick a hex (or hex alpha) color. This component is only available in the context of the CP.
+The
+[ColorPicker component](reference://Waterhole/View/Components/Cp/ColorPicker.html)
+allows the user to visually pick a hex (or hex alpha) color. This component is
+only available in the context of the CP.
 
 ```blade render
 <x-waterhole::cp.color-picker name="color" value="abcdef"/>
@@ -79,7 +88,9 @@ The [ColorPicker component](reference://Waterhole/View/Components/Cp/ColorPicker
 
 ## Fields
 
-Fields are a standard way to lay out a form control, its label, and help text or status message. If there is enough room, the label and control will be displayed in a row; otherwise, they will be stacked.
+Fields are a standard way to lay out a form control, its label, and help text or
+status message. If there is enough room, the label and control will be displayed
+in a row; otherwise, they will be stacked.
 
 ```html render
 <div class="field">
@@ -91,7 +102,9 @@ Fields are a standard way to lay out a form control, its label, and help text or
 </div>
 ```
 
-The [Field component](reference://Waterhole/View/Components/Field.html) can be used to efficiently construct this markup. It will also automatically show validation errors for the field:
+The [Field component](reference://Waterhole/View/Components/Field.html) can be
+used to efficiently construct this markup. It will also automatically show
+validation errors for the field:
 
 ```blade render
 <x-waterhole::field
@@ -103,7 +116,8 @@ The [Field component](reference://Waterhole/View/Components/Field.html) can be u
 </x-waterhole::field>
 ```
 
-Multiple fields can be spaced using the `.stack` layout utility – commonly together with `.dividers`:
+Multiple fields can be spaced using the `.stack` layout utility – commonly
+together with `.dividers`:
 
 ```blade render
 <div class="stack dividers">

@@ -6,7 +6,11 @@ You can add your own pages and dashboard widgets to Waterhole's Control Panel.
 
 ### Adding Routes
 
-The Control Panel is accessible under `/cp` by default (configurable in `config/waterhole/cp.php`), and all routes are named with the `waterhole.cp.` prefix. To register your own routes with these attributes, use the `CpRoutes` extender and define routes directly inside the extender callback using the `Route` facade:
+The Control Panel is accessible under `/cp` by default (configurable in
+`config/waterhole/cp.php`), and all routes are named with the `waterhole.cp.`
+prefix. To register your own routes with these attributes, use the `CpRoutes`
+extender and define routes directly inside the extender callback using the
+`Route` facade:
 
 ```php
 use Illuminate\Support\Facades\Route;
@@ -22,7 +26,11 @@ $this->extend(function (Extend\Routing\CpRoutes $routes) {
 
 ### Adding a Navigation Link
 
-The [`CpNav`](reference://Waterhole/Extend/Ui/CpNav.html) extender is a list of components that make up the CP navigation. You can add any component or view you want; typically you'll want to use a closure returning a [`NavLink`](reference://Waterhole/View/Components/NavLink.html) component instance:
+The [`CpNav`](reference://Waterhole/Extend/Ui/CpNav.html) extender is a list of
+components that make up the CP navigation. You can add any component or view you
+want; typically you'll want to use a closure returning a
+[`NavLink`](reference://Waterhole/View/Components/NavLink.html) component
+instance:
 
 ```php
 use Waterhole\View\Components\NavLink;
@@ -42,7 +50,8 @@ $this->extend(function (Extend\Ui\CpNav $nav) {
 
 ### Rendering the CP Layout
 
-Use the [`<x-waterhole::cp>`](reference://Waterhole/View/Components/Cp.html) component to render your views inside the CP layout:
+Use the [`<x-waterhole::cp>`](reference://Waterhole/View/Components/Cp.html)
+component to render your views inside the CP layout:
 
 ```blade
 <x-waterhole::cp title="My Page">
@@ -52,7 +61,11 @@ Use the [`<x-waterhole::cp>`](reference://Waterhole/View/Components/Cp.html) com
 
 ### Adding Assets
 
-To add styles or scripts to the Control Panel (without adding them to the global bundle), use the [`Stylesheet`](reference://Waterhole/Extend/Assets/Stylesheet.html) and [`Script`](reference://Waterhole/Extend/Assets/Script.html) extenders and specify `cp` as the bundle name.
+To add styles or scripts to the Control Panel (without adding them to the global
+bundle), use the
+[`Stylesheet`](reference://Waterhole/Extend/Assets/Stylesheet.html) and
+[`Script`](reference://Waterhole/Extend/Assets/Script.html) extenders and
+specify `cp` as the bundle name.
 
 ```php
 use Waterhole\Extend;
@@ -66,15 +79,19 @@ $this->extend(function (Extend\Assets\Script $scripts) {
 });
 ```
 
-> See [Assets](./assets.md) for more information about how Waterhole manages assets.
+> See [Assets](./assets.md) for more information about how Waterhole manages
+> assets.
 
 ## Widgets
 
-Extensions can make widgets available to be displayed on the CP [Dashboard](./dashboard.md).
+Extensions can make widgets available to be displayed on the CP
+[Dashboard](./dashboard.md).
 
 ### Defining a Widget
 
-Widgets are just [Blade components](https://laravel.com/docs/10.x/blade#components). So, to make a new widget available, define a new component:
+Widgets are just
+[Blade components](https://laravel.com/docs/10.x/blade#components). So, to make
+a new widget available, define a new component:
 
 ```php
 namespace App\Widgets;
@@ -90,7 +107,8 @@ class LatestResources extends Component
 }
 ```
 
-Typically the widget view will contain a [card](./design/cards.md) beginning with a `<h3>` element:
+Typically the widget view will contain a [card](./design/cards.md) beginning
+with a `<h3>` element:
 
 ```html
 <div class="card">
@@ -101,9 +119,13 @@ Typically the widget view will contain a [card](./design/cards.md) beginning wit
 
 ### Widget Configuration
 
-Each Waterhole project can configure its widget layout in `config/waterhole/cp.php` – refer to the [Dashboard](./dashboard.md) customization documentation.
+Each Waterhole project can configure its widget layout in
+`config/waterhole/cp.php` – refer to the [Dashboard](./dashboard.md)
+customization documentation.
 
-Any extra configuration options will be passed in when the widget is instantiated. For example, you could accept a `limit` configuration option (with a default value) like so:
+Any extra configuration options will be passed in when the widget is
+instantiated. For example, you could accept a `limit` configuration option (with
+a default value) like so:
 
 ```php
 class LatestResources extends Component
@@ -130,9 +152,12 @@ And then consumers can override it:
 
 ### Lazy Loading
 
-If your widget is a bit resource intensive – if it makes a HTTP request, or runs an expensive database query, for example – you can indicate that it should be loaded lazily, so as to not slow down the whole Dashboard loading.
+If your widget is a bit resource intensive – if it makes a HTTP request, or runs
+an expensive database query, for example – you can indicate that it should be
+loaded lazily, so as to not slow down the whole Dashboard loading.
 
-Set a static `$lazy` property to true on your component, and Waterhole will take care of the rest:
+Set a static `$lazy` property to true on your component, and Waterhole will take
+care of the rest:
 
 ```php
 class LatestResources extends Component

@@ -12,7 +12,8 @@ Use the `.spinner` class to display a spinner:
 
 ### Small
 
-Use the `.spinner--sm` class to reduce the spinner size, making it suitable for use inside of other components:
+Use the `.spinner--sm` class to reduce the spinner size, making it suitable for
+use inside of other components:
 
 ```html render
 <span role="status">
@@ -23,7 +24,8 @@ Use the `.spinner--sm` class to reduce the spinner size, making it suitable for 
 
 ### Block-level
 
-To display the spinner as a block-level element with some padding, use `.spinner--block`:
+To display the spinner as a block-level element with some padding, use
+`.spinner--block`:
 
 ```html render
 <div class="spinner spinner--block" role="status" aria-label="loading"></div>
@@ -31,7 +33,8 @@ To display the spinner as a block-level element with some padding, use `.spinner
 
 ## Blade Component
 
-Use the `<x-waterhole::spinner>` component to display a spinner, including the correct accessibility attributes:
+Use the `<x-waterhole::spinner>` component to display a spinner, including the
+correct accessibility attributes:
 
 ```blade render
 <x-waterhole::spinner/>

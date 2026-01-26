@@ -4,7 +4,8 @@ Various classes to help you work with icons.
 
 ## CSS
 
-Use the `.icon` class to give an icon the correct size and alignment relative to surrounding text:
+Use the `.icon` class to give an icon the correct size and alignment relative to
+surrounding text:
 
 ```html render
 Text
@@ -24,7 +25,8 @@ Text
 
 ### Thickness
 
-For line icons, the stroke thickness can be modulated using the `.icon--thin` and `.icon--thick` classes:
+For line icons, the stroke thickness can be modulated using the `.icon--thin`
+and `.icon--thick` classes:
 
 ```blade render
 @icon('tabler-star', ['class' => 'icon--thin text-xl'])
@@ -33,7 +35,9 @@ For line icons, the stroke thickness can be modulated using the `.icon--thin` an
 
 ### Width
 
-While icon elements are always square, sometimes the icon glyph itself doesn't take up much room and ends up with too much whitespace around it. In this situation, use `.icon--narrow` to reduce the whitespace.
+While icon elements are always square, sometimes the icon glyph itself doesn't
+take up much room and ends up with too much whitespace around it. In this
+situation, use `.icon--narrow` to reduce the whitespace.
 
 ```blade render
 <p>Text @icon('tabler-chevron-down') Text</p>
@@ -42,7 +46,8 @@ While icon elements are always square, sometimes the icon glyph itself doesn't t
 
 ### Text Label
 
-To pair an icon together with a text label, wrap them in an element with the `.with-icon` class:
+To pair an icon together with a text label, wrap them in an element with the
+`.with-icon` class:
 
 ```blade render
 <span class="with-icon">
@@ -53,7 +58,8 @@ To pair an icon together with a text label, wrap them in an element with the `.w
 
 ## Blade Directive
 
-Use the `@icon` Blade directive to quickly emit icon markup. The value may be one of the following:
+Use the `@icon` Blade directive to quickly emit icon markup. The value may be
+one of the following:
 
 - The name of a [Blade Icon](https://blade-ui-kit.com/blade-icons)
 - An emoji (prefixed with `emoji:`)
@@ -64,7 +70,8 @@ Use the `@icon` Blade directive to quickly emit icon markup. The value may be on
 @icon('emoji:🐡')
 ```
 
-You can pass an array of attributes to apply to the icon element as the second argument:
+You can pass an array of attributes to apply to the icon element as the second
+argument:
 
 ```blade render
 @icon('tabler-star', ['class' => 'text-lg'])
@@ -72,7 +79,9 @@ You can pass an array of attributes to apply to the icon element as the second a
 
 ## Icon Picker
 
-Use the `<x-waterhole::cp.icon-picker>` component in a form to allow the user to choose an icon from a Blade Icon, Emoji, or an uploaded file. This component is only available in the context of the CP.
+Use the `<x-waterhole::cp.icon-picker>` component in a form to allow the user to
+choose an icon from a Blade Icon, Emoji, or an uploaded file. This component is
+only available in the context of the CP.
 
 ```blade render
 <x-waterhole::cp.icon-picker
@@ -81,4 +90,6 @@ Use the `<x-waterhole::cp.icon-picker>` component in a form to allow the user to
 />
 ```
 
-This is best used in combination with a model with the `Waterhole\Models\Concerns\HasIcon` trait, which parses the icon picker value and saves it to the database/filesystem.
+This is best used in combination with a model with the
+`Waterhole\Models\Concerns\HasIcon` trait, which parses the icon picker value
+and saves it to the database/filesystem.

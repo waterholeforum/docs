@@ -9,8 +9,8 @@ Waterhole defines three font families for use as CSS variables:
 ```css
 /* The default family used for most text */
 --font-text:
-    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
 /* Display family for larger headings (no different by default) */
 --font-display: var(--font-text);
@@ -19,7 +19,8 @@ Waterhole defines three font families for use as CSS variables:
 --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace;
 ```
 
-In addition to being applied directly to heading and code elements, these fonts can be applied selectively using the `.font-{family}` utility classes:
+In addition to being applied directly to heading and code elements, these fonts
+can be applied selectively using the `.font-{family}` utility classes:
 
 ```html render
 <div class="font-text">.font-text</div>
@@ -41,7 +42,8 @@ Waterhole defines a typographic scale in `--text-{size}` CSS variables:
 --text-xxl: 2.5rem;
 ```
 
-This scale can be directly applied to text using the `.text-{size}` utility classes:
+This scale can be directly applied to text using the `.text-{size}` utility
+classes:
 
 ```html render
 <div class="text-xxs">.text-xxs</div>
@@ -55,7 +57,9 @@ This scale can be directly applied to text using the `.text-{size}` utility clas
 
 ## Line Height
 
-Three line heights are defined, with the `default` being applied globally, the `condensed` value used for headings, and the `expanded` value used for [content](#content).
+Three line heights are defined, with the `default` being applied globally, the
+`condensed` value used for headings, and the `expanded` value used for
+[content](#content).
 
 ```css
 --line-height-default: 1.3;
@@ -65,7 +69,8 @@ Three line heights are defined, with the `default` being applied globally, the `
 
 ## Headings
 
-Heading styles are applied to `<h1>`-`<h6>` elements globally, using the defined typographic scale.
+Heading styles are applied to `<h1>`-`<h6>` elements globally, using the defined
+typographic scale.
 
 ```html render
 <h1>Heading 1</h1>
@@ -76,7 +81,8 @@ Heading styles are applied to `<h1>`-`<h6>` elements globally, using the defined
 <h6>Heading 6</h6>
 ```
 
-These styles are also available as `.h1`-`.h6` classes, which are useful for changing the visual appearance while keeping the markup semantically correct:
+These styles are also available as `.h1`-`.h6` classes, which are useful for
+changing the visual appearance while keeping the markup semantically correct:
 
 ```html render
 <h2 class="h5">Looks like a heading 5, semantically a heading 2</h2>
@@ -84,15 +90,17 @@ These styles are also available as `.h1`-`.h6` classes, which are useful for cha
 
 ## Content
 
-User-generated content can be rendered inside a `.content` element to automatically apply styles and spacing to all semantic markup, including headings, quotes, lists, and code:
+User-generated content can be rendered inside a `.content` element to
+automatically apply styles and spacing to all semantic markup, including
+headings, quotes, lists, and code:
 
 ```html render
 <div class="content">
     <h4>User Generated Content</h4>
     <blockquote>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
     </blockquote>
     <ul>
@@ -132,7 +140,10 @@ Use text alignment utilities to left align, center, or right align text:
 
 ## Measure
 
-Waterhole defines a [typographic measure](https://every-layout.dev/rudiments/axioms/), which is the maxiumum recommended width of the line of text to ensure readability. The measure is available in a variable and can be applied using a utility class:
+Waterhole defines a
+[typographic measure](https://every-layout.dev/rudiments/axioms/), which is the
+maxiumum recommended width of the line of text to ensure readability. The
+measure is available in a variable and can be applied using a utility class:
 
 ```css
 --measure: 100ch;
@@ -140,22 +151,27 @@ Waterhole defines a [typographic measure](https://every-layout.dev/rudiments/axi
 
 ```html render
 <p class="measure">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 ```
 
 ## Links
 
-Anchor elements are globally styled with the accent color, and an underline on hover. You can also use the `.link` class to apply matching styles to other elements and make them look like links.
+Anchor elements are globally styled with the accent color, and an underline on
+hover. You can also use the `.link` class to apply matching styles to other
+elements and make them look like links.
 
 ```html render
 <a href="#">Hyperlink</a> <button class="link">Button Link</button>
 ```
 
-Anchor elements in a `.content` block are given a persistent underline to improve accessibility.
+Anchor elements in a `.content` block are given a persistent underline to
+improve accessibility.
 
-Use the `.underline` and `.no-underline` utility classes to force an underline or not.
+Use the `.underline` and `.no-underline` utility classes to force an underline
+or not.

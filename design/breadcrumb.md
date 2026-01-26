@@ -1,8 +1,10 @@
 # Breadcrumb
 
-Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.
+Indicate the current page's location within a navigational hierarchy that
+automatically adds separators via CSS.
 
-A standalone breadcrumb can be wrapped in a `<nav>`, with `aria-current="page"` being used to mark the current page:
+A standalone breadcrumb can be wrapped in a `<nav>`, with `aria-current="page"`
+being used to mark the current page:
 
 ```html render
 <nav aria-label="breadcrumb">
@@ -14,7 +16,9 @@ A standalone breadcrumb can be wrapped in a `<nav>`, with `aria-current="page"` 
 </nav>
 ```
 
-The breadcrumb can also be used inside a `<header>` to give context to the current page heading. An extra `<li>` without content is used to append a separator to the end of the breadcrumb:
+The breadcrumb can also be used inside a `<header>` to give context to the
+current page heading. An extra `<li>` without content is used to append a
+separator to the end of the breadcrumb:
 
 ```html render
 <header class="stack gap-xs">

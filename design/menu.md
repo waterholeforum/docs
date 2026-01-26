@@ -2,11 +2,21 @@
 
 Display a list of choices or commands in a dropdown menu.
 
-Waterhole uses the inclusive [popup](https://github.com/tobyzerner/inclusive-elements/tree/master/src/popup) and [menu](https://github.com/tobyzerner/inclusive-elements/tree/master/src/menu) elements to power menu buttons. Wrap the trigger button and menu in a `<ui-popup>` element to hook it up as an accessible popup. Use a `<ui-menu>` element for the menu itself to enable keyboard navigation.
+Waterhole uses the inclusive
+[popup](https://github.com/tobyzerner/inclusive-elements/tree/master/src/popup)
+and
+[menu](https://github.com/tobyzerner/inclusive-elements/tree/master/src/menu)
+elements to power menu buttons. Wrap the trigger button and menu in a
+`<ui-popup>` element to hook it up as an accessible popup. Use a `<ui-menu>`
+element for the menu itself to enable keyboard navigation.
 
-Menus should be styled with the `.menu` class. To prevent [FOUC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content), add the `hidden` attribute to the menu so it is hidden even before the JavaScript has loaded.
+Menus should be styled with the `.menu` class. To prevent
+[FOUC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content), add the
+`hidden` attribute to the menu so it is hidden even before the JavaScript has
+loaded.
 
-Use the `.menu-item` class for menu items, which can be buttons, links, or labels. Menu items support icons.
+Use the `.menu-item` class for menu items, which can be buttons, links, or
+labels. Menu items support icons.
 
 ```blade render
 <ui-popup placement="bottom-start">
@@ -54,7 +64,8 @@ Use the `.menu-heading` class for group headings.
 
 ## Title & Description
 
-Menu items may have a title and description, rather than just a text label. Use `.menu-item__title` and `.menu-item__description` for this:
+Menu items may have a title and description, rather than just a text label. Use
+`.menu-item__title` and `.menu-item__description` for this:
 
 ```blade render
 <ui-menu class="menu">
@@ -70,7 +81,10 @@ Menu items may have a title and description, rather than just a text label. Use 
 
 ## Selected
 
-Menu items will be styled as "selected" if they have the `.is-active` class, or `[aria-current="page"]` or `[aria-checked="true"]` attributes. The `.menu-item__check` class can be used to display an icon which will only become visible if the containing menu item is selected.
+Menu items will be styled as "selected" if they have the `.is-active` class, or
+`[aria-current="page"]` or `[aria-checked="true"]` attributes. The
+`.menu-item__check` class can be used to display an icon which will only become
+visible if the containing menu item is selected.
 
 ```blade render
 <ui-menu class="menu">

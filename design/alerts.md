@@ -2,11 +2,14 @@
 
 Alerts provide contextual feedback to the user.
 
-Alerts may include an icon and action buttons. They can be shown inline or as a toast.
+Alerts may include an icon and action buttons. They can be shown inline or as a
+toast.
 
 ## CSS
 
-The `.alert` class is combined with a `.bg` color class to create the alert container. `.alert__icon`, `.alert__message`, and `.alert__actions` lay out the contents of the alert.
+The `.alert` class is combined with a `.bg` color class to create the alert
+container. `.alert__icon`, `.alert__message`, and `.alert__actions` lay out the
+contents of the alert.
 
 ```blade render
 <div class="alert bg-success">
@@ -20,7 +23,10 @@ The `.alert` class is combined with a `.bg` color class to create the alert cont
 
 ## Blade Component
 
-Use the [`<x-waterhole::alert>` component](reference://Waterhole/View/Components/Alert.php) to render an alert in a Blade template. Pass a `type`, which corresponds to the name of one of the `.bg` color classes. An icon will be selected automatically:
+Use the
+[`<x-waterhole::alert>` component](reference://Waterhole/View/Components/Alert.php)
+to render an alert in a Blade template. Pass a `type`, which corresponds to the
+name of one of the `.bg` color classes. An icon will be selected automatically:
 
 ```blade render
 <div class="stack gap-sm">
@@ -66,9 +72,14 @@ You can also render a custom action in the `action` slot:
 
 ## Toasts
 
-Waterhole uses an [inclusive Alerts element](https://github.com/tobyzerner/inclusive-elements/tree/master/src/alerts) to manage accessible toast messages displayed at the top of the page. If you need to interact directly with this element, you can obtain a reference to it via `window.Waterhole.alerts`.
+Waterhole uses an
+[inclusive Alerts element](https://github.com/tobyzerner/inclusive-elements/tree/master/src/alerts)
+to manage accessible toast messages displayed at the top of the page. If you
+need to interact directly with this element, you can obtain a reference to it
+via `window.Waterhole.alerts`.
 
-You can show simple toast messages (`success`, `warning`, and `danger` messages) by setting Laravel session `flash` data:
+You can show simple toast messages (`success`, `warning`, and `danger` messages)
+by setting Laravel session `flash` data:
 
 ```php
 session()->flash('success', 'Task was successful!');

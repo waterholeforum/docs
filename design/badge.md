@@ -2,11 +2,13 @@
 
 Badges are compact elements that indicate a particular attribute.
 
-For example, badges are used to display user groups, post state like "locked", or the number of unread comments or notifications.
+For example, badges are used to display user groups, post state like "locked",
+or the number of unread comments or notifications.
 
 ## Colors
 
-The `.badge` class creates the basic style. It can be combined with a `.bg` class to give the badge color:
+The `.badge` class creates the basic style. It can be combined with a `.bg`
+class to give the badge color:
 
 ```html render
 <span class="badge">12</span>

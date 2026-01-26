@@ -10,7 +10,8 @@ Waterhole defines a global border radius variable:
 --radius: 10px;
 ```
 
-The `.rounded` utility class will apply this border radius, while `.pill` will apply maximum rounding:
+The `.rounded` utility class will apply this border radius, while `.pill` will
+apply maximum rounding:
 
 ```html render
 <div class="stack gap-md">
@@ -30,8 +31,12 @@ Waterhole defines two levels of shadow:
 
 ```html render
 <div class="row gap-md">
-    <div class="rounded p-sm" style="box-shadow: var(--shadow-sm)">shadow-sm</div>
-    <div class="rounded p-sm" style="box-shadow: var(--shadow-md)">shadow-md</div>
+    <div class="rounded p-sm" style="box-shadow: var(--shadow-sm)">
+        shadow-sm
+    </div>
+    <div class="rounded p-sm" style="box-shadow: var(--shadow-md)">
+        shadow-md
+    </div>
 </div>
 ```
 

@@ -12,11 +12,15 @@ Feel free to open issues for anything you find confusing or incomplete.
 
 ## Contributing
 
-Thank you for considering contributing to Waterhole! Please review the [contribution guide](https://waterhole.dev/docs/contributing) before you send pull requests.
+Thank you for considering contributing to Waterhole! Please review the
+[contribution guide](https://waterhole.dev/docs/contributing) before you send
+pull requests.
 
 ## Code of Conduct
 
-In order to ensure that the Waterhole community is welcoming to all, please review and abide by the [Code of Conduct](https://waterhole.dev/docs/code-of-conduct).
+In order to ensure that the Waterhole community is welcoming to all, please
+review and abide by the
+[Code of Conduct](https://waterhole.dev/docs/code-of-conduct).
 
 ## Important Links
 

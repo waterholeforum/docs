@@ -2,7 +2,8 @@
 
 Cards are used to bound pieces of content.
 
-The `.card` class creates a border around the content, while the `.card__body` class applies padding. Apply both of these to create a basic card:
+The `.card` class creates a border around the content, while the `.card__body`
+class applies padding. Apply both of these to create a basic card:
 
 ```html render
 <div class="card card__body">This is a card.</div>
@@ -19,7 +20,8 @@ Add a card header using the `.card__header` class:
 </div>
 ```
 
-These classes can be applied to `<details>` and `<summary>` elements to create a collapsible card:
+These classes can be applied to `<details>` and `<summary>` elements to create a
+collapsible card:
 
 ```html render
 <details class="card">

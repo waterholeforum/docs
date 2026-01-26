@@ -8,7 +8,8 @@ search results and when shared:
 
 - Page titles with your forum name appended.
 - Meta descriptions (auto-derived when possible, with a configurable fallback).
-- OpenGraph tags for title, description, URL, site name, and image (using a post's first image).
+- OpenGraph tags for title, description, URL, site name, and image (using a
+  post's first image).
 - Twitter card tags for rich social previews.
 - `robots` handling for pages marked as noindex.
 - JSON-LD structured data based on the page type (website, article, profile).

@@ -1,14 +1,20 @@
 # JSON:API
 
-Use the Waterhole JSON:API to access forum data externally. You can extend it with your own attributes, resources, and endpoints.
+Use the Waterhole JSON:API to access forum data externally. You can extend it
+with your own attributes, resources, and endpoints.
 
-The Waterhole JSON:API conforms to the [JSON:API specification](https://jsonapi.org/format/1.1/). It is powered by the [json-api-server](https://github.com/tobyzerner/json-api-server) library which makes it easy to define resource schema.
+The Waterhole JSON:API conforms to the
+[JSON:API specification](https://jsonapi.org/format/1.1/). It is powered by the
+[json-api-server](https://github.com/tobyzerner/json-api-server) library which
+makes it easy to define resource schema.
 
 ## Consuming the API
 
 ### Configuration
 
-You can configure the JSON:API in `config/waterhole/api.php`. Here you can enable or disable the API, configure whether the API is accessible to the public, and configure the API path.
+You can configure the JSON:API in `config/waterhole/api.php`. Here you can
+enable or disable the API, configure whether the API is accessible to the
+public, and configure the API path.
 
 ### OpenAPI Description
 
@@ -18,18 +24,25 @@ You can generate an OpenAPI description of your Waterhole API by running:
 php artisan waterhole:openapi
 ```
 
-The OpenAPI document will be saved into a `waterhole-openapi.json` file your project root.
+The OpenAPI document will be saved into a `waterhole-openapi.json` file your
+project root.
 
 ### Authentication
 
-The Waterhole JSON:API supports authentication using [Laravel Sanctum](https://laravel.com/docs/12.x/sanctum). If the API is configured to be public, then authentication is optional, and any Waterhole user will be able to create an API token for authentication in their account preferences. Otherwise, if the API is not public, authentication is required and only administrators can create API tokens.
+The Waterhole JSON:API supports authentication using
+[Laravel Sanctum](https://laravel.com/docs/12.x/sanctum). If the API is
+configured to be public, then authentication is optional, and any Waterhole user
+will be able to create an API token for authentication in their account
+preferences. Otherwise, if the API is not public, authentication is required and
+only administrators can create API tokens.
 
-Once an API token has been created, it can be used to authenticate API requests by setting it as a `Bearer` token in the `Authorization` header.
+Once an API token has been created, it can be used to authenticate API requests
+by setting it as a `Bearer` token in the `Authorization` header.
 
 ### Resources
 
-The JSON:API is made up of "resources" identified by a `type` and an `id`.
-All endpoints live under the configured API path (default `/api`).
+The JSON:API is made up of "resources" identified by a `type` and an `id`. All
+endpoints live under the configured API path (default `/api`).
 
 Built-in resource types include:
 
@@ -52,8 +65,8 @@ Built-in resource types include:
 - users
 
 Endpoints vary per resource. The core API is read-only (index and show), and
-extensions can add write endpoints if needed. Use the OpenAPI description to
-see the full list of endpoints, fields, filters, and relationships.
+extensions can add write endpoints if needed. Use the OpenAPI description to see
+the full list of endpoints, fields, filters, and relationships.
 
 ### Including Relationships
 
@@ -146,7 +159,8 @@ $this->extend(function (Extend\Api\PostsResource $resource) {
 
 ### Adding Routes
 
-Register API routes directly inside the extender callback using the `Route` facade:
+Register API routes directly inside the extender callback using the `Route`
+facade:
 
 ```php
 use Illuminate\Support\Facades\Route;
