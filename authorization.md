@@ -39,8 +39,8 @@ A Gate is defined for each ability. The permissions table is generally used to d
 
 Additionally, some logic is applied globally across all Gate checks:
 
-- If the user is an administrator, permission is granted
 - If the user has not yet verified their email, or if they have been suspended, they are treated as if they are a guest
+- If a Gate check returns `null` (i.e. no policy explicitly denies the ability), admins are allowed
 
 Gate abilities are named using the format `waterhole.resource.ability`. For example, the Gate to check whether a post can be edited is named `waterhole.post.edit`.
 
@@ -49,6 +49,9 @@ Use Gate methods, as per the [Laravel Gate documentation](https://laravel.com/do
 ```php
 Gate::authorize('waterhole.post.edit', $post);
 ```
+
+If a Gate returns `null` and the ability name matches `waterhole.resource.ability`,
+Waterhole will fall back to the permissions table for the ability and scope.
 
 > Refer to Waterhole's [`AuthServiceProvider`](https://github.com/waterholeforum/core/blob/main/src/Providers/AuthServiceProvider.php) class to see the available abilities.
 

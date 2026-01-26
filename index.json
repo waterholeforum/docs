@@ -16,9 +16,11 @@
         "items": [
             { "text": "Structure", "link": "/structure" },
             { "text": "User Groups", "link": "/groups" },
+            { "text": "Moderation", "link": "/moderation" },
             { "text": "Design", "link": "/design" },
             { "text": "Dashboard", "link": "/dashboard" },
             { "text": "Localization", "link": "/localization" },
+            { "text": "SEO", "link": "/seo" },
             { "text": "Authentication", "link": "/authentication" }
         ]
     },

@@ -4,7 +4,12 @@ Assign users to groups that elevate their permissions or add flair to their acco
 
 User groups allow you to give users special permissions, like being able to see private content, or having moderation powers. They can also have an associated "badge" which is displayed to indicate a user is part of the group.
 
-You can manage your community's user groups in the **Groups** section of the Control Panel. On a new installation, Waterhole automatically creates a **Mod** group for moderators; you are free to customize or delete this.
+You can manage your community's user groups in the **Groups** section of the Control Panel. On a new installation, Waterhole automatically creates built-in groups:
+
+- **Guest** and **Member** for baseline permissions
+- **Admin** for full access
+- **Mod** for moderation
+- **Quarantine** to require approval for new users
 
 ## Group Badges
 
@@ -26,9 +31,21 @@ Permissions can be managed from two perspectives:
 
 - When editing a user group, you can choose which structure nodes the group has permission to see and act on. This is useful if you want to grant global permissions to a particular user group (such as global moderation powers).
 
+Waterhole also includes a **Suspend users** permission, which allows trusted
+groups to suspend users from participating.
+
 ### Admin
 
 There is a special user group called **Admin**. Users assigned to this group have globally elevated permissions – they can view all content and perform all actions. As such, you should only assign this group to people you trust.
+
+## Auto-assign and Approval Rules
+
+Groups can be set to **auto-assign** new users. They can also apply **approval
+rules** to require moderator approval for posts/comments, and optionally remove
+users from the group once their content is approved.
+
+The Quarantine group is configured this way by default. See [Moderation](./moderation.md)
+for how approval and the moderation queue work.
 
 ## Assigning Users
 

@@ -59,9 +59,24 @@ To test your mail configuration, request a password reset on your account.
 
 ## Broadcasting Configuration
 
-Waterhole can push out new activity over WebSockets so users will see updates in real-time without having to reload the page. To enable this, you'll need to configure a broadcaster in `config/broadcasting.php`.
+Waterhole can push out new activity over WebSockets so users will see updates in real-time without having to reload the page. To enable this, you'll need to configure a broadcaster in `config/broadcasting.php`. See the [Laravel Broadcasting documentation](https://laravel.com/docs/10.x/broadcasting#pusher-channels) for more information about how to configure a driver.
 
-See the [Laravel Broadcasting documentation](https://laravel.com/docs/10.x/broadcasting#pusher-channels) for more information about how to configure a driver. You will only need to install the driver on the server-side – Waterhole already contains the client-side `pusher-js` package and will hook everything up for you.
+Waterhole is compatible with both **Pusher** and **Laravel Reverb**. The client connection
+is configured in `config/waterhole/system.php` under `echo_config`. When `BROADCAST_DRIVER` is set to `pusher` or `reverb`, Waterhole will wire up
+the matching Echo config automatically.
+
+## Filesystem Disks
+
+Waterhole uses Laravel's filesystem disks for uploads and compiled assets.
+These can be configured in `config/waterhole/uploads.php` and
+`config/waterhole/system.php`:
+
+- `uploads.disk` controls where user uploads are stored (attachments, avatars,
+  icons).
+- `system.assets_disk` controls where compiled Waterhole assets are stored.
+
+Both should be public disks (local `public`, S3, etc.) depending on your
+deployment. Make sure you configure the chosen disks in `config/filesystems.php`.
 
 ## Queue Configuration
 
