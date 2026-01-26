@@ -19,11 +19,11 @@ moderation queue.
 [User Groups](./groups.md) can be configured to require approval and optionally
 remove the user from the group after their content is approved.
 
-## Post Edit Time Limit
+## Edit Time Limit
 
-Authors can be limited to editing their posts within a time window after
-creation. Configure this in `config/waterhole/forum.php` under
-`post_edit_time_limit`. Moderators can always edit.
+Authors can be limited to editing their posts and comments within a time window
+after creation. Configure this in `config/waterhole/forum.php` under
+`edit_time_limit`. Moderators can always edit.
 
 ## Re-verify After Inactive Days
 
