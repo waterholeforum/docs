@@ -6,7 +6,7 @@ example, deleting comments, or locking a post.
 Each item's context menu is really just a list of actions, and extensions can
 add their own into the mix.
 
-<figure style="float: right">
+<figure>
 <img src="images/actions-example.png" alt="" width="204" height="333">
 <figcaption>The post controls menu is made up of a list of Actions.</figcaption>
 </figure>
@@ -114,6 +114,31 @@ If your action is potentially destructive, set the `$destructive` property to
 ```php
 public bool $destructive = true;
 ```
+
+### Keyboard Shortcuts
+
+Actions can expose a keyboard shortcut by returning a `KeyboardShortcut` from
+the `shortcut()` method:
+
+```php
+use Waterhole\Ui\KeyboardShortcut;
+
+public function shortcut(): ?KeyboardShortcut
+{
+    return new KeyboardShortcut(
+        id: 'action.feature',
+        keys: ['f'],
+        description: 'Feature the selected post',
+        category: 'discussion',
+        scopes: ['selection'],
+    );
+}
+```
+
+Waterhole will automatically render the shortcut in action buttons and menus,
+and include it in the shortcut reference for users who can access the action.
+See the [Keyboard Shortcuts](./keyboard-shortcuts.md) page for more details on
+binding shortcuts and scopes.
 
 ### Responses & Streams
 

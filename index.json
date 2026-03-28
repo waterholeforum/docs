@@ -40,6 +40,7 @@
             { "text": "Frontend", "link": "/frontend" },
             { "text": "Internationalization", "link": "/internationalization" },
             { "text": "JSON:API", "link": "/api" },
+            { "text": "Keyboard Shortcuts", "link": "/keyboard-shortcuts" },
             { "text": "Notifications", "link": "/notifications" },
             { "text": "Routes", "link": "/routes" }
         ]
