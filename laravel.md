@@ -1,6 +1,6 @@
 # Laravel Integration
 
-Waterhole can be installed into an existing Laravel 10.x, 11.x, or 12.x
+Waterhole can be installed into an existing Laravel 10.x, 11.x, 12.x, or 13.x
 application, and you can set it up to use your existing Laravel user base too.
 
 ## Installation
