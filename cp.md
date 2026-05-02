@@ -50,13 +50,13 @@ $this->extend(function (Extend\Ui\CpNav $nav) {
 
 ### Rendering the CP Layout
 
-Use the [`<x-waterhole::cp>`](reference://Waterhole/View/Components/Cp.html)
+Use the [`<x-waterhole::cp-layout>`](reference://Waterhole/View/Components/CpLayout.html)
 component to render your views inside the CP layout:
 
 ```blade
-<x-waterhole::cp title="My Page">
+<x-waterhole::cp-layout title="My Page">
     <!-- content -->
-</x-waterhole::cp>
+</x-waterhole::cp-layout>
 ```
 
 ### Adding Assets

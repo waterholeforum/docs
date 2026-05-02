@@ -9,9 +9,15 @@ Waterhole exposes many Blade Components that you can use in your own views.
 These are documented in the
 [`Waterhole\View\Components` namespace](reference://Waterhole/View/Components.html).
 
-Perhaps the most important of these to know is the
-[`<x-waterhole::layout>` component](reference://Waterhole/View/Components/Layout.html).
-Use this to render your own views inside the Waterhole layout:
+Blade Components are only used to encapsulate more complex HTML structures and
+behavior. For basic UI elements like buttons and inputs, use plain HTML elements
+and apply Waterhole's [CSS classes](./design/overview.md) directly.
+
+### Layouts
+
+Use the [`<x-waterhole::layout>` component](reference://Waterhole/View/Components/Layout.html)
+for generic pages that should appear inside Waterhole's standard application
+shell:
 
 ```blade
 <x-waterhole::layout title="Hello World">
@@ -19,9 +25,16 @@ Use this to render your own views inside the Waterhole layout:
 </x-waterhole::layout>
 ```
 
-Blade Components are only used to encapsulate more complex HTML structures and
-behavior. For basic UI elements like buttons and inputs, use plain HTML elements
-and apply Waterhole's [CSS classes](./design/overview.md) directly.
+Use the
+[`<x-waterhole::forum-layout>` component](reference://Waterhole/View/Components/ForumLayout.html)
+for pages that belong to the public forum experience. It applies the forum's
+layout conventions and can show the forum navigation sidebar when appropriate:
+
+```blade
+<x-waterhole::forum-layout title="Latest Posts" show-sidebar>
+    <x-waterhole::post-feed :feed="$feed" />
+</x-waterhole::forum-layout>
+```
 
 ## Component Lists
 
