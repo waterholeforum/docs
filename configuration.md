@@ -92,15 +92,13 @@ To test your mail configuration, request a password reset on your account.
 ## Broadcasting Configuration
 
 Waterhole can push out new activity over WebSockets so users will see updates in
-real-time without having to reload the page. To enable this, you'll need to
-configure a broadcaster in `config/broadcasting.php`. See the
-[Laravel Broadcasting documentation](https://laravel.com/docs/10.x/broadcasting#pusher-channels)
-for more information about how to configure a driver.
+real-time without having to reload the page. To enable this, you'll need to run
+`php artisan install:broadcasting` and configure a supported broadcaster. See
+the [Laravel Broadcasting documentation](https://laravel.com/docs/broadcasting)
+for more information.
 
-Waterhole is compatible with both **Pusher** and **Laravel Reverb**. The client
-connection is configured in `config/waterhole/system.php` under `echo_config`.
-When `BROADCAST_DRIVER` is set to `pusher` or `reverb`, Waterhole will wire up
-the matching Echo config automatically.
+Waterhole supports both **Pusher** and **Laravel Reverb** and automatically
+configures Laravel Echo for the default broadcast connection.
 
 ## Filesystem Disks
 
