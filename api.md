@@ -30,11 +30,11 @@ project root.
 ### Authentication
 
 The Waterhole JSON:API supports authentication using
-[Laravel Sanctum](https://laravel.com/docs/12.x/sanctum). If the API is
-configured to be public, then authentication is optional, and any Waterhole user
-will be able to create an API token for authentication in their account
-preferences. Otherwise, if the API is not public, authentication is required and
-only administrators can create API tokens.
+[Laravel Sanctum](https://laravel.com/docs/sanctum). If the API is configured to
+be public, then authentication is optional, and any Waterhole user will be able
+to create an API token for authentication in their account preferences.
+Otherwise, if the API is not public, authentication is required and only
+administrators can create API tokens.
 
 Once an API token has been created, it can be used to authenticate API requests
 by setting it as a `Bearer` token in the `Authorization` header.
@@ -46,10 +46,12 @@ endpoints live under the configured API path (default `/api`).
 
 Built-in resource types include:
 
+- bookmarks
 - channels
 - channelUsers
 - comments
 - groups
+- mentions
 - pages
 - posts
 - postUsers

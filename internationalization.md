@@ -23,8 +23,8 @@ the default Laravel translator with one that supports loading translations from
 Translations are stored in files within the `resources/lang` directory. Within
 this directory, create a subdirectory for each language you want to support. You
 can add translations in both `.php` files in the Laravel
-[short key format](https://laravel.com/docs/10.x/localization#using-short-keys),
-and in Fluent `.ftl` files, with the latter taking precedence.
+[short key format](https://laravel.com/docs/localization#using-short-keys), and
+in Fluent `.ftl` files, with the latter taking precedence.
 
 ```
 /resources

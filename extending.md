@@ -5,8 +5,7 @@ to your community.
 
 Waterhole is a Laravel package, meaning right off the bat you can add your own
 routes, views, middleware, container bindings, database migrations, console
-commands, and more, in the
-[standard Laravel way](https://laravel.com/docs/10.x).
+commands, and more, in the [standard Laravel way](https://laravel.com/docs).
 
 But there are also plenty of opportunities to extend Waterhole itself. This
 section of the documentation covers those.
@@ -15,8 +14,8 @@ section of the documentation covers those.
 
 In Laravel, all of the application bootstrapping – the registration of bindings,
 event listeners, middleware, routes – takes place in
-[service providers](https://laravel.com/docs/10.x/providers). This is also the
-place where you can put code to extend Waterhole.
+[service providers](https://laravel.com/docs/providers). This is also the place
+where you can put code to extend Waterhole.
 
 If you're building customizations specific to your community, then you can add
 code to your project's service providers, found in `app/Providers`.
@@ -62,10 +61,9 @@ this covering all parts of Waterhole's views and functionality, ready for you to
 hook into.
 
 > **Warning:** To avoid strange behavior when using
-> [Laravel Octane](https://laravel.com/docs/10.x/octane), extenders should
-> always be registered in a service provider's `register` method, and should
-> never be guarded by a request-specific condition. For example, **don't** do
-> this:
+> [Laravel Octane](https://laravel.com/docs/octane), extenders should always be
+> registered in a service provider's `register` method, and should never be
+> guarded by a request-specific condition. For example, **don't** do this:
 >
 > ```php
 > $this->extend(function (Extend\Ui\Layout $layout) {

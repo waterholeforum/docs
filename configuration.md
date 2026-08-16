@@ -3,8 +3,7 @@
 Waterhole uses the standard Laravel configuration system – including config
 files and environment variables.
 
-> Refer to the
-> [Laravel Configuration](https://laravel.com/docs/10.x/configuration)
+> Refer to the [Laravel Configuration](https://laravel.com/docs/configuration)
 > documentation for more information.
 
 ## Config Files
@@ -84,8 +83,8 @@ notification emails, you need to configure a mail driver. Mail driver
 configuration can be found in `config/mail.php`.
 
 See the
-[Laravel Mail documentation](https://laravel.com/docs/10.x/mail#configuration)
-for more information about the available drivers.
+[Laravel Mail documentation](https://laravel.com/docs/mail#configuration) for
+more information about the available drivers.
 
 To test your mail configuration, request a password reset on your account.
 
@@ -121,13 +120,13 @@ You should strongly consider setting up a queue to process time-intensive tasks
 web requests. Queue configuration can be found in `config/queue.php`.
 
 See the Laravel documentation for more information about the
-[available drivers](https://laravel.com/docs/10.x/queues#driver-prerequisites),
-how to
-[run the queue worker](https://laravel.com/docs/10.x/queues#running-the-queue-worker),
+[available drivers](https://laravel.com/docs/queues#driver-prerequisites), how
+to
+[run the queue worker](https://laravel.com/docs/queues#running-the-queue-worker),
 and how to
-[configure Supervisor](https://laravel.com/docs/10.x/queues#supervisor-configuration)
+[configure Supervisor](https://laravel.com/docs/queues#supervisor-configuration)
 to ensure the queue works reliably in production. Or, you may wish to set up
-[Laravel Horizon](https://laravel.com/docs/10.x/horizon) to manage your queue
+[Laravel Horizon](https://laravel.com/docs/horizon) to manage your queue
 workers.
 
 ## Cache Configuration
@@ -139,8 +138,8 @@ production, and especially on a larger community, you may wish to use a more
 robust driver such as Memcached or Redis.
 
 See the
-[Laravel Cache documentation](https://laravel.com/docs/10.x/cache#configuration)
-for more information about the available drivers.
+[Laravel Cache documentation](https://laravel.com/docs/cache#configuration) for
+more information about the available drivers.
 
 ## Debug Mode
 
@@ -161,7 +160,7 @@ development, you should set the `APP_DEBUG` environment variable to `true`.
 
 If you're performing some maintenance on your community and you want to
 temporarily disable access, you can use Laravel's
-[maintenance mode](https://laravel.com/docs/10.x/configuration#maintenance-mode).
+[maintenance mode](https://laravel.com/docs/configuration#maintenance-mode).
 
 To enable maintenance mode, run the `down` Artisan command:
 

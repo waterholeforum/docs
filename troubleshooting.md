@@ -56,7 +56,7 @@ try:
 - **Disable extensions.** Sometimes extensions can be the culprit. You can
   either remove them with the `composer remove` command or disable them
   temporarily by
-  [opting out of package discovery](https://laravel.com/docs/10.x/packages#opting-out-of-package-discovery).
+  [opting out of package discovery](https://laravel.com/docs/packages#opting-out-of-package-discovery).
 
 ## Common Problems
 

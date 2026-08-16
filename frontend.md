@@ -15,7 +15,8 @@ and apply Waterhole's [CSS classes](./design/overview.md) directly.
 
 ### Layouts
 
-Use the [`<x-waterhole::layout>` component](reference://Waterhole/View/Components/Layout.html)
+Use the
+[`<x-waterhole::layout>` component](reference://Waterhole/View/Components/Layout.html)
 for generic pages that should appear inside Waterhole's standard application
 shell:
 
@@ -39,12 +40,9 @@ layout conventions and can show the forum navigation sidebar when appropriate:
 ## Component Lists
 
 Many parts of Waterhole's templates render **lists** of components. For example,
-the page header is made up of these components:
-
-<figure>
-<img src="images/component-list-example.png" alt="" width="850" height="120">
-<figcaption>The header is made up of an ordered list of components: `title`, `spacer`, `search`, `notifications`, `user`, and `theme`.</figcaption>
-</figure>
+the page header is assembled from these components by default: `sidebar`,
+`title`, `breadcrumb`, `spacer`, `search`, `moderation`, `saved`,
+`notifications`, `guest`, and `user`.
 
 You can hook into these component lists and add your own components, or remove
 existing ones. All of these component lists are exposed as
@@ -227,11 +225,11 @@ first public property that is a `Model` instance (`$post` in this example). You
 can override the method if you'd like to specify a custom ID.
 
 To render a `<turbo-stream>` element for the streamable component, use the
-`Waterhole\Views\TurboStream` class. There is a method for each available Turbo
+`Waterhole\View\TurboStream` class. There is a method for each available Turbo
 Stream action. Pass in an instance of the streamable component:
 
 ```php
-use Waterhole\Views\TurboStream;
+use Waterhole\View\TurboStream;
 
 TurboStream::replace(new PostTitle($post));
 TurboStream::remove(new PostTitle($post));

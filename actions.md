@@ -202,7 +202,7 @@ want to render it manually in a view), you can implement the `shouldRender`
 method:
 
 ```php
-public function shouldRender(Collection $models): bool
+public function shouldRender(Collection $models, ?string $context = null): bool
 {
     return Waterhole::isCpRoute();
 }

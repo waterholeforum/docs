@@ -1,8 +1,8 @@
 # Notifications
 
 Waterhole builds on top of the
-[Laravel Notifications](https://laravel.com/docs/10.x/notifications) system to
-make implementing notifications even easier.
+[Laravel Notifications](https://laravel.com/docs/notifications) system to make
+implementing notifications even easier.
 
 Waterhole takes care of all the boilerplate: managing user preferences,
 generating HTML emails, handling secure unsubscribe links, and rendering
@@ -186,6 +186,19 @@ $this->extend(function (Extend\Core\NotificationTypes $types) {
 });
 ```
 
+### Delivery Channels
+
+Notifications support in-app (`database`) and email (`mail`) delivery by
+default. To limit the delivery methods offered in user preferences, implement
+the static `channels` method:
+
+```php
+public static function channels(): array
+{
+    return ['database'];
+}
+```
+
 ### Unsubscribe Links
 
 To allow the user to opt-out of receiving email notifications of this type,
@@ -235,5 +248,5 @@ public static function load(Collection $notifications): void
 ## Sending Notifications
 
 Refer to the
-[Laravel documentation](https://laravel.com/docs/10.x/notifications#sending-notifications)
+[Laravel documentation](https://laravel.com/docs/notifications#sending-notifications)
 for information on how to send notifications.

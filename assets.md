@@ -37,6 +37,25 @@ $this->extend(function (Extend\Assets\Script $scripts) {
 });
 ```
 
+You can also add a callback that generates CSS or JavaScript. Use this when the
+generated content should be concatenated and cached with the rest of the bundle.
+For example, an extension can render configured theme CSS from a view:
+
+```php
+use Waterhole\Extend;
+
+$this->extend(function (Extend\Assets\Stylesheet $stylesheets) {
+    $stylesheets->add(fn() => view('acme::theme', [
+        'palette' => config('acme.palette'),
+    ])->render());
+});
+```
+
+Outside debug mode, bundle output is cached, so callbacks should not depend on
+the current request or user. For small inline scripts or styles, especially
+request-specific data, use the [`DocumentHead` extender](#document-head)
+instead.
+
 ### CP Bundle
 
 By default, assets are added to the main bundle which is loaded on every page –
@@ -69,10 +88,11 @@ $this->publishes(
 );
 ```
 
-## External Assets
+## Document Head
 
-To link to an external asset (e.g. Google Fonts or something else from a CDN),
-don't use the `Stylesheet` or `Script` extenders. Instead, use the
+To output inline `<script>` or `<style>` elements, or link to an external asset
+such as Google Fonts, don't use the `Stylesheet` or `Script` extenders. Instead,
+use the
 [`DocumentHead` extender](reference://Waterhole/Extend/Ui/DocumentHead.html) to
 add a view to output in the `<head>` tag.
 

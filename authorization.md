@@ -9,7 +9,7 @@ The authorization layer is made up of two parts:
   groups have access and abilities for each structure node (channels, pages,
   links).
 
-- **[Laravel Gates](https://laravel.com/docs/10.x/authorization#gates)**, which
+- **[Laravel Gates](https://laravel.com/docs/authorization#gates)**, which
   enforce authorization on resources using the information in the permissions
   table, along with additional domain logic.
 
@@ -49,7 +49,7 @@ Waterhole::permissions()->ids(null, 'view', Channel::class);
 ## Checking Abilities With Gates
 
 While the permissions table merely stores information about permissions,
-[Laravel Gates](https://laravel.com/docs/10.x/authorization#gates) are used to
+[Laravel Gates](https://laravel.com/docs/authorization#gates) are used to
 actually enforce authorization. (Laravel Policies are not used because they are
 not extensible.)
 
@@ -70,7 +70,7 @@ example, the Gate to check whether a post can be edited is named
 `waterhole.post.edit`.
 
 Use Gate methods, as per the
-[Laravel Gate documentation](https://laravel.com/docs/10.x/authorization#authorizing-actions-via-gates),
+[Laravel Gate documentation](https://laravel.com/docs/authorization#authorizing-actions-via-gates),
 to authorize actions. For example, to assert that the current user can edit a
 post:
 

@@ -44,9 +44,9 @@ display it properly.
 
 ### Dark Mode
 
-Waterhole features a user Dark Mode toggle button in the header. To target
-changes to CSS variables and classes specifically to light or dark mode, put
-them within a `[data-theme]` selector:
+Waterhole features a user Dark Mode toggle in the user menu. To target changes
+to CSS variables and classes specifically to light or dark mode, put them within
+a `[data-theme]` selector:
 
 ```css
 [data-theme='light'] {
@@ -62,17 +62,24 @@ If you don't want to support Dark Mode on your forum, you can disable the toggle
 completely by setting `theme` to either `light` or `dark` in
 `config/waterhole/design.php`.
 
+### Global Sidebar
+
+By default, Waterhole shows the forum navigation sidebar across all forum pages.
+To limit it to index-style pages, disable `global_sidebar` in
+`config/waterhole/design.php`:
+
+```php
+'global_sidebar' => false,
+```
+
 ## Injecting HTML
 
-Waterhole's HTML is server-rended using
-[Blade](https://laravel.com/docs/10.x/blade) views and components. Many parts of
+Waterhole's HTML is server-rendered using
+[Blade](https://laravel.com/docs/blade) views and components. Many parts of
 Waterhole's templates render **dynamic lists of components**. For example, the
-page header is made up of these components:
-
-<figure>
-<img src="images/component-list-example.png" alt="" width="850" height="120">
-<figcaption>The header is made up of an ordered list of components: `title`, `spacer`, `search`, `notifications`, `user`, and `theme`.</figcaption>
-</figure>
+page header is assembled from these components by default: `sidebar`, `title`,
+`breadcrumb`, `spacer`, `search`, `moderation`, `saved`, `notifications`,
+`guest`, and `user`.
 
 Using [extenders](./extending.md#extenders), you can hook into these component
 lists and add your own components at any position, and replace or remove

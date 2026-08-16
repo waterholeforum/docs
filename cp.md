@@ -50,7 +50,8 @@ $this->extend(function (Extend\Ui\CpNav $nav) {
 
 ### Rendering the CP Layout
 
-Use the [`<x-waterhole::cp-layout>`](reference://Waterhole/View/Components/CpLayout.html)
+Use the
+[`<x-waterhole::cp-layout>`](reference://Waterhole/View/Components/CpLayout.html)
 component to render your views inside the CP layout:
 
 ```blade
@@ -89,9 +90,8 @@ Extensions can make widgets available to be displayed on the CP
 
 ### Defining a Widget
 
-Widgets are just
-[Blade components](https://laravel.com/docs/10.x/blade#components). So, to make
-a new widget available, define a new component:
+Widgets are just [Blade components](https://laravel.com/docs/blade#components).
+So, to make a new widget available, define a new component:
 
 ```php
 namespace App\Widgets;

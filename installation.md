@@ -10,8 +10,8 @@ following software requirements:
 
 - A web server like **Nginx** or **Apache**
 - **PHP 8.2+** with the following extensions: dom, gd, json, mbstring, openssl,
-  tokenizer, and one of pdo_mysql or pdo_pgsql
-- **MySQL 8.0.23+** or **PostgreSQL 10.0+**
+  tokenizer, and one of pdo_mysql, pdo_pgsql, or pdo_sqlite
+- **MySQL 8.0.23+**, **MariaDB**, **PostgreSQL 10.0+**, or **SQLite**
 - **Composer 2+**
 
 You will need **command line access** (locally or via SSH) in order to run

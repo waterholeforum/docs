@@ -12,9 +12,8 @@ test changes before you deploy them to production.
 
 There are many ways to set up a local development server, from installing the
 stack from scratch, to using tools that do it for you like
-[Laravel Valet](https://laravel.com/docs/10.x/valet). You can also run a Docker
-development environment using
-[Laravel Sail](https://laravel.com/docs/10.x/sail).
+[Laravel Valet](https://laravel.com/docs/valet). You can also run a Docker
+development environment using [Laravel Sail](https://laravel.com/docs/sail).
 
 ## Production
 
@@ -99,7 +98,7 @@ is enabled and `AllowOverride All` is set.
 ## Optimization
 
 Laravel offers various
-[optimization](https://laravel.com/docs/10.x/deployment#optimization) mechanisms
+[optimization](https://laravel.com/docs/deployment#optimization) mechanisms
 which can speed up your Waterhole installation in production. You should run
 these in your deployment script:
 
@@ -130,5 +129,5 @@ using Laravel Octane, ensure that the `opcache.enable_cli` flag is on.
 ### Laravel Octane
 
 To supercharge your community's performance, you can use
-[Laravel Octane](https://laravel.com/docs/10.x/octane). Refer to the Laravel
+[Laravel Octane](https://laravel.com/docs/octane). Refer to the Laravel
 documentation to learn more about how to set up Octane.

@@ -31,6 +31,14 @@ profiles and posts/comments.
 <figcaption>Groups can be exposed as badges. Groups that appear with a dotted outline are only visible to admins.</figcaption>
 </figure>
 
+## Group Mentions
+
+Members can mention a public group in posts and comments by typing
+`@group:Name`. Group members who can view the content will be notified.
+
+When editing a group, use the **Mentions** setting to control who can mention
+it: moderators only, moderators and group members, or anyone.
+
 ## Permissions
 
 Waterhole has a powerful permissions system that allows you to control access

@@ -47,7 +47,7 @@ with by including it in the `require` section of your extension's
 ```json
 {
     "require": {
-        "waterhole/core": "^0.1"
+        "waterhole/core": "^0.7"
     }
 }
 ```
